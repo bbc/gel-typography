@@ -1,0 +1,231 @@
+/*------------------------------------*\
+    #GEL TYPOGRAPHY
+\*------------------------------------*/
+
+/**
+ * GEL Typography proposes using four groups to apply a scale appropriately across
+ * a range of devices. We take a `Touch First` approach to typography, adjustments
+ * are then made based on if a primary input other than touch has been detected
+ *
+ * GEL Typography groups:
+ *
+ * Group A - Default sizing (feaure phones)
+ * Group B - Sizes applied at 320px (deafult & smart phone)
+ * Group C - Sizes applied at 600px (typically tablet devices)
+ * Group D - Sizes applied when touch is not available (typically desktop or laptop screens)
+ */
+
+
+// Import the `tools` used by this typography partial - these will need
+// to be abstracted out into their own repo and listed as a dependancy
+// in bower as part of the next phase of development
+@import 'tools';
+
+
+// Predefined configuration variables
+$gel-group-b-breakpoint: 320px;
+$gel-group-c-breakpoint: medium;
+
+$gel-namespace: 'gel-' !default;
+
+$gel-touch-class: 'no-touch' !default;
+
+
+// Not sure if this lives in here, if we even need this (e.g. Barlesque gives us this),
+// or if it needs to be abstracted out into a 'GEL Base' repo
+body {
+    font: Arial, sans-serif;
+}
+
+
+/**
+ * Trafalgar - typically used for the main page heading or article heading.
+ */
+.#{$gel-namespace}trafalgar,
+%#{$gel-namespace}trafalgar {
+    @include font-size(20px, 24px);
+    @include rem('letter-spacing', -1px);
+    font-weight: bold;
+
+    @include mq($from: $gel-group-b-breakpoint) {
+        @include font-size(24px, 28px);
+    }
+
+    @include mq($from: $gel-group-c-breakpoint) {
+        @include font-size(36px, 40px);
+
+        .#{$gel-touch-class} & {
+            @include font-size(32px, 32px);
+        }
+    }
+}
+
+
+/**
+ * Double Pica - generally used for sub-headings
+ */
+.#{$gel-namespace}double-pica,
+%#{$gel-namespace}double-pica {
+    @include font-size(20px, 24px);
+
+    @include mq($from: $gel-group-c-breakpoint) {
+        @include font-size(28px, 32px);
+
+        .#{$gel-touch-class} & {
+            @include font-size(24px, 24px);
+        }
+    }
+}
+
+    // Bold variant
+    .#{$gel-namespace}double-pica-bold,
+    %#{$gel-namespace}double-pica-bold {
+        @extend %#{$gel-namespace}double-pica;
+
+        &,
+        .#{$gel-touch-class} & {
+            font-weight: bold;
+        }
+    }
+
+
+/**
+ * Great Primer - thrid level headings typically used with a `<h3>` tag
+ */
+.#{$gel-namespace}great-primer,
+%#{$gel-namespace}great-primer {
+    @include font-size(18px, 20px);
+    @include rem('letter-spacing', -1px);
+    font-weight: bold;
+
+    @include mq($from: $gel-group-b-breakpoint) {
+        @include font-size(20px, 24px);
+    }
+
+    @include mq($from: $gel-group-c-breakpoint) {
+        @include font-size(24px, 28px);
+
+        .#{$gel-touch-class} & {
+            @include font-size(20px, 20px);
+        }
+    }
+}
+
+
+/**
+ * Pica - Typical paragraph text is wrapped with `<p>` elements
+ */
+.#{$gel-namespace}pica,
+%#{$gel-namespace}pica {
+    @include font-size(15px, 20px);
+
+    @include mq($from: $gel-group-b-breakpoint) {
+        @include font-size(16px, 22px);
+    }
+
+    @include mq($from: $gel-group-c-breakpoint) {
+        @include font-size(18px, 24px);
+
+        .#{$gel-touch-class} & {
+            @include font-size(16px, 22px);
+        }
+    }
+}
+
+    // Bold variant
+    .#{$gel-namespace}pica-bold,
+    %#{$gel-namespace}pica-bold {
+        @extend %#{$gel-namespace}pica;
+
+        &,
+        .#{$gel-touch-class} & {
+            font-weight: bold;
+        }
+    }
+
+
+/**
+ * Long Primer - Index page text and image captions are sized
+ */
+.#{$gel-namespace}long-primer,
+%#{$gel-namespace}long-primer {
+    @include font-size(15px, 18px);
+
+    @include mq($from: $gel-group-b-breakpoint) {
+        @include font-size(16px, 20px);
+    }
+
+    @include mq($from: $gel-group-c-breakpoint) {
+        @include font-size(16px, 22px);
+
+        .#{$gel-touch-class} & {
+            @include font-size(14px, 18px);
+        }
+    }
+}
+
+    // Bold variant
+    .#{$gel-namespace}long-primer-bold,
+    %#{$gel-namespace}long-primer-bold {
+        @extend %#{$gel-namespace}long-primer;
+
+        &,
+        .#{$gel-touch-class} & {
+            font-weight: bold;
+        }
+    }
+
+
+/**
+ * Brevier - Timestamps and bylines
+ */
+.#{$gel-namespace}brevier,
+%#{$gel-namespace}brevier {
+    @include font-size(14px, 16px);
+
+    @include mq($from: $gel-group-c-breakpoint) {
+        .#{$gel-touch-class} & {
+            @include font-size(13px);
+        }
+    }
+}
+
+    // Bold variant
+    .#{$gel-namespace}brevier-bold,
+    %#{$gel-namespace}brevier-bold {
+        @extend %#{$gel-namespace}brevier;
+
+        &,
+        .#{$gel-touch-class} & {
+            font-weight: bold;
+        }
+    }
+
+
+/**
+ * Minion - Small header capitals
+ */
+.#{$gel-namespace}minion,
+%#{$gel-namespace}minion {
+    @include font-size(12px, 16px);
+    text-transform: uppercase;
+
+    @include mq($from: $gel-group-c-breakpoint) {
+        @include font-size(13px);
+
+        .#{$gel-touch-class} & {
+            @include font-size(12px);
+        }
+    }
+}
+
+    // Bold variant
+    .#{$gel-namespace}minion-bold,
+    %#{$gel-namespace}minion-bold {
+        @extend %#{$gel-namespace}minion;
+
+        &,
+        .#{$gel-touch-class} & {
+            font-weight: bold;
+        }
+    }

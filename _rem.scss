@@ -1,0 +1,49 @@
+/*------------------------------------*\
+    #REM
+\*------------------------------------*/
+
+$gel-base-font-size: 16px !default;
+
+/**
+ * 'rem' is a Sass function that converts pixel values to rem values
+ * for whatever property is passed to it.
+ *
+ * Source: https://github.com/guardian/guss-rem
+ */
+@function rem($value, $baseline: $gel-base-font-size) {
+    @if $value == 0 { @return 0; } // 0rem -> 0
+    @if type-of($value) == list {
+        $result: ();
+        @each $e in $value {
+            $result: append($result, rem($e));
+        }
+        @return $result;
+    } @else {
+        @return if(type-of($value) == number and unit($value) == px, $value / $baseline * 1rem, $value);
+    }
+}
+
+/**
+ * Converts pixel values to rem values for whatever property is passed to it. It returns two
+ * lines of code — one of the regular pixel values (for old IE), and another with the
+ * converted rem values (for everyone else).
+ *
+ * A thrid value of true can be passed to optionally add the !impotant flag.
+ */
+@mixin rem($property, $value, $important: false) {
+
+    // Return the pixel value first
+    @if ($important == true) {
+        #{$property}: $value !important;
+    } @else {
+        #{$property}: $value;
+    }
+
+    // Pass the px value into the rem function
+    @if $important == true {
+        #{$property}: rem($value) !important;
+    } @else {
+        #{$property}: rem($value);
+    }
+
+}
