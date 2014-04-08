@@ -46,18 +46,6 @@ body {
     @include font-size(20px, 24px);
     @include rem('letter-spacing', -1px);
     font-weight: bold;
-
-    @include mq($from: $gel-group-b-breakpoint) {
-        @include font-size(24px, 28px);
-    }
-
-    @include mq($from: $gel-group-c-breakpoint) {
-        @include font-size(36px, 40px);
-
-        .#{$gel-touch-class} & {
-            @include font-size(32px, 32px);
-        }
-    }
 }
 
 
@@ -67,14 +55,6 @@ body {
 .#{$gel-namespace}double-pica,
 %#{$gel-namespace}double-pica {
     @include font-size(20px, 24px);
-
-    @include mq($from: $gel-group-c-breakpoint) {
-        @include font-size(28px, 32px);
-
-        .#{$gel-touch-class} & {
-            @include font-size(24px, 24px);
-        }
-    }
 }
 
     // Bold variant
@@ -97,18 +77,6 @@ body {
     @include font-size(18px, 20px);
     @include rem('letter-spacing', -1px);
     font-weight: bold;
-
-    @include mq($from: $gel-group-b-breakpoint) {
-        @include font-size(20px, 24px);
-    }
-
-    @include mq($from: $gel-group-c-breakpoint) {
-        @include font-size(24px, 28px);
-
-        .#{$gel-touch-class} & {
-            @include font-size(20px, 20px);
-        }
-    }
 }
 
 
@@ -118,18 +86,6 @@ body {
 .#{$gel-namespace}pica,
 %#{$gel-namespace}pica {
     @include font-size(15px, 20px);
-
-    @include mq($from: $gel-group-b-breakpoint) {
-        @include font-size(16px, 22px);
-    }
-
-    @include mq($from: $gel-group-c-breakpoint) {
-        @include font-size(18px, 24px);
-
-        .#{$gel-touch-class} & {
-            @include font-size(16px, 22px);
-        }
-    }
 }
 
     // Bold variant
@@ -150,18 +106,6 @@ body {
 .#{$gel-namespace}long-primer,
 %#{$gel-namespace}long-primer {
     @include font-size(15px, 18px);
-
-    @include mq($from: $gel-group-b-breakpoint) {
-        @include font-size(16px, 20px);
-    }
-
-    @include mq($from: $gel-group-c-breakpoint) {
-        @include font-size(16px, 22px);
-
-        .#{$gel-touch-class} & {
-            @include font-size(14px, 18px);
-        }
-    }
 }
 
     // Bold variant
@@ -182,12 +126,6 @@ body {
 .#{$gel-namespace}brevier,
 %#{$gel-namespace}brevier {
     @include font-size(14px, 16px);
-
-    @include mq($from: $gel-group-c-breakpoint) {
-        .#{$gel-touch-class} & {
-            @include font-size(13px);
-        }
-    }
 }
 
     // Bold variant
@@ -209,14 +147,6 @@ body {
 %#{$gel-namespace}minion {
     @include font-size(12px, 16px);
     text-transform: uppercase;
-
-    @include mq($from: $gel-group-c-breakpoint) {
-        @include font-size(13px);
-
-        .#{$gel-touch-class} & {
-            @include font-size(12px);
-        }
-    }
 }
 
     // Bold variant
@@ -229,3 +159,96 @@ body {
             font-weight: bold;
         }
     }
+
+
+/**
+ * Group B - Sizes applied are applied at 320px
+ */
+@include mq($from: $gel-group-b-breakpoint) {
+    .#{$gel-namespace}trafalgar,
+    %#{$gel-namespace}trafalgar {
+        @include font-size(24px, 28px);
+    }
+
+    .#{$gel-namespace}great-primer,
+    %#{$gel-namespace}great-primer {
+        @include font-size(20px, 24px);
+    }
+
+    .#{$gel-namespace}pica,
+    %#{$gel-namespace}pica {
+        @include font-size(16px, 22px);
+    }
+
+    .#{$gel-namespace}long-primer,
+    %#{$gel-namespace}long-primer {
+        @include font-size(16px, 20px);
+    }
+}
+
+
+/**
+ * Group C - Sizes applied are applied at 600px
+ */
+@include mq($from: $gel-group-c-breakpoint) {
+    .#{$gel-namespace}trafalgar,
+    %#{$gel-namespace}trafalgar {
+        @include font-size(36px, 40px);
+
+        .#{$gel-touch-class} & {
+            @include font-size(32px, 32px);
+        }
+    }
+
+    .#{$gel-namespace}double-pica,
+    %#{$gel-namespace}double-pica {
+        @include font-size(28px, 32px);
+
+        .#{$gel-touch-class} & {
+            @include font-size(24px, 24px);
+        }
+    }
+
+    .#{$gel-namespace}great-primer,
+    %#{$gel-namespace}great-primer {
+        @include font-size(24px, 28px);
+
+        .#{$gel-touch-class} & {
+            @include font-size(20px, 20px);
+        }
+    }
+
+    .#{$gel-namespace}pica,
+    %#{$gel-namespace}pica {
+        @include font-size(18px, 24px);
+
+        .#{$gel-touch-class} & {
+            @include font-size(16px, 22px);
+        }
+    }
+
+    .#{$gel-namespace}long-primer,
+    %#{$gel-namespace}long-primer {
+        @include font-size(16px, 22px);
+
+        .#{$gel-touch-class} & {
+            @include font-size(14px, 18px);
+        }
+    }
+
+    .#{$gel-namespace}brevier,
+    %#{$gel-namespace}brevier {
+        .#{$gel-touch-class} & {
+            @include font-size(13px);
+        }
+    }
+
+    .#{$gel-namespace}minion,
+    %#{$gel-namespace}minion {
+        @include font-size(13px);
+
+        .#{$gel-touch-class} & {
+            @include font-size(12px);
+        }
+    }
+}
