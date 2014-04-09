@@ -37,11 +37,13 @@ GEL Typography proposes using four groups to apply a scale appropriately across 
 2. Import the component into your project's Sass file `@import "bower_components/gel-typography/typography";`
 3. Override any of the configurable options defined at the top of the `_typography.scss` partial either directly before the component is included or in your projects own configuration file providing that file is included before this component. e.g.
 
-    $gel-namespace: 'sport-';
-    $gel-include-base-elements: true;
-    @import "bower_components/gel-typography/typography";
+```
+$gel-namespace: 'sport-';
+$gel-include-base-elements: true;
+@import "bower_components/gel-typography/typography";
+```
 
-**Note:** if this is the first Bower component installed within your project you must first initialise Bower within your project: `bower init` and follow the instructions. This will create a `bower.json` file within your project. 
+**Note:** if this is the first Bower component installed within your project you must first initialise Bower within your project: `bower init` and follow the instructions. This will create a `bower.json` file within your project.
 
 ### Credit
 
