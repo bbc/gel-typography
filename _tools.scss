@@ -10,6 +10,6 @@
 
     // If a line-height is defined then return that also
     @if (type-of($line-height) == number) {
-        @include rem('line-height', $font-size);
+        @include rem('line-height', $line-height);
     }
 }
