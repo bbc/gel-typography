@@ -7,12 +7,6 @@
  * a range of devices. We take a `Touch First` approach to typography, adjustments
  * are then made based on if a primary input other than touch has been detected
  *
- * GEL Typography groups:
- *
- * Group A - Default sizing (feaure phones)
- * Group B - Sizes applied at 320px (deafult & smart phone)
- * Group C - Sizes applied at 600px (typically tablet devices)
- * Group D - Sizes applied when touch is not available (typically desktop or laptop screens)
  */
 
 
@@ -29,13 +23,20 @@ $gel-group-c-breakpoint: medium;
 $gel-namespace: 'gel-' !default;
 $gel-touch-class: 'no-touch' !default;
 
+$gel-include-font-family: false !default;
 $gel-include-base-elements: false !default;
 
 
-// Not sure if this lives in here, if we even need this (e.g. Barlesque gives us this),
-// or if it needs to be abstracted out into a 'GEL Base' repo
-body {
-    font: Arial, sans-serif;
+/**
+ * Barlesque will set the correct font-family on the <body> tag but if you're working on a project
+ * without Barlesque you might want to enable this flag
+ */
+@if ( $gel-include-font-family == true ) {
+
+    body {
+        font-family: Arial, Helvetica, freesans, sans-serif;
+    }
+
 }
 
 
@@ -48,6 +49,17 @@ body {
     @include rem('letter-spacing', -1px);
     font-weight: bold;
 }
+
+    // Regular variant
+    .#{$gel-namespace}trafalgar-regular,
+    %#{$gel-namespace}trafalgar-regular {
+        @extend %#{$gel-namespace}trafalgar;
+
+        &,
+        .#{$gel-touch-class} & {
+            font-weight: normal;
+        }
+    }
 
 
 /**
@@ -79,6 +91,17 @@ body {
     @include rem('letter-spacing', -1px);
     font-weight: bold;
 }
+
+    // Regular variant
+    .#{$gel-namespace}great-primer-regular,
+    %#{$gel-namespace}great-primer-regular {
+        @extend %#{$gel-namespace}great-primer;
+
+        &,
+        .#{$gel-touch-class} & {
+            font-weight: normal;
+        }
+    }
 
 
 /**

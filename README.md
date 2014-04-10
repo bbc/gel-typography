@@ -16,7 +16,7 @@ The following class names allow us to scale elements independently from one anot
 
 - Trafalgar (`.trafalgar`) - typically used for the main page heading or article heading
 - Double Pica (`.double-pica`) - generally used for sub-headings
-- Great Primer (`.great-primer`) - thrid level headings typically used with a `<h3>` tag
+- Great Primer (`.great-primer`) - third level headings typically used with a `<h3>` tag
 - Pica (`.pica`) - Typical paragraph/body text is wrapped with `<p>` elements
 - Long Primer (`.long-primer`) - Index page text and image captions are sized
 - Brevier (`.brevier`) - Timestamps and bylines
@@ -26,14 +26,14 @@ The following class names allow us to scale elements independently from one anot
 
 GEL Typography proposes using four groups to apply a scale appropriately across a range of devices and input methods
 
-- **Group A** - Default sizing (feaure phones)
-- **Group B** - Sizes applied at 320px (deafult & smart phone)
+- **Group A** - Default sizing (feature phones)
+- **Group B** - Sizes applied at 320px (default & smart phone)
 - **Group C** - Sizes applied at 600px (typically tablet devices)
-- **Group D** - Sizes applied when touch is not available (typically desktop or laptop screens)
+- **Group D** - Sizes applied at 600px when touch is not available (typically desktop or laptop screens)
 
 ### Usage
 
-1. Install the component: `bower install https://github.com/bbc-sport/gel-typography.git --save-dev`. This will download the component into your project folder and the `--save-dev` flag will add it to your `bower.json` file.
+1. Install the component: `bower install https://github.com/bbc-sport/gel-typography.git --save`. This will download the component into your project folder and the `--save` flag will add it to your `bower.json` file.
 2. Import the component into your project's Sass file `@import "bower_components/gel-typography/typography";`
 3. Override any of the configurable options defined at the top of the `_typography.scss` partial either directly before the component is included or in your projects own configuration file providing that file is included before this component. e.g.
 
