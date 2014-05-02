@@ -5,7 +5,6 @@
     "shaun.bent@bbc.co.uk"
   ],
   "description": "BBC GEL Responsive Typography",
-  "main": "_typography.scss",
   "keywords": [
     "Sass",
     "Typography",
