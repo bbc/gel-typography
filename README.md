@@ -1,12 +1,13 @@
 # GEL Responsive Typography
 
-The GEL Responsive typography has been optimised based on the width of the viewport and the input method being used. We take a 'Touch First' approach to typography, adjustments are then made based on if a primary input other than touch has been detected.
+*The GEL Responsive Typography scale has been established to work on all devices and is independent of device size and resolution.* 
+The typographic scale has been optimised based on the size of the viewport and the input method being used. We take a 'Touch First' approach to typography, adjustments are then made if a primary input other than touch has been detected.
 
 ## Background
 
 In order to typographically size elements on the page independently and replicate styles across a range of elements we've established a naming convention that inherits from traditional type measuring techniques. Type dimensions were originally measured from a piece of metal bearing that was cast for each character.
 
-Type sizes were originally named. Catalogs with such names appeared as early as 1592. Some of the names came from the type of book produced in that size. Cicero was a size used for editions of classical authors; Primer was used for religious books ordered by Henry VIII.
+Type sizes were originally named - Catalogs with such names appeared as early as 1592. Some of the names came from the type of book produced in that size. Cicero was a size used for editions of classical authors; Primer was used for religious books ordered by Henry VIII.
 
 In order to stay inline with the BBC brand and audience, each type specification is based on typically British names. The names refer to corresponding point sizes but there is no relationship between the names and other defined standards like the inch.
 
@@ -21,6 +22,8 @@ The following class names allow us to scale elements independently from one anot
 - Long Primer (`.long-primer`) - Index page text and image captions are sized
 - Brevier (`.brevier`) - Timestamps and bylines
 - Minion (`.minion`) - Small header all capitals
+
+The benefit of this is that it provides memorable context to what will be a scale of changeable, device independent sizes. The names can be used by developers as useful class names so that styling rules can be applied independently to any HTML element.
 
 ### Typography Hierarchies
 
@@ -49,3 +52,4 @@ $gel-include-base-elements: true;
 
 - [Shaun Bent](http://www.twitter.com/shaunbent)
 - [Alexander Jones](https://twitter.com/itsaljones)
+- [Rory Pickering] 
