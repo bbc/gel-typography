@@ -52,4 +52,4 @@ $gel-include-base-elements: true;
 
 - [Shaun Bent](http://www.twitter.com/shaunbent)
 - [Alexander Jones](https://twitter.com/itsaljones)
-- [Rory Pickering] 
+- Rory Pickering
