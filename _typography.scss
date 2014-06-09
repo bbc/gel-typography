@@ -8,274 +8,37 @@
  * are then made based on if a primary input other than touch has been detected
  *
  */
-
-
-// Import the `tools` used by this typography partial - these will need
-// to be abstracted out into their own repo and listed as a dependancy
-// in bower as part of the next phase of development
+@import 'settings';
 @import 'tools';
 
 
-// Predefined configuration variables
-$gel-group-b-breakpoint: 320px;
-$gel-group-c-breakpoint: medium;
-
-$gel-namespace: 'gel-' !default;
-$gel-touch-class: 'no-touch' !default;
-
-$gel-include-font-family: false !default;
-$gel-include-base-elements: false !default;
-
-
 /**
- * Barlesque will set the correct font-family on the <body> tag but if you're working on a project
- * without Barlesque you might want to enable this flag
+ * Output the typography styles for the 4 groups
  */
+@include gel-output-type-group('group-a', $bold-variant: true);
+
+@include mq($from: group-b) {
+    @include gel-output-type-group('group-b');
+}
+
+@include mq($from: group-c) {
+    @include gel-output-type-group('group-c', $no-touch-styles: true);
+}
+
+
+
 @if ( $gel-include-font-family == true ) {
 
+    /**
+     * Barlesque will set the correct font-family on the <body> tag but if you're working on a project
+     * without Barlesque you might want to enable this flag
+     */
     body {
         font-family: Arial, Helvetica, freesans, sans-serif;
     }
 
 }
 
-
-/**
- * Trafalgar - typically used for the main page heading or article heading.
- */
-.#{$gel-namespace}trafalgar,
-%#{$gel-namespace}trafalgar {
-    @include font-size(20px, 24px);
-    @include rem('letter-spacing', -1px);
-    font-weight: bold;
-}
-
-    // Regular variant
-    .#{$gel-namespace}trafalgar-regular,
-    %#{$gel-namespace}trafalgar-regular {
-        @extend %#{$gel-namespace}trafalgar;
-
-        &,
-        .#{$gel-touch-class} & {
-            font-weight: normal;
-        }
-    }
-
-
-/**
- * Double Pica - generally used for sub-headings
- */
-.#{$gel-namespace}double-pica,
-%#{$gel-namespace}double-pica {
-    @include font-size(20px, 24px);
-}
-
-    // Bold variant
-    .#{$gel-namespace}double-pica-bold,
-    %#{$gel-namespace}double-pica-bold {
-        @extend %#{$gel-namespace}double-pica;
-
-        &,
-        .#{$gel-touch-class} & {
-            font-weight: bold;
-        }
-    }
-
-
-/**
- * Great Primer - thrid level headings typically used with a `<h3>` tag
- */
-.#{$gel-namespace}great-primer,
-%#{$gel-namespace}great-primer {
-    @include font-size(18px, 20px);
-    @include rem('letter-spacing', -1px);
-    font-weight: bold;
-}
-
-    // Regular variant
-    .#{$gel-namespace}great-primer-regular,
-    %#{$gel-namespace}great-primer-regular {
-        @extend %#{$gel-namespace}great-primer;
-
-        &,
-        .#{$gel-touch-class} & {
-            font-weight: normal;
-        }
-    }
-
-
-/**
- * Pica - Typical paragraph text is wrapped with `<p>` elements
- */
-.#{$gel-namespace}pica,
-%#{$gel-namespace}pica {
-    @include font-size(15px, 20px);
-}
-
-    // Bold variant
-    .#{$gel-namespace}pica-bold,
-    %#{$gel-namespace}pica-bold {
-        @extend %#{$gel-namespace}pica;
-
-        &,
-        .#{$gel-touch-class} & {
-            font-weight: bold;
-        }
-    }
-
-
-/**
- * Long Primer - Index page text and image captions are sized
- */
-.#{$gel-namespace}long-primer,
-%#{$gel-namespace}long-primer {
-    @include font-size(15px, 18px);
-}
-
-    // Bold variant
-    .#{$gel-namespace}long-primer-bold,
-    %#{$gel-namespace}long-primer-bold {
-        @extend %#{$gel-namespace}long-primer;
-
-        &,
-        .#{$gel-touch-class} & {
-            font-weight: bold;
-        }
-    }
-
-
-/**
- * Brevier - Timestamps and bylines
- */
-.#{$gel-namespace}brevier,
-%#{$gel-namespace}brevier {
-    @include font-size(14px, 16px);
-}
-
-    // Bold variant
-    .#{$gel-namespace}brevier-bold,
-    %#{$gel-namespace}brevier-bold {
-        @extend %#{$gel-namespace}brevier;
-
-        &,
-        .#{$gel-touch-class} & {
-            font-weight: bold;
-        }
-    }
-
-
-/**
- * Minion - Small header capitals
- */
-.#{$gel-namespace}minion,
-%#{$gel-namespace}minion {
-    @include font-size(12px, 16px);
-    text-transform: uppercase;
-}
-
-    // Bold variant
-    .#{$gel-namespace}minion-bold,
-    %#{$gel-namespace}minion-bold {
-        @extend %#{$gel-namespace}minion;
-
-        &,
-        .#{$gel-touch-class} & {
-            font-weight: bold;
-        }
-    }
-
-
-/**
- * Group B - Sizes applied are applied at 320px
- */
-@include mq($from: $gel-group-b-breakpoint) {
-    .#{$gel-namespace}trafalgar,
-    %#{$gel-namespace}trafalgar {
-        @include font-size(24px, 28px);
-    }
-
-    .#{$gel-namespace}great-primer,
-    %#{$gel-namespace}great-primer {
-        @include font-size(20px, 24px);
-    }
-
-    .#{$gel-namespace}pica,
-    %#{$gel-namespace}pica {
-        @include font-size(16px, 22px);
-    }
-
-    .#{$gel-namespace}long-primer,
-    %#{$gel-namespace}long-primer {
-        @include font-size(16px, 20px);
-    }
-}
-
-
-/**
- * Group C - Sizes applied are applied at 600px
- */
-@include mq($from: $gel-group-c-breakpoint) {
-    .#{$gel-namespace}trafalgar,
-    %#{$gel-namespace}trafalgar {
-        @include font-size(36px, 40px);
-
-        .#{$gel-touch-class} & {
-            @include font-size(32px, 32px);
-        }
-    }
-
-    .#{$gel-namespace}double-pica,
-    %#{$gel-namespace}double-pica {
-        @include font-size(28px, 32px);
-
-        .#{$gel-touch-class} & {
-            @include font-size(24px, 24px);
-        }
-    }
-
-    .#{$gel-namespace}great-primer,
-    %#{$gel-namespace}great-primer {
-        @include font-size(24px, 28px);
-
-        .#{$gel-touch-class} & {
-            @include font-size(20px, 20px);
-        }
-    }
-
-    .#{$gel-namespace}pica,
-    %#{$gel-namespace}pica {
-        @include font-size(18px, 24px);
-
-        .#{$gel-touch-class} & {
-            @include font-size(16px, 22px);
-        }
-    }
-
-    .#{$gel-namespace}long-primer,
-    %#{$gel-namespace}long-primer {
-        @include font-size(16px, 22px);
-
-        .#{$gel-touch-class} & {
-            @include font-size(14px, 18px);
-        }
-    }
-
-    .#{$gel-namespace}brevier,
-    %#{$gel-namespace}brevier {
-        .#{$gel-touch-class} & {
-            @include font-size(13px);
-        }
-    }
-
-    .#{$gel-namespace}minion,
-    %#{$gel-namespace}minion {
-        @include font-size(13px);
-
-        .#{$gel-touch-class} & {
-            @include font-size(12px);
-        }
-    }
-}
 
 @if ( $gel-include-base-elements == true ) {
 
