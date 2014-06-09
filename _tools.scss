@@ -6,7 +6,7 @@
  * Output the specified type group and optional create a bold or non touch
  * variant if requested
  */
-@mixin gel-output-type-group($group-name, $bold-variant: false, $touch-detection: false) {
+@mixin gel-output-type-group($group-name, $bold-variant: false, $no-touch-styles: false) {
 
     // Check that we've got the right type of data
     @if (type-of($gel-type-settings) != map) {
@@ -21,16 +21,16 @@
         @if map_has_key($type-values, $group-name) {
 
             // Output the styles for the current type class
-            .#{$gel-typography-namespace}#{$type-class},
-            %#{$gel-typography-namespace}#{$type-class} {
+            .#{$gel-type-namespace}#{$type-class},
+            %#{$gel-type-namespace}#{$type-class} {
 
                 @include gel-output-type-settings(map_get($type-values, $group-name));
 
                 // If we need touch detection then return the styles for the relivant group
-                @if $touch-detection {
+                @if $touch-styles {
 
-                    .#{$gel-typography-touch-class} & {
-                        @include gel-output-type-settings(map_get($type-values, $gel-typography-no-touch-group));
+                    .#{$gel-type-touch-class} & {
+                        @include gel-output-type-settings(map_get($type-values, $gel-type-no-touch-group));
                     }
 
                 }
@@ -40,12 +40,12 @@
             // Output a bold variant for each font
             @if $bold-variant {
 
-                .#{$gel-typography-namespace}#{$type-class}-bold,
-                %#{$gel-typography-namespace}#{$type-class}-bold {
+                .#{$gel-type-namespace}#{$type-class}-bold,
+                %#{$gel-type-namespace}#{$type-class}-bold {
                     @extend %#{$gel-typography-namespace}#{$type-class};
 
                     &,
-                    .#{$gel-typography-touch-class} & {
+                    .#{$gel-type-touch-class} & {
                         font-weight: bold;
                         @include gel-output-letter-spacing-adjustment(map_get($type-values, $group-name));
                     }
