@@ -3,13 +3,105 @@
 \*------------------------------------*/
 
 /**
- * Return a flexible font-size and line-height with a pixel based fallback
+ * Output the specified type group and optional create a bold or non touch
+ * variant if requested
  */
-@mixin font-size($font-size, $line-height: false) {
-    @include rem('font-size', $font-size);
+@mixin gel-output-type-group($group-name, $bold-variant: false, $touch-detection: false) {
 
-    // If a line-height is defined then return that also
-    @if (type-of($line-height) == number) {
-        @include rem('line-height', $line-height);
+    // Check that we've got the right type of data
+    @if (type-of($gel-type-settings) != map) {
+        @warn "$gel-type-settings is expected to be a Sass map, looks like somethings not right here";
+        @return nil;
+    }
+
+    // Loop through each font class
+    @each $type-class, $type-values in $gel-type-settings {
+
+        // Check if styles are defined for the current group
+        @if map_has_key($type-values, $group-name) {
+
+            // Output the styles for the current type class
+            .#{$gel-typography-namespace}#{$type-class},
+            %#{$gel-typography-namespace}#{$type-class} {
+
+                @include gel-output-type-settings(map_get($type-values, $group-name));
+
+                // If we need touch detection then return the styles for the relivant group
+                @if $touch-detection {
+
+                    .#{$gel-typography-touch-class} & {
+                        @include gel-output-type-settings(map_get($type-values, $gel-typography-no-touch-group));
+                    }
+
+                }
+
+            }
+
+            // Output a bold variant for each font
+            @if $bold-variant {
+
+                .#{$gel-typography-namespace}#{$type-class}-bold,
+                %#{$gel-typography-namespace}#{$type-class}-bold {
+                    @extend %#{$gel-typography-namespace}#{$type-class};
+
+                    &,
+                    .#{$gel-typography-touch-class} & {
+                        font-weight: bold;
+                        @include gel-output-letter-spacing-adjustment(map_get($type-values, $group-name));
+                    }
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+/**
+ * Loop through a supplied Sass map and return each key & value
+ * as CSS properities and values
+ */
+@mixin gel-output-type-settings($type-values) {
+
+    @each $property, $value in $type-values {
+
+        // If we've got a pixel value then convert it to a `rem`
+        @if ($gel-type-enable-rem-output and type-of($value) == number) {
+
+            // Check we've got a px value that we'll need for the `rem` convertion
+            @if (unitless($value)) {
+                @warn "Assuming #{$value} to be in pixels, attempting to convert it into pixels for you";
+                $value: $value + 0px;
+            }
+
+            // Pass the property and value into the rem function
+            @include rem($property, $value);
+        } @else {
+            #{$property}: $value;
+        }
+
+    }
+
+}
+
+/**
+ * The GEL typographic style relies on tight tracking for large headers
+ * By default a negative adjustment to letter spacing is applied to all
+ * type sizes above 18px, proportional to –3%. In CSS this equates to -1px
+ *
+ * This mixin is used to automatically apply this adjustment if the font-size
+ * meets the above critera
+ */
+@mixin gel-output-letter-spacing-adjustment($type-values) {
+
+    // only return this if the letter spacing adjustment is enabled
+    @if $gel-letter-spacing-adjustment {
+
+        // check if we've got a font-size value and its greater than 18px
+        @if (map-has-key($type-values, font-size) and map-get($type-values, font-size) > 18px) {
+            @include rem('letter-spacing', -1px);
+        }
     }
 }
