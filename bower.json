@@ -23,5 +23,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "sass-mq": "~2.0.0"
+  }
 }
