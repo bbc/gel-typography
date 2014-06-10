@@ -10,45 +10,49 @@
 
     // Check that we've got the right type of data
     @if (type-of($gel-type-settings) != map) {
+
         @warn "$gel-type-settings is expected to be a Sass map, looks like somethings not right here";
-        @return nil;
-    }
 
-    // Loop through each font class
-    @each $type-class, $type-values in $gel-type-settings {
+    } @else {
 
-        // Check if styles are defined for the current group
-        @if map_has_key($type-values, $group-name) {
+        // Loop through each font class
+        @each $type-class, $type-values in $gel-type-settings {
 
-            // Output the styles for the current type class
-            .#{$gel-type-namespace}#{$type-class},
-            %#{$gel-type-namespace}#{$type-class} {
+            // Check if styles are defined for the current group
+            @if map_has_key($type-values, $group-name) {
 
-                @include gel-output-type-settings(map_get($type-values, $group-name));
+                // Output the styles for the current type class
+                .#{$gel-type-namespace}#{$type-class},
+                %#{$gel-type-namespace}#{$type-class} {
 
-                // If we need touch detection then return the styles for the relivant group
-                @if $touch-styles {
+                    @include gel-output-type-settings(map_get($type-values, $group-name));
 
-                    .#{$gel-type-touch-class} & {
-                        @include gel-output-type-settings(map_get($type-values, $gel-type-no-touch-group));
+                    // If we need touch detection then return the styles for the relivant group
+                    @if $no-touch-styles {
+
+                        .#{$gel-type-touch-class} & {
+                            @include gel-output-type-settings(map_get($type-values, $gel-type-no-touch-group));
+                        }
+
                     }
 
                 }
 
-            }
+                // Output a bold variant for each font
+                @if $bold-variant {
 
-            // Output a bold variant for each font
-            @if $bold-variant {
+                    .#{$gel-type-namespace}#{$type-class}-bold,
+                    %#{$gel-type-namespace}#{$type-class}-bold {
+                        @extend %#{$gel-type-namespace}#{$type-class};
 
-                .#{$gel-type-namespace}#{$type-class}-bold,
-                %#{$gel-type-namespace}#{$type-class}-bold {
-                    @extend %#{$gel-typography-namespace}#{$type-class};
+                        &,
+                        .#{$gel-type-touch-class} & {
+                            font-weight: bold;
+                            @include gel-output-letter-spacing-adjustment(map_get($type-values, $group-name));
+                        }
 
-                    &,
-                    .#{$gel-type-touch-class} & {
-                        font-weight: bold;
-                        @include gel-output-letter-spacing-adjustment(map_get($type-values, $group-name));
                     }
+
                 }
 
             }
@@ -72,14 +76,19 @@
 
             // Check we've got a px value that we'll need for the `rem` convertion
             @if (unitless($value)) {
+
                 @warn "Assuming #{$value} to be in pixels, attempting to convert it into pixels for you";
                 $value: $value + 0px;
+
             }
 
             // Pass the property and value into the rem function
             @include rem($property, $value);
+
         } @else {
+
             #{$property}: $value;
+
         }
 
     }
@@ -97,11 +106,15 @@
 @mixin gel-output-letter-spacing-adjustment($type-values) {
 
     // only return this if the letter spacing adjustment is enabled
-    @if $gel-letter-spacing-adjustment {
+    @if $gel-type-letter-spacing-adjustment {
 
         // check if we've got a font-size value and its greater than 18px
         @if (map-has-key($type-values, font-size) and map-get($type-values, font-size) > 18px) {
+
             @include rem('letter-spacing', -1px);
+
         }
+
     }
+
 }
