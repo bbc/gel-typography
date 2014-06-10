@@ -11,7 +11,7 @@
     // check that we've got the right type of data
     @if (type-of($gel-type-settings) != map) {
 
-        @warn "$gel-type-settings is expected to be a Sass map, looks like somethings not right here";
+        @warn "$gel-type-settings is expected to be a Sass map, looks like something's not right here";
 
     } @else {
 
