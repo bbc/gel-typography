@@ -39,7 +39,7 @@ $gel-type-default-settings: (
         )
     ),
     'double-pica': (
-        'group-a' (
+        'group-a': (
           'font-size': 20px,
           'line-height': 24px
         ),
@@ -53,7 +53,7 @@ $gel-type-default-settings: (
         )
     ),
     'great-primer': (
-        'group-a' (
+        'group-a': (
           'font-size': 18px,
           'line-height': 20px
         ),
@@ -71,7 +71,7 @@ $gel-type-default-settings: (
         )
     ),
     'pica': (
-        'group-a' (
+        'group-a': (
           'font-size': 15px,
           'line-height': 20px
         ),
@@ -89,7 +89,7 @@ $gel-type-default-settings: (
         )
     ),
     'long-primer': (
-        'group-a' (
+        'group-a': (
           'font-size': 15px,
           'line-height': 18px
         ),
@@ -106,7 +106,7 @@ $gel-type-default-settings: (
         )
     ),
     'brevier': (
-        'group-a' (
+        'group-a': (
           'font-size': 14px,
           'line-height': 16px
         ),
@@ -115,9 +115,10 @@ $gel-type-default-settings: (
         )
     ),
     'minion': (
-        'group-a' (
+        'group-a': (
           'font-size': 12px,
-          'line-height': 16px
+          'line-height': 16px,
+          'text-transform': uppercase
         ),
         'group-c': (
           'font-size': 13px
