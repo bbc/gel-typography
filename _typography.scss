@@ -27,7 +27,7 @@
 
 
 
-@if ( $gel-include-font-family == true ) {
+@if ( $gel-type-enable-font-family == true ) {
 
     /**
      * Barlesque will set the correct font-family on the <body> tag but if you're working on a project
@@ -40,7 +40,7 @@
 }
 
 
-@if ( $gel-include-base-elements == true ) {
+@if ( $gel-type-enable-base-elements == true ) {
 
     /**
      * Map the GEL Typography classes to the relivant
