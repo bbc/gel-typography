@@ -10,7 +10,7 @@ Background information relating to the [GEL Responsive Typography Guidelines](ht
 
 ### Usage
 
-See [Setup & Configuration](https://github.com/bbc-sport/gel-typography/wiki/GEL-Typography-Guidelines) guide.
+See [Setup & Configuration](https://github.com/bbc-sport/gel-typography/wiki/GEL-Typography-Guidelines) guide and more details on the [BBC GEL website](http://www.bbc.co.uk/gel).
 
 ### Credit
 
