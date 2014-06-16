@@ -7,7 +7,6 @@ $gel-type-breakpoints: (
     group-b: 320px,
     group-c: 600px
 ) !default;
-$gel-type-settings: ( ) !default;
 $gel-type-namespace: 'gel-' !default;
 $gel-type-touch-class: 'no-touch' !default;
 $gel-type-no-touch-group: 'group-d';
@@ -19,7 +18,7 @@ $gel-type-enable-font-family: false !default;
 $gel-type-enable-base-elements: false !default;
 
 // default GEL typography configuration
-$gel-type-default-settings: (
+$gel-type-settings: (
     'trafalgar': (
         'group-a': (
           'font-size': 20px,
@@ -127,10 +126,7 @@ $gel-type-default-settings: (
           'font-size': 12px
         )
     )
-);
-
-// merge any custom type configurations with the defaults
-$gel-type-settings: map-merge($gel-type-default-settings, $gel-type-settings);
+) !default;
 
 // merge the GEL type breakpoints into Sass Mq
 $mq-breakpoints: map-merge($mq-breakpoints, $gel-type-breakpoints);
