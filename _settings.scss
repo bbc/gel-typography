@@ -10,6 +10,8 @@ $gel-type-breakpoints: (
 $gel-type-namespace: 'gel-' !default;
 $gel-type-touch-class: 'no-touch' !default;
 $gel-type-no-touch-group: 'group-d';
+$gel-type-letter-spacing-threshold: 18px !default;
+$gel-type-letter-spacing-adjustment-amount: -1px !default;
 
 // output configuration
 $gel-type-enable-rem-output: true !default;
