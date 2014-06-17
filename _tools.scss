@@ -48,7 +48,7 @@
                         &,
                         .#{$gel-type-touch-class} & {
                             font-weight: bold;
-                            @include gel-output-letter-spacing-adjustment(map_get($type-values, $group-name));
+                            @include gel-output-letter-spacing-adjustment($type-class);
                         }
 
                     }
@@ -103,18 +103,58 @@
  * This mixin is used to automatically apply this adjustment if the font-size
  * meets the above critera
  */
-@mixin gel-output-letter-spacing-adjustment($type-values) {
+@mixin gel-output-letter-spacing-adjustment($type-class) {
 
     // only return this if the letter spacing adjustment is enabled
     @if $gel-type-letter-spacing-adjustment {
 
-        // check if we've got a font-size value and its greater than 18px
-        @if (map-has-key($type-values, font-size) and map-get($type-values, font-size) > 18px) {
+        // Sass doesn't offer continue or break functionally so we need to do this - Boo
+        $letter-spacing-active: false;
 
-            @include rem('letter-spacing', -1px);
+        // get the map for the given type class
+        $type-class-settings: map-get($gel-type-settings, $type-class);
+
+        // loop through all the type groups
+        @each $type-group, $type-values in $type-class-settings {
+
+            // check we've not already output the adjustment and if the threshold is met
+            @if ($letter-spacing-active != true and gel-letter-spacing-threshold($type-values)) {
+
+                $letter-spacing-active: true;
+
+                // if the group is in the breakpoints map output mq else just return it
+                @if (map-has-key($gel-type-breakpoints, $type-group)) {
+
+                    @include mq($from: $type-group) {
+                        @include rem('letter-spacing', $gel-type-letter-spacing-adjustment-amount);
+                    }
+
+                } @else {
+
+                    @include rem('letter-spacing', $gel-type-letter-spacing-adjustment-amount);
+
+                }
+
+            }
 
         }
 
     }
+
+}
+
+/**
+ * A small function which contains the logic to see if the letter
+ * spacing adjustment threshold has been met
+ */
+@function gel-letter-spacing-threshold($type-values) {
+
+    @if (map-has-key($type-values, font-size) and map-get($type-values, font-size) > $gel-type-letter-spacing-threshold) {
+
+        @return true;
+
+    }
+
+    @return false;
 
 }
