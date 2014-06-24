@@ -10,7 +10,7 @@ Background information relating to the [GEL Responsive Typography Guidelines](ht
 
 ### Dependancies
 
-- Requires [Sass 3.3.x](http://blog.sass-lang.com/posts/184094-sass-33-is-released) to make use of [Sass Maps](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#maps
+- Requires [Sass 3.3.x](http://blog.sass-lang.com/posts/184094-sass-33-is-released) to make use of [Sass Maps](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#maps)
 
 > **Note:** We are aware that [libsass](https://github.com/sass/libsass/) doesn't currently support Sass Maps and as such this implementation is not current compatible with projects compiling their Sass using Libsass. We have our fingerscrossed that Libsass will implement Sass Maps in their [next major version](https://github.com/sass/libsass/releases/tag/v2.0).
 
