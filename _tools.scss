@@ -14,7 +14,7 @@
 
     } @else {
 
-        // is the requested group the no-touch group
+        // is the requested group the no-touch group?
         @if $group-name == $gel-type-no-touch-group {
 
             .#{$gel-type-touch-class} {
@@ -71,7 +71,7 @@
         // do we need output values or a modifier
         @if (type-of($value) == map) {
 
-            // create the class
+            // create the new modifier class
             &#{$property} {
                 @include gel-output-type-values($value);
             }
