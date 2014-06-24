@@ -10,12 +10,9 @@ $gel-type-breakpoints: (
 $gel-type-namespace: 'gel-' !default;
 $gel-type-touch-class: 'no-touch' !default;
 $gel-type-no-touch-group: 'group-d';
-$gel-type-letter-spacing-threshold: 18px !default;
-$gel-type-letter-spacing-adjustment-amount: -1px !default;
 
 // output configuration
 $gel-type-enable-rem-output: true !default;
-$gel-type-letter-spacing-adjustment: true !default;
 $gel-type-enable-font-family: false !default;
 $gel-type-enable-base-elements: false !default;
 
@@ -24,7 +21,11 @@ $gel-type-settings: (
     'trafalgar': (
         'group-a': (
           'font-size': 20px,
-          'line-height': 24px
+          'line-height': 24px,
+          '--bold': (
+              'font-weight': bold,
+              'letter-spacing': -1px
+          )
         ),
         'group-b': (
           'font-size': 24px,
@@ -42,7 +43,11 @@ $gel-type-settings: (
     'double-pica': (
         'group-a': (
           'font-size': 20px,
-          'line-height': 24px
+          'line-height': 24px,
+          '--bold': (
+              'font-weight': bold,
+              'letter-spacing': -1px
+          )
         ),
         'group-c': (
           'font-size': 28px,
@@ -56,11 +61,17 @@ $gel-type-settings: (
     'great-primer': (
         'group-a': (
           'font-size': 18px,
-          'line-height': 20px
+          'line-height': 20px,
+          '--bold': (
+              'font-weight': bold
+          )
         ),
         'group-b': (
           'font-size': 20px,
-          'line-height': 24px
+          'line-height': 24px,
+          '--bold': (
+              'letter-spacing': -1px
+          )
         ),
         'group-c': (
           'font-size': 24px,
@@ -74,7 +85,10 @@ $gel-type-settings: (
     'pica': (
         'group-a': (
           'font-size': 15px,
-          'line-height': 20px
+          'line-height': 20px,
+          '--bold': (
+              'font-weight': bold
+          )
         ),
         'group-b': (
           'font-size': 16px,
@@ -92,7 +106,10 @@ $gel-type-settings: (
     'long-primer': (
         'group-a': (
           'font-size': 15px,
-          'line-height': 18px
+          'line-height': 18px,
+          '--bold': (
+              'font-weight': bold
+          )
         ),
         'group-b': (
           'font-size': 16px,
@@ -109,7 +126,10 @@ $gel-type-settings: (
     'brevier': (
         'group-a': (
           'font-size': 14px,
-          'line-height': 16px
+          'line-height': 16px,
+          '--bold': (
+              'font-weight': bold
+          )
         ),
         'group-d': (
           'font-size': 13px
@@ -119,7 +139,10 @@ $gel-type-settings: (
         'group-a': (
           'font-size': 12px,
           'line-height': 16px,
-          'text-transform': uppercase
+          'text-transform': uppercase,
+          '--bold': (
+              'font-weight': bold
+          )
         ),
         'group-c': (
           'font-size': 13px
