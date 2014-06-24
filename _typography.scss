@@ -15,14 +15,15 @@
 /**
  * Output the typography styles for the 4 groups
  */
-@include gel-output-type-group('group-a', $bold-variant: true);
+@include gel-output-type-group('group-a');
 
 @include mq($from: group-b) {
     @include gel-output-type-group('group-b');
 }
 
 @include mq($from: group-c) {
-    @include gel-output-type-group('group-c', $no-touch-styles: true);
+    @include gel-output-type-group('group-c');
+    @include gel-output-type-group('group-d');
 }
 
 
