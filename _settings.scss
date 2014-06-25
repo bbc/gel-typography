@@ -9,6 +9,7 @@ $gel-type-breakpoints: (
 ) !default;
 $gel-type-namespace: 'gel-' !default;
 $gel-type-touch-class: 'no-touch' !default;
+$gel-type-base-group: 'group-a';
 $gel-type-no-touch-group: 'group-d';
 
 // output configuration
@@ -22,7 +23,7 @@ $gel-type-settings: (
         'group-a': (
           'font-size': 20px,
           'line-height': 24px,
-          '--bold': (
+          '-bold': (
               'font-weight': bold,
               'letter-spacing': -1px
           )
@@ -44,7 +45,7 @@ $gel-type-settings: (
         'group-a': (
           'font-size': 20px,
           'line-height': 24px,
-          '--bold': (
+          '-bold': (
               'font-weight': bold,
               'letter-spacing': -1px
           )
@@ -62,14 +63,14 @@ $gel-type-settings: (
         'group-a': (
           'font-size': 18px,
           'line-height': 20px,
-          '--bold': (
+          '-bold': (
               'font-weight': bold
           )
         ),
         'group-b': (
           'font-size': 20px,
           'line-height': 24px,
-          '--bold': (
+          '-bold': (
               'letter-spacing': -1px
           )
         ),
@@ -86,7 +87,7 @@ $gel-type-settings: (
         'group-a': (
           'font-size': 15px,
           'line-height': 20px,
-          '--bold': (
+          '-bold': (
               'font-weight': bold
           )
         ),
@@ -107,7 +108,7 @@ $gel-type-settings: (
         'group-a': (
           'font-size': 15px,
           'line-height': 18px,
-          '--bold': (
+          '-bold': (
               'font-weight': bold
           )
         ),
@@ -127,7 +128,7 @@ $gel-type-settings: (
         'group-a': (
           'font-size': 14px,
           'line-height': 16px,
-          '--bold': (
+          '-bold': (
               'font-weight': bold
           )
         ),
@@ -140,7 +141,7 @@ $gel-type-settings: (
           'font-size': 12px,
           'line-height': 16px,
           'text-transform': uppercase,
-          '--bold': (
+          '-bold': (
               'font-weight': bold
           )
         ),

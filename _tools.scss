@@ -50,7 +50,7 @@
             .#{$gel-type-namespace}#{$type-class},
             %#{$gel-type-namespace}#{$type-class} {
 
-                @include gel-output-type-values(map-get($type-values, $group-name), $type-class);
+                @include gel-output-type-values(map-get($type-values, $group-name), $type-class, $group-name);
 
             }
 
@@ -64,7 +64,7 @@
  * Loop through a supplied Sass map and return each key & value
  * as CSS properities and values
  */
-@mixin gel-output-type-values($type-values, $type-class: null) {
+@mixin gel-output-type-values($type-values, $type-class: null, $group-name: null) {
 
     @each $property, $value in $type-values {
 
@@ -73,6 +73,14 @@
 
             // create the new modifier class
             &#{$property} {
+
+                // if the current group is the base group then we should extend the parent
+                @if $group-name == $gel-type-base-group {
+
+                    @extend %#{$gel-type-namespace}#{$type-class};
+
+                }
+
                 @include gel-output-type-values($value);
             }
 
