@@ -11,24 +11,32 @@
 @import 'settings';
 @import 'tools';
 
+$enhanced: true !default;
 
-/**
- * Output the typography styles for the 4 groups
- */
-@include gel-output-type-group('group-a');
+@if ($gel-type-enable-markup-output == true) {
 
-@include mq($from: group-b) {
-    @include gel-output-type-group('group-b');
+    /**
+     * Output the typography styles for the 4 groups
+     */
+    @include gel-output-type-group('group-a');
+
+    @if $enhanced {
+
+        @include mq($from: group-b) {
+            @include gel-output-type-group('group-b');
+        }
+
+        @include mq($from: group-c) {
+            @include gel-output-type-group('group-c');
+            @include gel-output-type-group('group-d');
+        }
+
+    }
+
 }
 
-@include mq($from: group-c) {
-    @include gel-output-type-group('group-c');
-    @include gel-output-type-group('group-d');
-}
 
-
-
-@if ( $gel-type-enable-font-family == true ) {
+@if ($gel-type-enable-font-family == true) {
 
     /**
      * Barlesque will set the correct font-family on the <body> tag but if you're working on a project
