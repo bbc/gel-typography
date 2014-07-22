@@ -10,7 +10,7 @@
     // check that we've got the right type of data
     @if (type-of($gel-type-settings) != map) {
 
-        @warn "$gel-type-settings is expected to be a Sass map, looks like something's not right here";
+        @warn '$gel-type-settings is expected to be a Sass map, looks like something\'s not right here';
 
     } @else {
 
@@ -74,7 +74,7 @@
             // create the new modifier class
             &#{$property} {
 
-                // if the current group is the base group then we should extend the parent
+                // if the current group is not the base group then we should extend the parent
                 @if $group-name == $gel-type-base-group {
 
                     @extend %#{$gel-type-namespace}#{$type-class};
@@ -92,7 +92,7 @@
                 // check we've got a px value that we'll need for the `rem` convertion
                 @if (unitless($value)) {
 
-                    @warn "Assuming #{$value} to be in pixels, attempting to convert it into pixels for you";
+                    @warn 'Assuming #{$value} to be in pixels, attempting to convert it into pixels for you';
                     $value: $value + 0px;
 
                 }

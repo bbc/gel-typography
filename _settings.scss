@@ -3,10 +3,6 @@
 \*------------------------------------*/
 
 // general configuration
-$gel-type-breakpoints: (
-    group-b: 320px,
-    group-c: 600px
-) !default;
 $gel-type-namespace: 'gel-' !default;
 $gel-type-touch-class: 'no-touch' !default;
 $gel-type-base-group: 'group-a';
@@ -155,5 +151,11 @@ $gel-type-settings: (
     )
 ) !default;
 
-// merge the GEL type breakpoints into Sass Mq
-$mq-breakpoints: map-merge($mq-breakpoints, $gel-type-breakpoints);
+// add the typography breakpoints to the list of exisiting
+// breakpoints if Sass Mq is available
+@if mixin-exists(mq) {
+
+    $mq-breakpoints: mq-add-breakpoint(gel-type-group-b, 320px) !global;
+    $mq-breakpoints: mq-add-breakpoint(gel-type-group-c, 600px) !global;
+
+}

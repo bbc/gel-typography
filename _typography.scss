@@ -2,6 +2,7 @@
     #GEL TYPOGRAPHY
 \*------------------------------------*/
 
+
 /**
  * GEL Typography proposes using four groups to apply a scale appropriately across
  * a range of devices. We take a `Touch First` approach to typography, adjustments
@@ -15,21 +16,30 @@ $enhanced: true !default;
 
 @if ($gel-type-enable-markup-output == true) {
 
-    /**
-     * Output the typography styles for the 4 groups
-     */
-    @include gel-output-type-group('group-a');
+    // Check that we've got the mq mixin available
+    @if mixin-exists(mq) {
 
-    @if $enhanced {
+        /**
+         * Output the typography styles for the 4 groups
+         */
+        @include gel-output-type-group('group-a');
 
-        @include mq($from: group-b) {
-            @include gel-output-type-group('group-b');
+        @if $enhanced {
+
+            @include mq($from: gel-type-group-b) {
+                @include gel-output-type-group('group-b');
+            }
+
+            @include mq($from: gel-type-group-c) {
+                @include gel-output-type-group('group-c');
+                @include gel-output-type-group('group-d');
+            }
+
         }
 
-        @include mq($from: group-c) {
-            @include gel-output-type-group('group-c');
-            @include gel-output-type-group('group-d');
-        }
+    } @else {
+
+        @warn 'Missing Dependency! You need to include the Sass MQ Mixin: https://github.com/guardian/sass-mq';
 
     }
 
