@@ -1,0 +1,116 @@
+/*------------------------------------*\
+    #MEDIA
+\*------------------------------------*/
+
+/**
+ * Place any image- and text-like content side-by-side, as per:
+ * stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+ */
+$gel-media-collapse-at:           720px !default;
+
+/**
+ * The core media object
+ */
+.media,
+%media {
+    @extend %clearfix;
+    display: block;
+}
+
+.media__img,
+%media__img {
+    float: left;
+    margin-right: $gel-spacing-unit;
+
+    @include mq($from: $gel-gutter-change) {
+        margin-right: double($gel-spacing-unit);
+    }
+
+    > img {
+        display: block;
+    }
+}
+
+.media__body,
+%media__body {
+    overflow: hidden;
+    display: block;
+
+    &,
+    > :last-child {
+        margin-bottom: 0;
+    }
+
+}
+
+
+/**
+ * Reversed image location (right instead of left). Extends `.media`.
+ */
+.media--rev,
+%media--rev {
+
+    > .media__img,
+    > %media__img {
+        float: right;
+        margin-right: 0;
+        margin-left: $gel-spacing-unit;
+
+        @include mq($from: $gel-gutter-change) {
+            margin-left: double($gel-spacing-unit);
+        }
+    }
+
+}
+
+
+/**
+ * Flush media objects have no space between the image- and text-content.
+ */
+
+.media--flush,
+%media--flush {
+
+    > .media__img,
+    > %media__img {
+        margin-right: 0;
+        margin-left:  0;
+    }
+}
+
+
+/**
+ * Responsive media objects.
+ *
+ * There is a very pragmatic, simple implementation of a responsive media
+ * object, which simply places the text-content beneath the image-content.
+ *
+ * We use a `max-width` media query because:
+ *
+ * a) it is the least verbose method in terms of amount of code required.
+ * b) the media object’s default state is image-next-to-text, so its stacked
+ *    state is the exception, rather than the rule.
+ */
+@media screen and (max-width: $gel-media-collapse-at) {
+
+    .media--responsive,
+    %media--responsive {
+
+        /**
+         * Rework the spacings on regular media objects.
+         */
+        > .media__img,
+        > %media__img {
+            float: none;
+            margin-right: 0;
+            margin-bottom: $gel-spacing-unit;
+            margin-left:  0;
+
+            @include mq($from: $gel-margin-change) {
+                margin-bottom: double($gel-spacing-unit);
+            }
+        }
+
+    }
+
+}

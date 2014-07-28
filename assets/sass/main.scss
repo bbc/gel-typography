@@ -1,0 +1,80 @@
+/**
+ * Imports the various partials to create the main stylesheet
+ * for the site
+ *
+ * We import files in the following order, which is insired by
+ * Harry Roberts 'Inverted Triangle Architecture':
+ *
+ * SETTINGS - Sass vars, etc
+ * TOOLS - Mixins and functions
+ * GENERIC - High-level styles such as resets
+ * BASE - Initial site wide styling, typography
+ * OBJECTS - Object and abstractions
+ * COMPONENTS - Site/project specific UI elements
+ * TRUMPS - Overrides and helper classes
+ *
+ * The theory behind this archietecture is that styles should only
+ * become more specfic as we move down the file.
+ */
+
+/*------------------------------------*\
+	#SETTINGS
+\*------------------------------------*/
+
+@import 'settings.defaults';
+
+/*------------------------------------*\
+    #TOOLS
+\*------------------------------------*/
+
+@import '../../bower_components/sass-mq/mq';
+@import '../../bower_components/gel-typography/rem';
+@import '../../bower_components/inuit-functions/tools.functions';
+
+/*------------------------------------*\
+    #GENERIC
+\*------------------------------------*/
+
+@import '../../bower_components/inuit-normalize/generic.normalize';
+@import '../../bower_components/inuit-reset/generic.reset';
+@import '../../bower_components/inuit-box-sizing/generic.box-sizing';
+@import '../../bower_components/inuit-clearfix/generic.clearfix';
+@import 'generic.shared';
+
+/*------------------------------------*\
+    #BASE
+\*------------------------------------*/
+
+@import 'base.page';
+@import '../../bower_components/inuit-images/base.images';
+@import '../../bower_components/inuit-lists/base.lists';
+@import '../../bower_components/gel-typography/typography';
+
+/*------------------------------------*\
+    #OBJECTS
+\*------------------------------------*/
+
+@import 'objects.layout';
+@import 'objects.media';
+
+/*------------------------------------*\
+    #COMPONENTS
+\*------------------------------------*/
+
+@import 'components.global';
+@import 'components.device-status';
+@import 'components.type-demo';
+
+/*------------------------------------*\
+    #TRUMPS
+\*------------------------------------*/
+
+@import 'trumps.widths';
+
+$inuit-enable-margins:        true;
+$inuit-enable-margins--tiny:  true;
+$inuit-enable-margins--small: true;
+$inuit-enable-margins--large: true;
+$inuit-enable-margins--huge:  true;
+$inuit-enable-margins--none:  true;
+@import '../../bower_components/inuit-spacing/trumps.spacing';

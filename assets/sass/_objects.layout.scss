@@ -1,0 +1,51 @@
+/*------------------------------------*\
+    #LAYOUT
+\*------------------------------------*/
+
+/**
+ * Begin a layout group.
+ */
+.layout,
+%layout {
+    list-style: none;
+    margin:  0;
+    padding: 0;
+    margin-left: -$gel-spacing-unit;
+
+    @include mq($from: $gel-gutter-change) {
+        margin-left: -double($gel-spacing-unit);
+    }
+}
+
+/**
+ * 1. Cause columns to stack side-by-side.
+ * 2. Space columns apart.
+ * 3. Align columns to the tops of each other.
+ * 4. Full-width unless told to behave otherwise.
+ * 5. Required to combine fluid widths and fixed gutters.
+ */
+.layout__item,
+%layout__item {
+    display: inline-block; /* [1] */
+    padding-left: $gel-spacing-unit; /* [2] */
+    vertical-align: top; /* [3] */
+    width: 100%; /* [4] */
+
+    @include mq($from: $gel-gutter-change) {
+        padding-left: -double($gel-spacing-unit);
+    }
+}
+
+/**
+ * Make the layout items fill up from the center outward.
+ */
+.layout--center,
+%layout--center {
+    text-align: center;
+
+    > .layout__item,
+    > %layout__item {
+        text-align: left;
+    }
+
+}

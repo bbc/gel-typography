@@ -1,0 +1,2966 @@
+@charset "UTF-8";
+/**
+ * Imports the various partials to create the main stylesheet
+ * for the site
+ *
+ * We import files in the following order, which is insired by
+ * Harry Roberts 'Inverted Triangle Architecture':
+ *
+ * SETTINGS - Sass vars, etc
+ * TOOLS - Mixins and functions
+ * GENERIC - High-level styles such as resets
+ * BASE - Initial site wide styling, typography
+ * OBJECTS - Object and abstractions
+ * COMPONENTS - Site/project specific UI elements
+ * TRUMPS - Overrides and helper classes
+ *
+ * The theory behind this archietecture is that styles should only
+ * become more specfic as we move down the file.
+ */
+/*------------------------------------*\
+	#SETTINGS
+\*------------------------------------*/
+/*------------------------------------*\
+    #DEFAULTS
+\*------------------------------------*/
+/*------------------------------------*\
+    #TOOLS
+\*------------------------------------*/
+/*------------------------------------*\
+    #REM
+\*------------------------------------*/
+/**
+ * 'rem' is a Sass function that converts pixel values to rem values
+ * for whatever property is passed to it.
+ *
+ * Source: https://github.com/guardian/guss-rem
+ */
+/**
+ * Converts pixel values to rem values for whatever property is passed to it. It returns two
+ * lines of code — one of the regular pixel values (for old IE), and another with the
+ * converted rem values (for everyone else).
+ *
+ * A thrid value of true can be passed to optionally add the !impotant flag.
+ */
+/*------------------------------------*\
+    #GENERIC
+\*------------------------------------*/
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 9, ../../bower_components/inuit-normalize/_generic.normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+/* line 19, ../../bower_components/inuit-normalize/_generic.normalize.scss */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+/* line 32, ../../bower_components/inuit-normalize/_generic.normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+/* line 52, ../../bower_components/inuit-normalize/_generic.normalize.scss */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 65, ../../bower_components/inuit-normalize/_generic.normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+/* line 75, ../../bower_components/inuit-normalize/_generic.normalize.scss */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+/* line 87, ../../bower_components/inuit-normalize/_generic.normalize.scss */
+a {
+  background: transparent;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 95, ../../bower_components/inuit-normalize/_generic.normalize.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+/* line 107, ../../bower_components/inuit-normalize/_generic.normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+/* line 115, ../../bower_components/inuit-normalize/_generic.normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+/* line 124, ../../bower_components/inuit-normalize/_generic.normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+/* line 133, ../../bower_components/inuit-normalize/_generic.normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 142, ../../bower_components/inuit-normalize/_generic.normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 151, ../../bower_components/inuit-normalize/_generic.normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 159, ../../bower_components/inuit-normalize/_generic.normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 167, ../../bower_components/inuit-normalize/_generic.normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 171, ../../bower_components/inuit-normalize/_generic.normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+/* line 182, ../../bower_components/inuit-normalize/_generic.normalize.scss */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+/* line 190, ../../bower_components/inuit-normalize/_generic.normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+/* line 201, ../../bower_components/inuit-normalize/_generic.normalize.scss */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+/* line 209, ../../bower_components/inuit-normalize/_generic.normalize.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+/* line 219, ../../bower_components/inuit-normalize/_generic.normalize.scss */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+/* line 227, ../../bower_components/inuit-normalize/_generic.normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+/* line 250, ../../bower_components/inuit-normalize/_generic.normalize.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+/* line 264, ../../bower_components/inuit-normalize/_generic.normalize.scss */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+/* line 275, ../../bower_components/inuit-normalize/_generic.normalize.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 288, ../../bower_components/inuit-normalize/_generic.normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 300, ../../bower_components/inuit-normalize/_generic.normalize.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+/* line 309, ../../bower_components/inuit-normalize/_generic.normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 320, ../../bower_components/inuit-normalize/_generic.normalize.scss */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+/* line 332, ../../bower_components/inuit-normalize/_generic.normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+/* line 344, ../../bower_components/inuit-normalize/_generic.normalize.scss */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 355, ../../bower_components/inuit-normalize/_generic.normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+/* line 368, ../../bower_components/inuit-normalize/_generic.normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 377, ../../bower_components/inuit-normalize/_generic.normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 388, ../../bower_components/inuit-normalize/_generic.normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+/* line 397, ../../bower_components/inuit-normalize/_generic.normalize.scss */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+/* line 406, ../../bower_components/inuit-normalize/_generic.normalize.scss */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 417, ../../bower_components/inuit-normalize/_generic.normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 422, ../../bower_components/inuit-normalize/_generic.normalize.scss */
+td,
+th {
+  padding: 0;
+}
+
+/*------------------------------------*\
+    #RESET
+\*------------------------------------*/
+/**
+ * As well as using normalize.css, it is often advantageous to remove all
+ * margins from certain elements.
+ */
+/* line 9, ../../bower_components/inuit-reset/_generic.reset.scss */
+body,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul,
+form, fieldset, legend,
+figure,
+table, th, td, caption,
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Give a help cursor to elements that give extra info on `:hover`.
+ */
+/* line 28, ../../bower_components/inuit-reset/_generic.reset.scss */
+abbr[title],
+dfn[title] {
+  cursor: help;
+}
+
+/**
+ * Remove underlines from potentially troublesome elements.
+ */
+/* line 40, ../../bower_components/inuit-reset/_generic.reset.scss */
+u,
+ins {
+  text-decoration: none;
+}
+
+/**
+ * Apply faux underlines to inserted text via `border-bottom`.
+ */
+/* line 52, ../../bower_components/inuit-reset/_generic.reset.scss */
+ins {
+  border-bottom: 1px solid;
+}
+
+/*------------------------------------*\
+    #BOX-SIZING
+\*------------------------------------*/
+/**
+ * Set the global `box-sizing` state to `border-box`.
+ *
+ * css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+ * paulirish.com/2012/box-sizing-border-box-ftw
+ */
+/* line 11, ../../bower_components/inuit-box-sizing/_generic.box-sizing.scss */
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 19, ../../bower_components/inuit-box-sizing/_generic.box-sizing.scss */
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/*------------------------------------*\
+    #CLEARFIX
+\*------------------------------------*/
+/**
+ * Micro clearfix, as per: css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
+ * Extend the clearfix class with Sass to avoid the `.clearfix` class appearing
+ * over and over in your markup.
+ */
+/* line 13, ../../bower_components/inuit-clearfix/_generic.clearfix.scss */
+.clearfix:after,
+.media:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*------------------------------------*\
+    #SHARED
+\*------------------------------------*/
+/**
+ * Where `margin-bottom` is concerned,this value will be the same as the
+ * base line-height. This allows us to keep a consistent vertical rhythm.
+ * As per: csswizardry.com/2012/06/single-direction-margin-declarations
+ */
+/* line 10, ../sass/_generic.shared.scss */
+h1, h2, h3, h4, h5, h6,
+ul, ol, dl,
+blockquote, p, address,
+table,
+fieldset, figure,
+pre {
+  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
+}
+@media all and (min-width: 37.5em) {
+  /* line 10, ../sass/_generic.shared.scss */
+  h1, h2, h3, h4, h5, h6,
+  ul, ol, dl,
+  blockquote, p, address,
+  table,
+  fieldset, figure,
+  pre {
+    margin-bottom: 16px;
+    margin-bottom: 1rem;
+  }
+}
+
+/**
+ * We don't want to apply any font-weights to any elements so these can be controlled
+ * purely by the type classes
+ */
+/* line 28, ../sass/_generic.shared.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+/**
+ * Where `margin-left` is concerned we want to try and indent certain elements
+ * by a consistent amount. Define that amount once,here.
+ */
+/* line 40, ../sass/_generic.shared.scss */
+ul, ol, dd {
+  margin-left: 8px;
+  margin-left: 0.5rem;
+}
+@media all and (min-width: 37.5em) {
+  /* line 40, ../sass/_generic.shared.scss */
+  ul, ol, dd {
+    margin-bottom: 16px;
+    margin-bottom: 1rem;
+  }
+}
+
+/*------------------------------------*\
+    #BASE
+\*------------------------------------*/
+/*------------------------------------*\
+    #PAGE
+\*------------------------------------*/
+/**
+ * High-, page-level styling.
+ *
+ * 1. Set the default `font-size` and `line-height` for the entire project,
+ *    sourced from our default variables. The `font-size` is calculated to exist
+ *    in ems, the `line-height` is calculated to exist unitlessly.
+ * 2. Force scrollbars to always be visible to prevent awkward ‘jumps’ when
+ *    navigating between pages that do/do not have enough content to produce
+ *    scrollbars naturally.
+ * 3. Ensure the page always fills at least the entire height of the viewport.
+ * 4. Prevent certain mobile browsers from automatically zooming fonts.
+ * 5. Fonts on OSX will look more consistent with other systems that do not
+ *    render text using sub-pixel anti-aliasing.
+ */
+/* line 19, ../sass/_base.page.scss */
+html {
+  font-size: 1em;
+  /* [1] */
+  line-height: 1.5;
+  /* [1] */
+  background-color: white;
+  color: #333333;
+  overflow-y: scroll;
+  /* [2] */
+  min-height: 100%;
+  /* [3] */
+  -webkit-text-size-adjust: 100%;
+  /* [4] */
+  -ms-text-size-adjust: 100%;
+  /* [4] */
+  -moz-osx-font-smoothing: grayscale;
+  /* [5] */
+  -webkit-font-smoothing: antialiased;
+  /* [5] */
+}
+
+/*------------------------------------*\
+    #IMAGES
+\*------------------------------------*/
+/**
+ * 1. Fluid images for responsive purposes.
+ * 2. Offset `alt` text from surrounding copy.
+ * 3. Setting `vertical-align` removes the whitespace that appears under `img`
+ *    elements when they are dropped into a page as-is. Safer alternative to
+ *    using `display: block;`.
+ */
+/* line 12, ../../bower_components/inuit-images/_base.images.scss */
+img {
+  max-width: 100%;
+  /* [1] */
+  font-style: italic;
+  /* [2] */
+  vertical-align: middle;
+  /* [3] */
+}
+
+/**
+ * If a `width` and/or `height` attribute have been explicitly defined, let’s
+ * not make the image fluid.
+ */
+/* line 26, ../../bower_components/inuit-images/_base.images.scss */
+img[width],
+img[height] {
+  max-width: none;
+}
+
+/*------------------------------------*\
+    #LISTS
+\*------------------------------------*/
+/**
+ * Remove extra vertical spacing when nesting lists.
+ */
+/* line 10, ../../bower_components/inuit-lists/_base.lists.scss */
+li > ul,
+li > ol {
+  margin-bottom: 0;
+}
+
+/*------------------------------------*\
+    #GEL TYPOGRAPHY
+\*------------------------------------*/
+/**
+ * GEL Typography proposes using four groups to apply a scale appropriately across
+ * a range of devices. We take a `Touch First` approach to typography, adjustments
+ * are then made based on if a primary input other than touch has been detected
+ *
+ */
+/*------------------------------------*\
+    #SETTINGS
+\*------------------------------------*/
+/*------------------------------------*\
+    #TOOLS
+\*------------------------------------*/
+/**
+ * Output the specified type group and non touch variant if required
+ */
+/**
+ * We need to loop through each class, create a selector and placeholder
+ * and output the values
+ */
+/**
+ * Loop through a supplied Sass map and return each key & value
+ * as CSS properities and values
+ */
+/**
+ * Output the typography styles for the 4 groups
+ */
+/* line 50, ../../bower_components/gel-typography/_tools.scss */
+.gel-trafalgar,
+.gel-trafalgar-bold {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+}
+/* line 75, ../../bower_components/gel-typography/_tools.scss */
+.gel-trafalgar-bold {
+  font-weight: bold;
+  letter-spacing: -1px;
+  letter-spacing: -0.0625rem;
+}
+
+/* line 50, ../../bower_components/gel-typography/_tools.scss */
+.gel-double-pica,
+.gel-double-pica-bold {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+}
+/* line 75, ../../bower_components/gel-typography/_tools.scss */
+.gel-double-pica-bold {
+  font-weight: bold;
+  letter-spacing: -1px;
+  letter-spacing: -0.0625rem;
+}
+
+/* line 50, ../../bower_components/gel-typography/_tools.scss */
+.gel-great-primer,
+.gel-great-primer-bold {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 20px;
+  line-height: 1.25rem;
+}
+/* line 75, ../../bower_components/gel-typography/_tools.scss */
+.gel-great-primer-bold {
+  font-weight: bold;
+}
+
+/* line 50, ../../bower_components/gel-typography/_tools.scss */
+.gel-pica,
+.gel-pica-bold {
+  font-size: 15px;
+  font-size: 0.9375rem;
+  line-height: 20px;
+  line-height: 1.25rem;
+}
+/* line 75, ../../bower_components/gel-typography/_tools.scss */
+.gel-pica-bold {
+  font-weight: bold;
+}
+
+/* line 50, ../../bower_components/gel-typography/_tools.scss */
+.gel-long-primer,
+.gel-long-primer-bold {
+  font-size: 15px;
+  font-size: 0.9375rem;
+  line-height: 18px;
+  line-height: 1.125rem;
+}
+/* line 75, ../../bower_components/gel-typography/_tools.scss */
+.gel-long-primer-bold {
+  font-weight: bold;
+}
+
+/* line 50, ../../bower_components/gel-typography/_tools.scss */
+.gel-brevier,
+.gel-brevier-bold {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 16px;
+  line-height: 1rem;
+}
+/* line 75, ../../bower_components/gel-typography/_tools.scss */
+.gel-brevier-bold {
+  font-weight: bold;
+}
+
+/* line 50, ../../bower_components/gel-typography/_tools.scss */
+.gel-minion,
+.gel-minion-bold {
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 16px;
+  line-height: 1rem;
+  text-transform: uppercase;
+}
+/* line 75, ../../bower_components/gel-typography/_tools.scss */
+.gel-minion-bold {
+  font-weight: bold;
+}
+
+@media all and (min-width: 20em) {
+  /* line 50, ../../bower_components/gel-typography/_tools.scss */
+  .gel-trafalgar,
+  .gel-trafalgar-bold {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 28px;
+    line-height: 1.75rem;
+  }
+
+  /* line 50, ../../bower_components/gel-typography/_tools.scss */
+  .gel-great-primer,
+  .gel-great-primer-bold {
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 24px;
+    line-height: 1.5rem;
+  }
+  /* line 75, ../../bower_components/gel-typography/_tools.scss */
+  .gel-great-primer-bold {
+    letter-spacing: -1px;
+    letter-spacing: -0.0625rem;
+  }
+
+  /* line 50, ../../bower_components/gel-typography/_tools.scss */
+  .gel-pica,
+  .gel-pica-bold {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 22px;
+    line-height: 1.375rem;
+  }
+
+  /* line 50, ../../bower_components/gel-typography/_tools.scss */
+  .gel-long-primer,
+  .gel-long-primer-bold {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 20px;
+    line-height: 1.25rem;
+  }
+}
+@media all and (min-width: 37.5em) {
+  /* line 50, ../../bower_components/gel-typography/_tools.scss */
+  .gel-trafalgar,
+  .gel-trafalgar-bold {
+    font-size: 36px;
+    font-size: 2.25rem;
+    line-height: 40px;
+    line-height: 2.5rem;
+  }
+
+  /* line 50, ../../bower_components/gel-typography/_tools.scss */
+  .gel-double-pica,
+  .gel-double-pica-bold {
+    font-size: 28px;
+    font-size: 1.75rem;
+    line-height: 32px;
+    line-height: 2rem;
+  }
+
+  /* line 50, ../../bower_components/gel-typography/_tools.scss */
+  .gel-great-primer,
+  .gel-great-primer-bold {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 28px;
+    line-height: 1.75rem;
+  }
+
+  /* line 50, ../../bower_components/gel-typography/_tools.scss */
+  .gel-pica,
+  .gel-pica-bold {
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 24px;
+    line-height: 1.5rem;
+  }
+
+  /* line 50, ../../bower_components/gel-typography/_tools.scss */
+  .gel-long-primer,
+  .gel-long-primer-bold {
+    line-height: 22px;
+    line-height: 1.375rem;
+  }
+
+  /* line 50, ../../bower_components/gel-typography/_tools.scss */
+  .gel-minion,
+  .gel-minion-bold {
+    font-size: 13px;
+    font-size: 0.8125rem;
+  }
+
+  /* line 50, ../../bower_components/gel-typography/_tools.scss */
+  .no-touch .gel-trafalgar,
+  .no-touch .gel-trafalgar-bold {
+    font-size: 32px;
+    font-size: 2rem;
+    line-height: 32px;
+    line-height: 2rem;
+  }
+  /* line 50, ../../bower_components/gel-typography/_tools.scss */
+  .no-touch .gel-double-pica,
+  .no-touch .gel-double-pica-bold {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 24px;
+    line-height: 1.5rem;
+  }
+  /* line 50, ../../bower_components/gel-typography/_tools.scss */
+  .no-touch .gel-great-primer,
+  .no-touch .gel-great-primer-bold {
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 20px;
+    line-height: 1.25rem;
+  }
+  /* line 50, ../../bower_components/gel-typography/_tools.scss */
+  .no-touch .gel-pica,
+  .no-touch .gel-pica-bold {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 22px;
+    line-height: 1.375rem;
+  }
+  /* line 50, ../../bower_components/gel-typography/_tools.scss */
+  .no-touch .gel-long-primer,
+  .no-touch .gel-long-primer-bold {
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 18px;
+    line-height: 1.125rem;
+  }
+  /* line 50, ../../bower_components/gel-typography/_tools.scss */
+  .no-touch .gel-brevier,
+  .no-touch .gel-brevier-bold {
+    font-size: 13px;
+    font-size: 0.8125rem;
+  }
+  /* line 50, ../../bower_components/gel-typography/_tools.scss */
+  .no-touch .gel-minion,
+  .no-touch .gel-minion-bold {
+    font-size: 12px;
+    font-size: 0.75rem;
+  }
+}
+/*------------------------------------*\
+    #OBJECTS
+\*------------------------------------*/
+/*------------------------------------*\
+    #LAYOUT
+\*------------------------------------*/
+/**
+ * Begin a layout group.
+ */
+/* line 8, ../sass/_objects.layout.scss */
+.layout {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: -8px;
+}
+@media all and (min-width: 37.5em) {
+  /* line 8, ../sass/_objects.layout.scss */
+  .layout {
+    margin-left: -double(8px);
+  }
+}
+
+/**
+ * 1. Cause columns to stack side-by-side.
+ * 2. Space columns apart.
+ * 3. Align columns to the tops of each other.
+ * 4. Full-width unless told to behave otherwise.
+ * 5. Required to combine fluid widths and fixed gutters.
+ */
+/* line 27, ../sass/_objects.layout.scss */
+.layout__item {
+  display: inline-block;
+  /* [1] */
+  padding-left: 8px;
+  /* [2] */
+  vertical-align: top;
+  /* [3] */
+  width: 100%;
+  /* [4] */
+}
+@media all and (min-width: 37.5em) {
+  /* line 27, ../sass/_objects.layout.scss */
+  .layout__item {
+    padding-left: -double(8px);
+  }
+}
+
+/**
+ * Make the layout items fill up from the center outward.
+ */
+/* line 42, ../sass/_objects.layout.scss */
+.layout--center {
+  text-align: center;
+}
+/* line 46, ../sass/_objects.layout.scss */
+.layout--center > .layout__item {
+  text-align: left;
+}
+
+/*------------------------------------*\
+    #MEDIA
+\*------------------------------------*/
+/**
+ * Place any image- and text-like content side-by-side, as per:
+ * stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+ */
+/**
+ * The core media object
+ */
+/* line 14, ../sass/_objects.media.scss */
+.media {
+  display: block;
+}
+
+/* line 20, ../sass/_objects.media.scss */
+.media__img {
+  float: left;
+  margin-right: 8px;
+}
+@media all and (min-width: 37.5em) {
+  /* line 20, ../sass/_objects.media.scss */
+  .media__img {
+    margin-right: 16px;
+  }
+}
+/* line 29, ../sass/_objects.media.scss */
+.media__img > img {
+  display: block;
+}
+
+/* line 34, ../sass/_objects.media.scss */
+.media__body {
+  overflow: hidden;
+  display: block;
+}
+/* line 39, ../sass/_objects.media.scss */
+.media__body,
+.media__body > :last-child {
+  margin-bottom: 0;
+}
+
+/**
+ * Reversed image location (right instead of left). Extends `.media`.
+ */
+/* line 53, ../sass/_objects.media.scss */
+.media--rev > .media__img {
+  float: right;
+  margin-right: 0;
+  margin-left: 8px;
+}
+@media all and (min-width: 37.5em) {
+  /* line 53, ../sass/_objects.media.scss */
+  .media--rev > .media__img {
+    margin-left: 16px;
+  }
+}
+
+/**
+ * Flush media objects have no space between the image- and text-content.
+ */
+/* line 74, ../sass/_objects.media.scss */
+.media--flush > .media__img {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/**
+ * Responsive media objects.
+ *
+ * There is a very pragmatic, simple implementation of a responsive media
+ * object, which simply places the text-content beneath the image-content.
+ *
+ * We use a `max-width` media query because:
+ *
+ * a) it is the least verbose method in terms of amount of code required.
+ * b) the media object’s default state is image-next-to-text, so its stacked
+ *    state is the exception, rather than the rule.
+ */
+@media screen and (max-width: 720px) {
+  /* line 96, ../sass/_objects.media.scss */
+  .media--responsive {
+    /**
+     * Rework the spacings on regular media objects.
+     */
+  }
+  /* line 102, ../sass/_objects.media.scss */
+  .media--responsive > .media__img {
+    float: none;
+    margin-right: 0;
+    margin-bottom: 8px;
+    margin-left: 0;
+  }
+}
+/*------------------------------------*\
+    #COMPONENTS
+\*------------------------------------*/
+/*------------------------------------*\
+    #GLOBAL
+\*------------------------------------*/
+/**
+ * Generic page wrapper
+ *
+ * 1. Al wanted some ghost columns but as its effecting the entire page
+ *    I thought this might be easier
+ */
+/* line 11, ../sass/_components.global.scss */
+.wrap {
+  max-width: 826px;
+  /* [1] */
+  margin: 0 auto;
+  padding: 8px;
+  padding: 0.5rem;
+}
+@media all and (min-width: 25em) {
+  /* line 11, ../sass/_components.global.scss */
+  .wrap {
+    padding: 8px 16px;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* line 22, ../sass/_components.global.scss */
+.bbc-brand {
+  display: block;
+}
+
+/* line 26, ../sass/_components.global.scss */
+.gel-brand {
+  display: block;
+}
+
+/* line 30, ../sass/_components.global.scss */
+.global-header__title {
+  font-size: 40px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: -1px;
+  letter-spacing: -0.0625rem;
+}
+
+/*------------------------------------*\
+    #DEVICE STATUS
+\*------------------------------------*/
+/**
+ * 1. Remove the margin from the last item
+ */
+/* line 8, ../sass/_components.device-status.scss */
+.device-status {
+  position: relative;
+  margin: -8px;
+  margin: -0.5rem;
+  padding: 8px;
+  padding: 0.5rem;
+  background-color: #f59331;
+  color: #fff;
+}
+@media all and (min-width: 25em) {
+  /* line 8, ../sass/_components.device-status.scss */
+  .device-status {
+    margin: 0 -16px;
+    margin: 0 -1rem;
+    padding: 16px;
+    padding: 1rem;
+  }
+}
+@media all and (min-width: 56.25em) {
+  /* line 8, ../sass/_components.device-status.scss */
+  .device-status {
+    margin: 0;
+  }
+}
+/* line 26, ../sass/_components.device-status.scss */
+.device-status > :last-child {
+  margin-bottom: 0;
+  /* [1] */
+}
+
+/* line 31, ../sass/_components.device-status.scss */
+.device-status__toggle-controls {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+}
+@media all and (min-width: 25em) {
+  /* line 31, ../sass/_components.device-status.scss */
+  .device-status__toggle-controls {
+    bottom: 16px;
+    right: 16px;
+  }
+}
+
+/* line 42, ../sass/_components.device-status.scss */
+.device-status__mode-toggle {
+  padding: 0;
+  border: 0;
+  outline: 0;
+  color: #fff;
+  background: none;
+}
+/* line 51, ../sass/_components.device-status.scss */
+.device-status__mode-toggle:focus, .device-status__mode-toggle:hover {
+  text-decoration: underline;
+}
+
+/* line 57, ../sass/_components.device-status.scss */
+.device-status__mode-toggle--bold {
+  display: inline-block;
+}
+
+/* line 61, ../sass/_components.device-status.scss */
+.device-status__mode-toggle--touch {
+  display: none;
+}
+@media all and (min-width: 37.5em) {
+  /* line 61, ../sass/_components.device-status.scss */
+  .device-status__mode-toggle--touch {
+    display: inline-block;
+    margin-left: 8px;
+    margin-left: 0.5rem;
+  }
+}
+
+/**
+ * Change the group name based on the current media-query
+ */
+/* line 74, ../sass/_components.device-status.scss */
+.device-status__group-name:after {
+  content: 'Group A (0 - 319px)';
+}
+@media all and (min-width: 20em) {
+  /* line 79, ../sass/_components.device-status.scss */
+  .device-status__group-name:after {
+    content: 'Group B (320px - 599px)';
+  }
+}
+@media all and (min-width: 37.5em) {
+  /* line 85, ../sass/_components.device-status.scss */
+  .device-status__group-name:after {
+    content: 'Group C (600+, Touch available)';
+  }
+  /* line 89, ../sass/_components.device-status.scss */
+  .no-touch .device-status__group-name:after {
+    content: 'Group D (600+, Touch not available)';
+  }
+}
+
+/**
+ * Change the example device based on the current media-query
+ */
+/* line 99, ../sass/_components.device-status.scss */
+.device-status__example-device:after {
+  content: 'Feature Phones';
+}
+@media all and (min-width: 20em) {
+  /* line 104, ../sass/_components.device-status.scss */
+  .device-status__example-device:after {
+    content: 'Default & Smart Phones';
+  }
+}
+@media all and (min-width: 37.5em) {
+  /* line 110, ../sass/_components.device-status.scss */
+  .device-status__example-device:after {
+    content: 'Typically Tablet Devices';
+  }
+  /* line 114, ../sass/_components.device-status.scss */
+  .no-touch .device-status__example-device:after {
+    content: 'Typically Desktop or Laptop Screens';
+  }
+}
+
+/*------------------------------------*\
+    #TYPE DEMO
+\*------------------------------------*/
+/* line 5, ../sass/_components.type-demo.scss */
+.type-demo {
+  margin-bottom: 16px;
+  margin-bottom: 1rem;
+  padding-top: 16px;
+  padding-top: 1rem;
+  border-top: 1px solid #dcdcdc;
+}
+
+/**
+ * 1. Just incase this is nested within a bold type class
+ */
+/* line 14, ../sass/_components.type-demo.scss */
+.type-demo__class {
+  color: #565656;
+  letter-spacing: 0;
+  /* [1] */
+}
+
+/**
+ * 1. Remove an text-tranforms which might be missing with the look and feel
+ */
+/* line 22, ../sass/_components.type-demo.scss */
+.type-demo__sample-scale {
+  text-transform: none;
+  /* [1] */
+}
+
+/* line 26, ../sass/_components.type-demo.scss */
+.type-demo__settings {
+  color: #f59331;
+}
+
+/**
+ * Remove any units from a given value
+ */
+/**
+ * Get the type settings for the specified group
+ */
+/**
+ * Output the type settings for each font-class for each group
+ */
+/* line 61, ../sass/_components.type-demo.scss */
+[data-type-class="trafalgar"] .type-demo__settings:after {
+  content: "20/24";
+}
+@media all and (min-width: 20em) {
+  /* line 67, ../sass/_components.type-demo.scss */
+  [data-type-class="trafalgar"] .type-demo__settings:after {
+    content: "24/28";
+  }
+}
+@media all and (min-width: 37.5em) {
+  /* line 75, ../sass/_components.type-demo.scss */
+  [data-type-class="trafalgar"] .type-demo__settings:after {
+    content: "36/40";
+  }
+  /* line 81, ../sass/_components.type-demo.scss */
+  .no-touch [data-type-class="trafalgar"] .type-demo__settings:after {
+    content: "32/32";
+  }
+}
+
+/* line 61, ../sass/_components.type-demo.scss */
+[data-type-class="double-pica"] .type-demo__settings:after {
+  content: "20/24";
+}
+@media all and (min-width: 37.5em) {
+  /* line 75, ../sass/_components.type-demo.scss */
+  [data-type-class="double-pica"] .type-demo__settings:after {
+    content: "28/32";
+  }
+  /* line 81, ../sass/_components.type-demo.scss */
+  .no-touch [data-type-class="double-pica"] .type-demo__settings:after {
+    content: "24/24";
+  }
+}
+
+/* line 61, ../sass/_components.type-demo.scss */
+[data-type-class="great-primer"] .type-demo__settings:after {
+  content: "18/20";
+}
+@media all and (min-width: 20em) {
+  /* line 67, ../sass/_components.type-demo.scss */
+  [data-type-class="great-primer"] .type-demo__settings:after {
+    content: "20/24";
+  }
+}
+@media all and (min-width: 37.5em) {
+  /* line 75, ../sass/_components.type-demo.scss */
+  [data-type-class="great-primer"] .type-demo__settings:after {
+    content: "24/28";
+  }
+  /* line 81, ../sass/_components.type-demo.scss */
+  .no-touch [data-type-class="great-primer"] .type-demo__settings:after {
+    content: "20/20";
+  }
+}
+
+/* line 61, ../sass/_components.type-demo.scss */
+[data-type-class="pica"] .type-demo__settings:after {
+  content: "15/20";
+}
+@media all and (min-width: 20em) {
+  /* line 67, ../sass/_components.type-demo.scss */
+  [data-type-class="pica"] .type-demo__settings:after {
+    content: "16/22";
+  }
+}
+@media all and (min-width: 37.5em) {
+  /* line 75, ../sass/_components.type-demo.scss */
+  [data-type-class="pica"] .type-demo__settings:after {
+    content: "18/24";
+  }
+  /* line 81, ../sass/_components.type-demo.scss */
+  .no-touch [data-type-class="pica"] .type-demo__settings:after {
+    content: "16/22";
+  }
+}
+
+/* line 61, ../sass/_components.type-demo.scss */
+[data-type-class="long-primer"] .type-demo__settings:after {
+  content: "15/18";
+}
+@media all and (min-width: 20em) {
+  /* line 67, ../sass/_components.type-demo.scss */
+  [data-type-class="long-primer"] .type-demo__settings:after {
+    content: "16/20";
+  }
+}
+@media all and (min-width: 37.5em) {
+  /* line 75, ../sass/_components.type-demo.scss */
+  [data-type-class="long-primer"] .type-demo__settings:after {
+    content: "16/22";
+  }
+  /* line 81, ../sass/_components.type-demo.scss */
+  .no-touch [data-type-class="long-primer"] .type-demo__settings:after {
+    content: "14/18";
+  }
+}
+
+/* line 61, ../sass/_components.type-demo.scss */
+[data-type-class="brevier"] .type-demo__settings:after {
+  content: "14/16";
+}
+@media all and (min-width: 37.5em) {
+  /* line 81, ../sass/_components.type-demo.scss */
+  .no-touch [data-type-class="brevier"] .type-demo__settings:after {
+    content: "13/16";
+  }
+}
+
+/* line 61, ../sass/_components.type-demo.scss */
+[data-type-class="minion"] .type-demo__settings:after {
+  content: "12/16";
+}
+@media all and (min-width: 37.5em) {
+  /* line 75, ../sass/_components.type-demo.scss */
+  [data-type-class="minion"] .type-demo__settings:after {
+    content: "13/16";
+  }
+  /* line 81, ../sass/_components.type-demo.scss */
+  .no-touch [data-type-class="minion"] .type-demo__settings:after {
+    content: "12/16";
+  }
+}
+
+/*------------------------------------*\
+    #TRUMPS
+\*------------------------------------*/
+/*------------------------------------*\
+    #WIDTHS
+\*------------------------------------*/
+/**
+ * We need to map our grid namespaces to the relivant breakpoints
+ */
+/**
+ * Create our width placeholders, prefixed by the specified namespace.
+ * The good things about using placeholders is only the required
+ * placeholders will be compiled making our stylesheet nice and effective
+ */
+/**
+ * The grid setup mixin creates the inital grid placeholders then
+ * loops through each breakpoint and creates all the placeholders
+ * needed for our grid system.
+ */
+/**
+ * Whole
+ */
+/* line 25, ../sass/_trumps.widths.scss */
+.one-whole {
+  width: 100%;
+}
+
+/**
+ * Halves
+ */
+/* line 30, ../sass/_trumps.widths.scss */
+.one-half, .two-quarters, .three-sixths, .four-eighths, .five-tenths, .six-twelfths {
+  width: 50%;
+}
+
+/**
+ * Thirds
+ */
+/* line 35, ../sass/_trumps.widths.scss */
+.one-third, .two-sixths, .four-twelfths {
+  width: 33.3333333%;
+}
+
+/* line 36, ../sass/_trumps.widths.scss */
+.two-thirds, .four-sixths, .eight-twelfths {
+  width: 66.6666666%;
+}
+
+/**
+ * Quarters
+ */
+/* line 41, ../sass/_trumps.widths.scss */
+.one-quarter, .two-eighths, .three-twelfths {
+  width: 25%;
+}
+
+/* line 43, ../sass/_trumps.widths.scss */
+.three-quarters, .six-eighths, .nine-twelfths {
+  width: 75%;
+}
+
+/**
+ * Fifths
+ */
+/* line 48, ../sass/_trumps.widths.scss */
+.one-fifth, .two-tenths {
+  width: 20%;
+}
+
+/* line 49, ../sass/_trumps.widths.scss */
+.two-fifths, .four-tenths {
+  width: 40%;
+}
+
+/* line 50, ../sass/_trumps.widths.scss */
+.three-fifths, .six-tenths {
+  width: 60%;
+}
+
+/* line 51, ../sass/_trumps.widths.scss */
+.four-fifths, .eight-tenths {
+  width: 80%;
+}
+
+/**
+ * Sixths
+ */
+/* line 56, ../sass/_trumps.widths.scss */
+.one-sixth, .two-twelfths {
+  width: 16.6666666%;
+}
+
+/* line 60, ../sass/_trumps.widths.scss */
+.five-sixths, .ten-twelfths {
+  width: 83.3333333%;
+}
+
+/**
+ * Ninths
+ */
+/* line 65, ../sass/_trumps.widths.scss */
+.four-ninths {
+  width: 44.444444444%;
+}
+
+/* line 66, ../sass/_trumps.widths.scss */
+.five-ninths {
+  width: 55.555555556%;
+}
+
+/**
+ * Eighths
+ */
+/* line 71, ../sass/_trumps.widths.scss */
+.one-eighth {
+  width: 12.5%;
+}
+
+/* line 73, ../sass/_trumps.widths.scss */
+.three-eighths {
+  width: 37.5%;
+}
+
+/* line 75, ../sass/_trumps.widths.scss */
+.five-eighths {
+  width: 62.5%;
+}
+
+/* line 77, ../sass/_trumps.widths.scss */
+.seven-eighths {
+  width: 87.5%;
+}
+
+/**
+ * Tenths
+ */
+/* line 82, ../sass/_trumps.widths.scss */
+.one-tenth {
+  width: 10%;
+}
+
+/* line 84, ../sass/_trumps.widths.scss */
+.three-tenths {
+  width: 30%;
+}
+
+/* line 88, ../sass/_trumps.widths.scss */
+.seven-tenths {
+  width: 70%;
+}
+
+/* line 90, ../sass/_trumps.widths.scss */
+.nine-tenths {
+  width: 90%;
+}
+
+/**
+ * Twelfths
+ */
+/* line 95, ../sass/_trumps.widths.scss */
+.one-twelfth {
+  width: 8.3333333%;
+}
+
+/* line 99, ../sass/_trumps.widths.scss */
+.five-twelfths {
+  width: 41.6666666%;
+}
+
+/* line 101, ../sass/_trumps.widths.scss */
+.seven-twelfths {
+  width: 58.3333333%;
+}
+
+/* line 105, ../sass/_trumps.widths.scss */
+.eleven-twelfths {
+  width: 91.6666666%;
+}
+
+/**
+ * Sixteenths
+ */
+/* line 110, ../sass/_trumps.widths.scss */
+.five-sixteenths {
+  width: 31.25%;
+}
+
+/* line 111, ../sass/_trumps.widths.scss */
+.seven-sixteenths {
+  width: 43.75%;
+}
+
+/**
+ * Nineteenths
+ */
+/* line 116, ../sass/_trumps.widths.scss */
+.five-nineteenths {
+  width: 26.315789474%;
+}
+
+/* line 117, ../sass/_trumps.widths.scss */
+.nine-nineteenths {
+  width: 47.368421053%;
+}
+
+/**
+ * Twentieths
+ */
+/* line 122, ../sass/_trumps.widths.scss */
+.one-twentieth {
+  width: 5%;
+}
+
+/* line 123, ../sass/_trumps.widths.scss */
+.three-twentieths {
+  width: 15%;
+}
+
+/* line 124, ../sass/_trumps.widths.scss */
+.seven-twentieths {
+  width: 35%;
+}
+
+/* line 125, ../sass/_trumps.widths.scss */
+.nine-twentieths {
+  width: 45%;
+}
+
+/* line 126, ../sass/_trumps.widths.scss */
+.eleven-twentieths {
+  width: 55%;
+}
+
+/**
+ * Twenty Forths
+ */
+/* line 131, ../sass/_trumps.widths.scss */
+.one-twenty-forth {
+  width: 4.1666666%;
+}
+
+/* line 132, ../sass/_trumps.widths.scss */
+.five-twenty-fourths {
+  width: 20.833333333%;
+}
+
+/* line 133, ../sass/_trumps.widths.scss */
+.seven-twenty-fourths {
+  width: 29.166666667%;
+}
+
+/* line 134, ../sass/_trumps.widths.scss */
+.eleven-twenty-fourths {
+  width: 45.833333333%;
+}
+
+/* line 135, ../sass/_trumps.widths.scss */
+.nineteen-twenty-fourths {
+  width: 79.166666667%;
+}
+
+@media all and (min-width: 15em) {
+  /**
+   * Whole
+   */
+  /* line 25, ../sass/_trumps.widths.scss */
+  .cm--one-whole {
+    width: 100%;
+  }
+
+  /**
+   * Halves
+   */
+  /* line 30, ../sass/_trumps.widths.scss */
+  .cm--one-half, .cm--two-quarters, .cm--three-sixths, .cm--four-eighths, .cm--five-tenths, .cm--six-twelfths {
+    width: 50%;
+  }
+
+  /**
+   * Thirds
+   */
+  /* line 35, ../sass/_trumps.widths.scss */
+  .cm--one-third, .cm--two-sixths, .cm--four-twelfths {
+    width: 33.3333333%;
+  }
+
+  /* line 36, ../sass/_trumps.widths.scss */
+  .cm--two-thirds, .cm--four-sixths, .cm--eight-twelfths {
+    width: 66.6666666%;
+  }
+
+  /**
+   * Quarters
+   */
+  /* line 41, ../sass/_trumps.widths.scss */
+  .cm--one-quarter, .cm--two-eighths, .cm--three-twelfths {
+    width: 25%;
+  }
+
+  /* line 43, ../sass/_trumps.widths.scss */
+  .cm--three-quarters, .cm--six-eighths, .cm--nine-twelfths {
+    width: 75%;
+  }
+
+  /**
+   * Fifths
+   */
+  /* line 48, ../sass/_trumps.widths.scss */
+  .cm--one-fifth, .cm--two-tenths {
+    width: 20%;
+  }
+
+  /* line 49, ../sass/_trumps.widths.scss */
+  .cm--two-fifths, .cm--four-tenths {
+    width: 40%;
+  }
+
+  /* line 50, ../sass/_trumps.widths.scss */
+  .cm--three-fifths, .cm--six-tenths {
+    width: 60%;
+  }
+
+  /* line 51, ../sass/_trumps.widths.scss */
+  .cm--four-fifths, .cm--eight-tenths {
+    width: 80%;
+  }
+
+  /**
+   * Sixths
+   */
+  /* line 56, ../sass/_trumps.widths.scss */
+  .cm--one-sixth, .cm--two-twelfths {
+    width: 16.6666666%;
+  }
+
+  /* line 60, ../sass/_trumps.widths.scss */
+  .cm--five-sixths, .cm--ten-twelfths {
+    width: 83.3333333%;
+  }
+
+  /**
+   * Ninths
+   */
+  /* line 65, ../sass/_trumps.widths.scss */
+  .cm--four-ninths {
+    width: 44.444444444%;
+  }
+
+  /* line 66, ../sass/_trumps.widths.scss */
+  .cm--five-ninths {
+    width: 55.555555556%;
+  }
+
+  /**
+   * Eighths
+   */
+  /* line 71, ../sass/_trumps.widths.scss */
+  .cm--one-eighth {
+    width: 12.5%;
+  }
+
+  /* line 73, ../sass/_trumps.widths.scss */
+  .cm--three-eighths {
+    width: 37.5%;
+  }
+
+  /* line 75, ../sass/_trumps.widths.scss */
+  .cm--five-eighths {
+    width: 62.5%;
+  }
+
+  /* line 77, ../sass/_trumps.widths.scss */
+  .cm--seven-eighths {
+    width: 87.5%;
+  }
+
+  /**
+   * Tenths
+   */
+  /* line 82, ../sass/_trumps.widths.scss */
+  .cm--one-tenth {
+    width: 10%;
+  }
+
+  /* line 84, ../sass/_trumps.widths.scss */
+  .cm--three-tenths {
+    width: 30%;
+  }
+
+  /* line 88, ../sass/_trumps.widths.scss */
+  .cm--seven-tenths {
+    width: 70%;
+  }
+
+  /* line 90, ../sass/_trumps.widths.scss */
+  .cm--nine-tenths {
+    width: 90%;
+  }
+
+  /**
+   * Twelfths
+   */
+  /* line 95, ../sass/_trumps.widths.scss */
+  .cm--one-twelfth {
+    width: 8.3333333%;
+  }
+
+  /* line 99, ../sass/_trumps.widths.scss */
+  .cm--five-twelfths {
+    width: 41.6666666%;
+  }
+
+  /* line 101, ../sass/_trumps.widths.scss */
+  .cm--seven-twelfths {
+    width: 58.3333333%;
+  }
+
+  /* line 105, ../sass/_trumps.widths.scss */
+  .cm--eleven-twelfths {
+    width: 91.6666666%;
+  }
+
+  /**
+   * Sixteenths
+   */
+  /* line 110, ../sass/_trumps.widths.scss */
+  .cm--five-sixteenths {
+    width: 31.25%;
+  }
+
+  /* line 111, ../sass/_trumps.widths.scss */
+  .cm--seven-sixteenths {
+    width: 43.75%;
+  }
+
+  /**
+   * Nineteenths
+   */
+  /* line 116, ../sass/_trumps.widths.scss */
+  .cm--five-nineteenths {
+    width: 26.315789474%;
+  }
+
+  /* line 117, ../sass/_trumps.widths.scss */
+  .cm--nine-nineteenths {
+    width: 47.368421053%;
+  }
+
+  /**
+   * Twentieths
+   */
+  /* line 122, ../sass/_trumps.widths.scss */
+  .cm--one-twentieth {
+    width: 5%;
+  }
+
+  /* line 123, ../sass/_trumps.widths.scss */
+  .cm--three-twentieths {
+    width: 15%;
+  }
+
+  /* line 124, ../sass/_trumps.widths.scss */
+  .cm--seven-twentieths {
+    width: 35%;
+  }
+
+  /* line 125, ../sass/_trumps.widths.scss */
+  .cm--nine-twentieths {
+    width: 45%;
+  }
+
+  /* line 126, ../sass/_trumps.widths.scss */
+  .cm--eleven-twentieths {
+    width: 55%;
+  }
+
+  /**
+   * Twenty Forths
+   */
+  /* line 131, ../sass/_trumps.widths.scss */
+  .cm--one-twenty-forth {
+    width: 4.1666666%;
+  }
+
+  /* line 132, ../sass/_trumps.widths.scss */
+  .cm--five-twenty-fourths {
+    width: 20.833333333%;
+  }
+
+  /* line 133, ../sass/_trumps.widths.scss */
+  .cm--seven-twenty-fourths {
+    width: 29.166666667%;
+  }
+
+  /* line 134, ../sass/_trumps.widths.scss */
+  .cm--eleven-twenty-fourths {
+    width: 45.833333333%;
+  }
+
+  /* line 135, ../sass/_trumps.widths.scss */
+  .cm--nineteen-twenty-fourths {
+    width: 79.166666667%;
+  }
+}
+@media all and (min-width: 25em) {
+  /**
+   * Whole
+   */
+  /* line 25, ../sass/_trumps.widths.scss */
+  .sm--one-whole {
+    width: 100%;
+  }
+
+  /**
+   * Halves
+   */
+  /* line 30, ../sass/_trumps.widths.scss */
+  .sm--one-half, .sm--two-quarters, .sm--three-sixths, .sm--four-eighths, .sm--five-tenths, .sm--six-twelfths {
+    width: 50%;
+  }
+
+  /**
+   * Thirds
+   */
+  /* line 35, ../sass/_trumps.widths.scss */
+  .sm--one-third, .sm--two-sixths, .sm--four-twelfths {
+    width: 33.3333333%;
+  }
+
+  /* line 36, ../sass/_trumps.widths.scss */
+  .sm--two-thirds, .sm--four-sixths, .sm--eight-twelfths {
+    width: 66.6666666%;
+  }
+
+  /**
+   * Quarters
+   */
+  /* line 41, ../sass/_trumps.widths.scss */
+  .sm--one-quarter, .sm--two-eighths, .sm--three-twelfths {
+    width: 25%;
+  }
+
+  /* line 43, ../sass/_trumps.widths.scss */
+  .sm--three-quarters, .sm--six-eighths, .sm--nine-twelfths {
+    width: 75%;
+  }
+
+  /**
+   * Fifths
+   */
+  /* line 48, ../sass/_trumps.widths.scss */
+  .sm--one-fifth, .sm--two-tenths {
+    width: 20%;
+  }
+
+  /* line 49, ../sass/_trumps.widths.scss */
+  .sm--two-fifths, .sm--four-tenths {
+    width: 40%;
+  }
+
+  /* line 50, ../sass/_trumps.widths.scss */
+  .sm--three-fifths, .sm--six-tenths {
+    width: 60%;
+  }
+
+  /* line 51, ../sass/_trumps.widths.scss */
+  .sm--four-fifths, .sm--eight-tenths {
+    width: 80%;
+  }
+
+  /**
+   * Sixths
+   */
+  /* line 56, ../sass/_trumps.widths.scss */
+  .sm--one-sixth, .sm--two-twelfths {
+    width: 16.6666666%;
+  }
+
+  /* line 60, ../sass/_trumps.widths.scss */
+  .sm--five-sixths, .sm--ten-twelfths {
+    width: 83.3333333%;
+  }
+
+  /**
+   * Ninths
+   */
+  /* line 65, ../sass/_trumps.widths.scss */
+  .sm--four-ninths {
+    width: 44.444444444%;
+  }
+
+  /* line 66, ../sass/_trumps.widths.scss */
+  .sm--five-ninths {
+    width: 55.555555556%;
+  }
+
+  /**
+   * Eighths
+   */
+  /* line 71, ../sass/_trumps.widths.scss */
+  .sm--one-eighth {
+    width: 12.5%;
+  }
+
+  /* line 73, ../sass/_trumps.widths.scss */
+  .sm--three-eighths {
+    width: 37.5%;
+  }
+
+  /* line 75, ../sass/_trumps.widths.scss */
+  .sm--five-eighths {
+    width: 62.5%;
+  }
+
+  /* line 77, ../sass/_trumps.widths.scss */
+  .sm--seven-eighths {
+    width: 87.5%;
+  }
+
+  /**
+   * Tenths
+   */
+  /* line 82, ../sass/_trumps.widths.scss */
+  .sm--one-tenth {
+    width: 10%;
+  }
+
+  /* line 84, ../sass/_trumps.widths.scss */
+  .sm--three-tenths {
+    width: 30%;
+  }
+
+  /* line 88, ../sass/_trumps.widths.scss */
+  .sm--seven-tenths {
+    width: 70%;
+  }
+
+  /* line 90, ../sass/_trumps.widths.scss */
+  .sm--nine-tenths {
+    width: 90%;
+  }
+
+  /**
+   * Twelfths
+   */
+  /* line 95, ../sass/_trumps.widths.scss */
+  .sm--one-twelfth {
+    width: 8.3333333%;
+  }
+
+  /* line 99, ../sass/_trumps.widths.scss */
+  .sm--five-twelfths {
+    width: 41.6666666%;
+  }
+
+  /* line 101, ../sass/_trumps.widths.scss */
+  .sm--seven-twelfths {
+    width: 58.3333333%;
+  }
+
+  /* line 105, ../sass/_trumps.widths.scss */
+  .sm--eleven-twelfths {
+    width: 91.6666666%;
+  }
+
+  /**
+   * Sixteenths
+   */
+  /* line 110, ../sass/_trumps.widths.scss */
+  .sm--five-sixteenths {
+    width: 31.25%;
+  }
+
+  /* line 111, ../sass/_trumps.widths.scss */
+  .sm--seven-sixteenths {
+    width: 43.75%;
+  }
+
+  /**
+   * Nineteenths
+   */
+  /* line 116, ../sass/_trumps.widths.scss */
+  .sm--five-nineteenths {
+    width: 26.315789474%;
+  }
+
+  /* line 117, ../sass/_trumps.widths.scss */
+  .sm--nine-nineteenths {
+    width: 47.368421053%;
+  }
+
+  /**
+   * Twentieths
+   */
+  /* line 122, ../sass/_trumps.widths.scss */
+  .sm--one-twentieth {
+    width: 5%;
+  }
+
+  /* line 123, ../sass/_trumps.widths.scss */
+  .sm--three-twentieths {
+    width: 15%;
+  }
+
+  /* line 124, ../sass/_trumps.widths.scss */
+  .sm--seven-twentieths {
+    width: 35%;
+  }
+
+  /* line 125, ../sass/_trumps.widths.scss */
+  .sm--nine-twentieths {
+    width: 45%;
+  }
+
+  /* line 126, ../sass/_trumps.widths.scss */
+  .sm--eleven-twentieths {
+    width: 55%;
+  }
+
+  /**
+   * Twenty Forths
+   */
+  /* line 131, ../sass/_trumps.widths.scss */
+  .sm--one-twenty-forth {
+    width: 4.1666666%;
+  }
+
+  /* line 132, ../sass/_trumps.widths.scss */
+  .sm--five-twenty-fourths {
+    width: 20.833333333%;
+  }
+
+  /* line 133, ../sass/_trumps.widths.scss */
+  .sm--seven-twenty-fourths {
+    width: 29.166666667%;
+  }
+
+  /* line 134, ../sass/_trumps.widths.scss */
+  .sm--eleven-twenty-fourths {
+    width: 45.833333333%;
+  }
+
+  /* line 135, ../sass/_trumps.widths.scss */
+  .sm--nineteen-twenty-fourths {
+    width: 79.166666667%;
+  }
+}
+@media all and (min-width: 37.5em) {
+  /**
+   * Whole
+   */
+  /* line 25, ../sass/_trumps.widths.scss */
+  .md--one-whole {
+    width: 100%;
+  }
+
+  /**
+   * Halves
+   */
+  /* line 30, ../sass/_trumps.widths.scss */
+  .md--one-half, .md--two-quarters, .md--three-sixths, .md--four-eighths, .md--five-tenths, .md--six-twelfths {
+    width: 50%;
+  }
+
+  /**
+   * Thirds
+   */
+  /* line 35, ../sass/_trumps.widths.scss */
+  .md--one-third, .md--two-sixths, .md--four-twelfths {
+    width: 33.3333333%;
+  }
+
+  /* line 36, ../sass/_trumps.widths.scss */
+  .md--two-thirds, .md--four-sixths, .md--eight-twelfths {
+    width: 66.6666666%;
+  }
+
+  /**
+   * Quarters
+   */
+  /* line 41, ../sass/_trumps.widths.scss */
+  .md--one-quarter, .md--two-eighths, .md--three-twelfths {
+    width: 25%;
+  }
+
+  /* line 43, ../sass/_trumps.widths.scss */
+  .md--three-quarters, .md--six-eighths, .md--nine-twelfths {
+    width: 75%;
+  }
+
+  /**
+   * Fifths
+   */
+  /* line 48, ../sass/_trumps.widths.scss */
+  .md--one-fifth, .md--two-tenths {
+    width: 20%;
+  }
+
+  /* line 49, ../sass/_trumps.widths.scss */
+  .md--two-fifths, .md--four-tenths {
+    width: 40%;
+  }
+
+  /* line 50, ../sass/_trumps.widths.scss */
+  .md--three-fifths, .md--six-tenths {
+    width: 60%;
+  }
+
+  /* line 51, ../sass/_trumps.widths.scss */
+  .md--four-fifths, .md--eight-tenths {
+    width: 80%;
+  }
+
+  /**
+   * Sixths
+   */
+  /* line 56, ../sass/_trumps.widths.scss */
+  .md--one-sixth, .md--two-twelfths {
+    width: 16.6666666%;
+  }
+
+  /* line 60, ../sass/_trumps.widths.scss */
+  .md--five-sixths, .md--ten-twelfths {
+    width: 83.3333333%;
+  }
+
+  /**
+   * Ninths
+   */
+  /* line 65, ../sass/_trumps.widths.scss */
+  .md--four-ninths {
+    width: 44.444444444%;
+  }
+
+  /* line 66, ../sass/_trumps.widths.scss */
+  .md--five-ninths {
+    width: 55.555555556%;
+  }
+
+  /**
+   * Eighths
+   */
+  /* line 71, ../sass/_trumps.widths.scss */
+  .md--one-eighth {
+    width: 12.5%;
+  }
+
+  /* line 73, ../sass/_trumps.widths.scss */
+  .md--three-eighths {
+    width: 37.5%;
+  }
+
+  /* line 75, ../sass/_trumps.widths.scss */
+  .md--five-eighths {
+    width: 62.5%;
+  }
+
+  /* line 77, ../sass/_trumps.widths.scss */
+  .md--seven-eighths {
+    width: 87.5%;
+  }
+
+  /**
+   * Tenths
+   */
+  /* line 82, ../sass/_trumps.widths.scss */
+  .md--one-tenth {
+    width: 10%;
+  }
+
+  /* line 84, ../sass/_trumps.widths.scss */
+  .md--three-tenths {
+    width: 30%;
+  }
+
+  /* line 88, ../sass/_trumps.widths.scss */
+  .md--seven-tenths {
+    width: 70%;
+  }
+
+  /* line 90, ../sass/_trumps.widths.scss */
+  .md--nine-tenths {
+    width: 90%;
+  }
+
+  /**
+   * Twelfths
+   */
+  /* line 95, ../sass/_trumps.widths.scss */
+  .md--one-twelfth {
+    width: 8.3333333%;
+  }
+
+  /* line 99, ../sass/_trumps.widths.scss */
+  .md--five-twelfths {
+    width: 41.6666666%;
+  }
+
+  /* line 101, ../sass/_trumps.widths.scss */
+  .md--seven-twelfths {
+    width: 58.3333333%;
+  }
+
+  /* line 105, ../sass/_trumps.widths.scss */
+  .md--eleven-twelfths {
+    width: 91.6666666%;
+  }
+
+  /**
+   * Sixteenths
+   */
+  /* line 110, ../sass/_trumps.widths.scss */
+  .md--five-sixteenths {
+    width: 31.25%;
+  }
+
+  /* line 111, ../sass/_trumps.widths.scss */
+  .md--seven-sixteenths {
+    width: 43.75%;
+  }
+
+  /**
+   * Nineteenths
+   */
+  /* line 116, ../sass/_trumps.widths.scss */
+  .md--five-nineteenths {
+    width: 26.315789474%;
+  }
+
+  /* line 117, ../sass/_trumps.widths.scss */
+  .md--nine-nineteenths {
+    width: 47.368421053%;
+  }
+
+  /**
+   * Twentieths
+   */
+  /* line 122, ../sass/_trumps.widths.scss */
+  .md--one-twentieth {
+    width: 5%;
+  }
+
+  /* line 123, ../sass/_trumps.widths.scss */
+  .md--three-twentieths {
+    width: 15%;
+  }
+
+  /* line 124, ../sass/_trumps.widths.scss */
+  .md--seven-twentieths {
+    width: 35%;
+  }
+
+  /* line 125, ../sass/_trumps.widths.scss */
+  .md--nine-twentieths {
+    width: 45%;
+  }
+
+  /* line 126, ../sass/_trumps.widths.scss */
+  .md--eleven-twentieths {
+    width: 55%;
+  }
+
+  /**
+   * Twenty Forths
+   */
+  /* line 131, ../sass/_trumps.widths.scss */
+  .md--one-twenty-forth {
+    width: 4.1666666%;
+  }
+
+  /* line 132, ../sass/_trumps.widths.scss */
+  .md--five-twenty-fourths {
+    width: 20.833333333%;
+  }
+
+  /* line 133, ../sass/_trumps.widths.scss */
+  .md--seven-twenty-fourths {
+    width: 29.166666667%;
+  }
+
+  /* line 134, ../sass/_trumps.widths.scss */
+  .md--eleven-twenty-fourths {
+    width: 45.833333333%;
+  }
+
+  /* line 135, ../sass/_trumps.widths.scss */
+  .md--nineteen-twenty-fourths {
+    width: 79.166666667%;
+  }
+}
+@media all and (min-width: 56.25em) {
+  /**
+   * Whole
+   */
+  /* line 25, ../sass/_trumps.widths.scss */
+  .wd--one-whole {
+    width: 100%;
+  }
+
+  /**
+   * Halves
+   */
+  /* line 30, ../sass/_trumps.widths.scss */
+  .wd--one-half, .wd--two-quarters, .wd--three-sixths, .wd--four-eighths, .wd--five-tenths, .wd--six-twelfths {
+    width: 50%;
+  }
+
+  /**
+   * Thirds
+   */
+  /* line 35, ../sass/_trumps.widths.scss */
+  .wd--one-third, .wd--two-sixths, .wd--four-twelfths {
+    width: 33.3333333%;
+  }
+
+  /* line 36, ../sass/_trumps.widths.scss */
+  .wd--two-thirds, .wd--four-sixths, .wd--eight-twelfths {
+    width: 66.6666666%;
+  }
+
+  /**
+   * Quarters
+   */
+  /* line 41, ../sass/_trumps.widths.scss */
+  .wd--one-quarter, .wd--two-eighths, .wd--three-twelfths {
+    width: 25%;
+  }
+
+  /* line 43, ../sass/_trumps.widths.scss */
+  .wd--three-quarters, .wd--six-eighths, .wd--nine-twelfths {
+    width: 75%;
+  }
+
+  /**
+   * Fifths
+   */
+  /* line 48, ../sass/_trumps.widths.scss */
+  .wd--one-fifth, .wd--two-tenths {
+    width: 20%;
+  }
+
+  /* line 49, ../sass/_trumps.widths.scss */
+  .wd--two-fifths, .wd--four-tenths {
+    width: 40%;
+  }
+
+  /* line 50, ../sass/_trumps.widths.scss */
+  .wd--three-fifths, .wd--six-tenths {
+    width: 60%;
+  }
+
+  /* line 51, ../sass/_trumps.widths.scss */
+  .wd--four-fifths, .wd--eight-tenths {
+    width: 80%;
+  }
+
+  /**
+   * Sixths
+   */
+  /* line 56, ../sass/_trumps.widths.scss */
+  .wd--one-sixth, .wd--two-twelfths {
+    width: 16.6666666%;
+  }
+
+  /* line 60, ../sass/_trumps.widths.scss */
+  .wd--five-sixths, .wd--ten-twelfths {
+    width: 83.3333333%;
+  }
+
+  /**
+   * Ninths
+   */
+  /* line 65, ../sass/_trumps.widths.scss */
+  .wd--four-ninths {
+    width: 44.444444444%;
+  }
+
+  /* line 66, ../sass/_trumps.widths.scss */
+  .wd--five-ninths {
+    width: 55.555555556%;
+  }
+
+  /**
+   * Eighths
+   */
+  /* line 71, ../sass/_trumps.widths.scss */
+  .wd--one-eighth {
+    width: 12.5%;
+  }
+
+  /* line 73, ../sass/_trumps.widths.scss */
+  .wd--three-eighths {
+    width: 37.5%;
+  }
+
+  /* line 75, ../sass/_trumps.widths.scss */
+  .wd--five-eighths {
+    width: 62.5%;
+  }
+
+  /* line 77, ../sass/_trumps.widths.scss */
+  .wd--seven-eighths {
+    width: 87.5%;
+  }
+
+  /**
+   * Tenths
+   */
+  /* line 82, ../sass/_trumps.widths.scss */
+  .wd--one-tenth {
+    width: 10%;
+  }
+
+  /* line 84, ../sass/_trumps.widths.scss */
+  .wd--three-tenths {
+    width: 30%;
+  }
+
+  /* line 88, ../sass/_trumps.widths.scss */
+  .wd--seven-tenths {
+    width: 70%;
+  }
+
+  /* line 90, ../sass/_trumps.widths.scss */
+  .wd--nine-tenths {
+    width: 90%;
+  }
+
+  /**
+   * Twelfths
+   */
+  /* line 95, ../sass/_trumps.widths.scss */
+  .wd--one-twelfth {
+    width: 8.3333333%;
+  }
+
+  /* line 99, ../sass/_trumps.widths.scss */
+  .wd--five-twelfths {
+    width: 41.6666666%;
+  }
+
+  /* line 101, ../sass/_trumps.widths.scss */
+  .wd--seven-twelfths {
+    width: 58.3333333%;
+  }
+
+  /* line 105, ../sass/_trumps.widths.scss */
+  .wd--eleven-twelfths {
+    width: 91.6666666%;
+  }
+
+  /**
+   * Sixteenths
+   */
+  /* line 110, ../sass/_trumps.widths.scss */
+  .wd--five-sixteenths {
+    width: 31.25%;
+  }
+
+  /* line 111, ../sass/_trumps.widths.scss */
+  .wd--seven-sixteenths {
+    width: 43.75%;
+  }
+
+  /**
+   * Nineteenths
+   */
+  /* line 116, ../sass/_trumps.widths.scss */
+  .wd--five-nineteenths {
+    width: 26.315789474%;
+  }
+
+  /* line 117, ../sass/_trumps.widths.scss */
+  .wd--nine-nineteenths {
+    width: 47.368421053%;
+  }
+
+  /**
+   * Twentieths
+   */
+  /* line 122, ../sass/_trumps.widths.scss */
+  .wd--one-twentieth {
+    width: 5%;
+  }
+
+  /* line 123, ../sass/_trumps.widths.scss */
+  .wd--three-twentieths {
+    width: 15%;
+  }
+
+  /* line 124, ../sass/_trumps.widths.scss */
+  .wd--seven-twentieths {
+    width: 35%;
+  }
+
+  /* line 125, ../sass/_trumps.widths.scss */
+  .wd--nine-twentieths {
+    width: 45%;
+  }
+
+  /* line 126, ../sass/_trumps.widths.scss */
+  .wd--eleven-twentieths {
+    width: 55%;
+  }
+
+  /**
+   * Twenty Forths
+   */
+  /* line 131, ../sass/_trumps.widths.scss */
+  .wd--one-twenty-forth {
+    width: 4.1666666%;
+  }
+
+  /* line 132, ../sass/_trumps.widths.scss */
+  .wd--five-twenty-fourths {
+    width: 20.833333333%;
+  }
+
+  /* line 133, ../sass/_trumps.widths.scss */
+  .wd--seven-twenty-fourths {
+    width: 29.166666667%;
+  }
+
+  /* line 134, ../sass/_trumps.widths.scss */
+  .wd--eleven-twenty-fourths {
+    width: 45.833333333%;
+  }
+
+  /* line 135, ../sass/_trumps.widths.scss */
+  .wd--nineteen-twenty-fourths {
+    width: 79.166666667%;
+  }
+}
+/*------------------------------------*\
+    #SPACING
+\*------------------------------------*/
+/**
+ * Margin and padding helper classes. Use these to tweak layout on a micro
+ * level.
+ *
+ * `.(m|p)(t|r|b|l|h|v)(-|+|0) {}` = margin/padding top/right/bottom/left/horizontal/vertical less/more/none
+ */
+/**
+ * Margin helper classes.
+ *
+ * Add margins.
+ */
+/* line 52, ../../bower_components/inuit-spacing/_trumps.spacing.scss */
+.m {
+  margin: 8px !important;
+}
+
+/* line 53, ../../bower_components/inuit-spacing/_trumps.spacing.scss */
+.mt {
+  margin-top: 8px !important;
+}
+
+/* line 54, ../../bower_components/inuit-spacing/_trumps.spacing.scss */
+.mr {
+  margin-right: 8px !important;
+}
+
+/* line 55, ../../bower_components/inuit-spacing/_trumps.spacing.scss */
+.mb {
+  margin-bottom: 8px !important;
+}
+
+/* line 56, ../../bower_components/inuit-spacing/_trumps.spacing.scss */
+.ml {
+  margin-left: 8px !important;
+}
+
+/* line 57, ../../bower_components/inuit-spacing/_trumps.spacing.scss */
+.mh {
+  margin-right: 8px !important;
+  margin-left: 8px !important;
+}
+
+/* line 58, ../../bower_components/inuit-spacing/_trumps.spacing.scss */
+.mv {
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
+}
+
+/**
+ * Add tiny margins.
+ */
+/* line 69, ../../bower_components/inuit-spacing/_trumps.spacing.scss */
+.m-- {
+  margin: 2px !important;
+}
+
+/* line 70, ../../bower_components/inuit-spacing/_trumps.spacing.scss */
+.mt-- {
+  margin-top: 2px !important;
+}
+
+/* line 71, ../../bower_components/inuit-spacing/_trumps.spacing.scss */
+.mr-- {
+  margin-right: 2px !important;
+}
+
+/* line 72, ../../bower_components/inuit-spacing/_trumps.spacing.scss */
+.mb-- {
+  margin-bottom: 2px !important;
+}
+
+/* line 73, ../../bower_components/inuit-spacing/_trumps.spacing.scss */
+.ml-- {
+  margin-left: 2px !important;
+}
+
+/* line 74, ../../bower_components/inuit-spacing/_trumps.spacing.scss */
+.mh-- {
+  margin-right: 2px !important;
+  margin-left: 2px !important;
+}
+
+/* line 75, ../../bower_components/inuit-spacing/_trumps.spacing.scss */
+.mv-- {
+  margin-top: 2px !important;
+  margin-bottom: 2px !important;
+}
+
+/**
+ * Add small margins.
+ */
+/* line 86, ../../bower_components/inuit-spacing/_trumps.spacing.scss */
+.m- {
+  margin: 4px !important;
+}
+
+/* line 87, ../../bower_components/inuit-spacing/_trumps.spacing.scss */
+.mt- {
+  margin-top: 4px !important;
+}
+
+/* line 88, ../../bower_components/inuit-spacing/_trumps.spacing.scss */
+.mr- {
+  margin-right: 4px !important;
+}
+
+/* line 89, ../../bower_components/inuit-spacing/_trumps.spacing.scss */
+.mb- {
+  margin-bottom: 4px !important;
+}
+
+/* line 90, ../../bower_components/inuit-spacing/_trumps.spacing.scss */
+.ml- {
+  margin-left: 4px !important;
+}
+
+/* line 91, ../../bower_components/inuit-spacing/_trumps.spacing.scss */
+.mh- {
+  margin-right: 4px !important;
+  margin-left: 4px !important;
+}
+
+/* line 92, ../../bower_components/inuit-spacing/_trumps.spacing.scss */
+.mv- {
+  margin-top: 4px !important;
+  margin-bottom: 4px !important;
+}
+
+/**
+ * Add large margins.
+ */
+/* line 103, ../../bower_components/inuit-spacing/_trumps.spacing.scss */
+.m\+ {
+  margin: 16px !important;
+}
+
+/* line 104, ../../bower_components/inuit-spacing/_trumps.spacing.scss */
+.mt\+ {
+  margin-top: 16px !important;
+}
+
+/* line 105, ../../bower_components/inuit-spacing/_trumps.spacing.scss */
+.mr\+ {
+  margin-right: 16px !important;
+}
+
+/* line 106, ../../bower_components/inuit-spacing/_trumps.spacing.scss */
+.mb\+ {
+  margin-bottom: 16px !important;
+}
+
+/* line 107, ../../bower_components/inuit-spacing/_trumps.spacing.scss */
+.ml\+ {
+  margin-left: 16px !important;
+}
+
+/* line 108, ../../bower_components/inuit-spacing/_trumps.spacing.scss */
+.mh\+ {
+  margin-right: 16px !important;
+  margin-left: 16px !important;
+}
+
+/* line 109, ../../bower_components/inuit-spacing/_trumps.spacing.scss */
+.mv\+ {
+  margin-top: 16px !important;
+  margin-bottom: 16px !important;
+}
+
+/**
+ * Add huge margins.
+ */
+/* line 120, ../../bower_components/inuit-spacing/_trumps.spacing.scss */
+.m\+\+ {
+  margin: 32px !important;
+}
+
+/* line 121, ../../bower_components/inuit-spacing/_trumps.spacing.scss */
+.mt\+\+ {
+  margin-top: 32px !important;
+}
+
+/* line 122, ../../bower_components/inuit-spacing/_trumps.spacing.scss */
+.mr\+\+ {
+  margin-right: 32px !important;
+}
+
+/* line 123, ../../bower_components/inuit-spacing/_trumps.spacing.scss */
+.mb\+\+ {
+  margin-bottom: 32px !important;
+}
+
+/* line 124, ../../bower_components/inuit-spacing/_trumps.spacing.scss */
+.ml\+\+ {
+  margin-left: 32px !important;
+}
+
+/* line 125, ../../bower_components/inuit-spacing/_trumps.spacing.scss */
+.mh\+\+ {
+  margin-right: 32px !important;
+  margin-left: 32px !important;
+}
+
+/* line 126, ../../bower_components/inuit-spacing/_trumps.spacing.scss */
+.mv\+\+ {
+  margin-top: 32px !important;
+  margin-bottom: 32px !important;
+}
+
+/**
+ * Remove margins.
+ */
+/* line 137, ../../bower_components/inuit-spacing/_trumps.spacing.scss */
+.m0 {
+  margin: 0 !important;
+}
+
+/* line 138, ../../bower_components/inuit-spacing/_trumps.spacing.scss */
+.mt0 {
+  margin-top: 0 !important;
+}
+
+/* line 139, ../../bower_components/inuit-spacing/_trumps.spacing.scss */
+.mr0 {
+  margin-right: 0 !important;
+}
+
+/* line 140, ../../bower_components/inuit-spacing/_trumps.spacing.scss */
+.mb0 {
+  margin-bottom: 0 !important;
+}
+
+/* line 141, ../../bower_components/inuit-spacing/_trumps.spacing.scss */
+.ml0 {
+  margin-left: 0 !important;
+}
+
+/* line 142, ../../bower_components/inuit-spacing/_trumps.spacing.scss */
+.mh0 {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+/* line 143, ../../bower_components/inuit-spacing/_trumps.spacing.scss */
+.mv0 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/*# sourceMappingURL=main.css.map */
