@@ -14,17 +14,23 @@
     @include rem('padding', $gel-spacing-unit);
 
     @include mq($from: $gel-margin-change) {
-        @include rem('padding', $gel-spacing-unit double($gel-spacing-unit));
+        @include rem('padding', double($gel-spacing-unit));
     }
 }
 
-// Header styles
+// Brands styles
 .bbc-brand {
     display: block;
+    @include rem('margin-bottom', 24px);
 }
 
 .gel-brand {
     display: block;
+}
+
+// Header styles
+.global-header {
+    @include rem('margin-bottom', 24px);
 }
 
 .global-header__title {
