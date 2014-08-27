@@ -19,9 +19,7 @@ $enhanced: true !default;
     // Check that we've got the mq mixin available
     @if mixin-exists(mq) {
 
-        /**
-         * Output the typography styles for the 4 groups
-         */
+        // Output the typography styles for the 4 groups
         @include gel-output-type-group('group-a');
 
         @if $enhanced {
@@ -59,40 +57,23 @@ $enhanced: true !default;
 }
 
 
-@if ( $gel-type-enable-base-elements == true ) {
+@if ($gel-type-enable-base-elements == true) {
 
     /**
-     * Map the GEL Typography classes to the relivant
+     * Map the GEL Typography classes to the relevant
      * HTML elements
      */
-     h1 {
-         @extend %gel-trafalgar;
-     }
+    h1 { @extend %gel-trafalgar; }
+    h2 { @extend %gel-double-pica; }
+    h3 { @extend %gel-great-primer; }
+    h4 { @extend %gel-minion; }
 
-     h2 {
-         @extend %gel-double-pica;
-     }
+    p,
+    ul,
+    ol {
+        @extend %gel-pica;
+    }
 
-     h3 {
-         @extend %gel-great-primer;
-     }
-
-     h4 {
-         @extend %gel-minion;
-     }
-
-     p,
-     ul,
-     ol {
-         @extend %gel-pica;
-     }
-
-     figcaption {
-         @extend %gel-long-primer;
-     }
-
-     time {
-         @extend %gel-brevier;
-     }
-
+    figcaption { @extend %gel-long-primer; }
+    time { @extend %gel-brevier; }
 }
