@@ -23,14 +23,3 @@ body {
     color: #909090;
     font-style: italic;
 }
-
-%hello {
-    background: blue;
-}
-
-.custom-type {
-    @extend %gel-group-a-trafalgar;
-    @extend %gel-group-b-trafalgar;
-    @extend %gel-group-c-pica;
-    .no-touch { @extend %gel-group-d-pica; }
-}
