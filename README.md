@@ -19,6 +19,20 @@ Background information relating to the [GEL Responsive Typography Guidelines](ht
 - [Setup Guide](https://github.com/bbc-sport/gel-typography/wiki/Setup) - Information on how to integrate the GEL Typography component into your project.
 - [Configuration Guide](https://github.com/bbc-sport/gel-typography/wiki/Configuration) - Details on how you can customise this component to meet any specific requirements of your product.
 
+#### Custom Typography
+
+If you need to vary the type across breakpoints you can use the following technique (class equivalents not available yet):
+
+```
+.custom-type {
+    @extend %gel-trafalgar;
+    @extend %gel-group-c-pica;
+    .no-touch & {
+        @extend %gel-group-d-pica;
+    }
+}
+```
+
 ### Credits
 
 - [Shaun Bent](http://www.twitter.com/shaunbent)
