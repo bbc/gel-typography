@@ -20,8 +20,9 @@
 \*------------------------------------*/
 /**
  * GEL Typography proposes using four groups to apply a scale appropriately across
- * a range of devices. We take a 'touch first' approach to typography, adjustments
- * are then made based on if a primary input other than touch has been detected.
+ * a range of devices. We take a `Touch First` approach to typography, adjustments
+ * are then made based on if a primary input other than touch has been detected
+ *
  */
 /*------------------------------------*\
     #SETTINGS
@@ -222,8 +223,8 @@
     font-size: 12px;
     font-size: 0.75rem; } }
 /**
- * Barlesque will set the correct font-family on the <body> tag but if you're
- * working on a project without Barlesque you might want to enable this flag.
+ * Barlesque will set the correct font-family on the <body> tag but if you're working on a project
+ * without Barlesque you might want to enable this flag
  */
 body {
   font-family: Arial, Helvetica, freesans, sans-serif; }
