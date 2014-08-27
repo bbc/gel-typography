@@ -8,3 +8,4 @@ bower_components/*
 # Testing Files
 type-test.css
 type-test.scss
+*.scssc
