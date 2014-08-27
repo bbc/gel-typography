@@ -1,0 +1,1 @@
+To compile run ```sass style.scss:style.css```

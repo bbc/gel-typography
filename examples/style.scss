@@ -1,0 +1,36 @@
+@import '../rem';
+@import 'mq';
+
+$gel-type-enable-font-family: true;
+
+@import '../typography';
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+body {
+    padding: 32px;
+}
+
+.title {
+    color: #f90;
+}
+
+.typography-class {
+    display: inline-block;
+    margin-left: 8px;
+    color: #909090;
+    font-style: italic;
+}
+
+%hello {
+    background: blue;
+}
+
+.custom-type {
+    @extend %gel-group-a-trafalgar;
+    @extend %gel-group-b-trafalgar;
+    @extend %gel-group-c-pica;
+    .no-touch { @extend %gel-group-d-pica; }
+}

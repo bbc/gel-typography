@@ -49,6 +49,8 @@
             // output the styles for the current type class
             .#{$gel-type-namespace}#{$type-class},
             %#{$gel-type-namespace}#{$type-class} {
+            %#{$gel-type-namespace}#{$type-class},
+            %#{$gel-type-namespace}#{$group-name}-#{$type-class} {
 
                 @include gel-output-type-values(map-get($type-values, $group-name), $type-class, $group-name);
 

@@ -1,0 +1,244 @@
+@charset "UTF-8";
+/*------------------------------------*\
+    #REM
+\*------------------------------------*/
+/**
+ * 'rem' is a Sass function that converts pixel values to rem values
+ * for whatever property is passed to it.
+ *
+ * Source: https://github.com/guardian/guss-rem
+ */
+/**
+ * Converts pixel values to rem values for whatever property is passed to it. It returns two
+ * lines of code — one of the regular pixel values (for old IE), and another with the
+ * converted rem values (for everyone else).
+ *
+ * A thrid value of true can be passed to optionally add the !impotant flag.
+ */
+/*------------------------------------*\
+    #GEL TYPOGRAPHY
+\*------------------------------------*/
+/**
+ * GEL Typography proposes using four groups to apply a scale appropriately across
+ * a range of devices. We take a 'touch first' approach to typography, adjustments
+ * are then made based on if a primary input other than touch has been detected.
+ */
+/*------------------------------------*\
+    #SETTINGS
+\*------------------------------------*/
+/*------------------------------------*\
+    #TOOLS
+\*------------------------------------*/
+/**
+ * Output the specified type group and non touch variant if required
+ */
+/**
+ * We need to loop through each class, create a selector and placeholder
+ * and output the values
+ */
+/**
+ * Loop through a supplied Sass map and return each key & value
+ * as CSS properities and values
+ */
+.gel-trafalgar,
+.gel-trafalgar-bold,
+.custom-type {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 24px;
+  line-height: 1.5rem; }
+  .gel-trafalgar-bold {
+    font-weight: bold;
+    letter-spacing: -1px;
+    letter-spacing: -0.0625rem; }
+
+.gel-double-pica,
+.gel-double-pica-bold {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 24px;
+  line-height: 1.5rem; }
+  .gel-double-pica-bold {
+    font-weight: bold;
+    letter-spacing: -1px;
+    letter-spacing: -0.0625rem; }
+
+.gel-great-primer,
+.gel-great-primer-bold {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 20px;
+  line-height: 1.25rem; }
+  .gel-great-primer-bold {
+    font-weight: bold; }
+
+.gel-pica,
+.gel-pica-bold {
+  font-size: 15px;
+  font-size: 0.9375rem;
+  line-height: 20px;
+  line-height: 1.25rem; }
+  .gel-pica-bold {
+    font-weight: bold; }
+
+.gel-long-primer,
+.gel-long-primer-bold {
+  font-size: 15px;
+  font-size: 0.9375rem;
+  line-height: 18px;
+  line-height: 1.125rem; }
+  .gel-long-primer-bold {
+    font-weight: bold; }
+
+.gel-brevier,
+.gel-brevier-bold {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 16px;
+  line-height: 1rem; }
+  .gel-brevier-bold {
+    font-weight: bold; }
+
+.gel-minion,
+.gel-minion-bold {
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 16px;
+  line-height: 1rem;
+  text-transform: uppercase; }
+  .gel-minion-bold {
+    font-weight: bold; }
+
+@media all and (min-width: 20em) {
+  .gel-trafalgar,
+  .gel-trafalgar-bold,
+  .custom-type {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 28px;
+    line-height: 1.75rem; }
+
+  .gel-great-primer,
+  .gel-great-primer-bold {
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 24px;
+    line-height: 1.5rem; }
+    .gel-great-primer-bold {
+      letter-spacing: -1px;
+      letter-spacing: -0.0625rem; }
+
+  .gel-pica,
+  .gel-pica-bold {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 22px;
+    line-height: 1.375rem; }
+
+  .gel-long-primer,
+  .gel-long-primer-bold {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 20px;
+    line-height: 1.25rem; } }
+@media all and (min-width: 37.5em) {
+  .gel-trafalgar,
+  .gel-trafalgar-bold {
+    font-size: 36px;
+    font-size: 2.25rem;
+    line-height: 40px;
+    line-height: 2.5rem; }
+
+  .gel-double-pica,
+  .gel-double-pica-bold {
+    font-size: 28px;
+    font-size: 1.75rem;
+    line-height: 32px;
+    line-height: 2rem; }
+
+  .gel-great-primer,
+  .gel-great-primer-bold {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 28px;
+    line-height: 1.75rem; }
+
+  .gel-pica,
+  .gel-pica-bold,
+  .custom-type {
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 24px;
+    line-height: 1.5rem; }
+
+  .gel-long-primer,
+  .gel-long-primer-bold {
+    line-height: 22px;
+    line-height: 1.375rem; }
+
+  .gel-minion,
+  .gel-minion-bold {
+    font-size: 13px;
+    font-size: 0.8125rem; }
+
+  .no-touch .gel-trafalgar,
+  .no-touch .gel-trafalgar-bold {
+    font-size: 32px;
+    font-size: 2rem;
+    line-height: 32px;
+    line-height: 2rem; }
+  .no-touch .gel-double-pica,
+  .no-touch .gel-double-pica-bold {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 24px;
+    line-height: 1.5rem; }
+  .no-touch .gel-great-primer,
+  .no-touch .gel-great-primer-bold {
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 20px;
+    line-height: 1.25rem; }
+  .no-touch .gel-pica,
+  .no-touch .gel-pica-bold,
+  .no-touch .custom-type .no-touch,
+  .custom-type .no-touch .no-touch {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 22px;
+    line-height: 1.375rem; }
+  .no-touch .gel-long-primer,
+  .no-touch .gel-long-primer-bold {
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 18px;
+    line-height: 1.125rem; }
+  .no-touch .gel-brevier,
+  .no-touch .gel-brevier-bold {
+    font-size: 13px;
+    font-size: 0.8125rem; }
+  .no-touch .gel-minion,
+  .no-touch .gel-minion-bold {
+    font-size: 12px;
+    font-size: 0.75rem; } }
+/**
+ * Barlesque will set the correct font-family on the <body> tag but if you're
+ * working on a project without Barlesque you might want to enable this flag.
+ */
+body {
+  font-family: Arial, Helvetica, freesans, sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal; }
+
+body {
+  padding: 32px; }
+
+.title {
+  color: #f90; }
+
+.typography-class {
+  display: inline-block;
+  margin-left: 8px;
+  color: #909090;
+  font-style: italic; }
