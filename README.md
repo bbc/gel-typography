@@ -64,7 +64,7 @@ The following configurable options are available:
 
 > **Note:** In an attempt to establish a standard across the BBC we recommend that you use the default prefix of `gel-`. This will allow components to be shared across products and consistently rely on the same set of typography rules. Without the standard prefix you may need to include the same set of style rules twice.
 
-- `$gel-type-touch-class: 'no-touch';` - as described within the [GEL Responsive Typography Guidelines](https://github.com/bbc-sport/gel-typography/wiki/GEL-Typography-Guidelines) a 'touch-first' approach is taken. You can specific the exact class name you're using for your touch detection. **Note:** as we're taking a 'touch-first' approach this class is applied when a non-touch interface is detected.
+- `$gel-type-touch-class: 'no-touch';` - as detailed previously the GEL Responsive Typography Guidelines adopts a 'touch-first' approach. You can specific the exact class name you're using for your touch detection. **Note:** as we're taking a 'touch-first' approach this class is applied when a non-touch interface is detected.
 
 #### Output Configuration
 
