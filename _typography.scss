@@ -67,17 +67,9 @@ $enhanced: true !default;
      * Map the GEL Typography classes to the relevant
      * HTML elements
      */
-    h1 { @extend %gel-trafalgar; }
-    h2 { @extend %gel-double-pica; }
-    h3 { @extend %gel-great-primer; }
-    h4 { @extend %gel-minion; }
+    h1 { @extend %#{$gel-type-namespace}trafalgar; }
+    h2 { @extend %#{$gel-type-namespace}double-pica; }
+    h3 { @extend %#{$gel-type-namespace}great-primer; }
+    h4 { @extend %#{$gel-type-namespace}pica; }
 
-    p,
-    ul,
-    ol {
-        @extend %gel-pica;
-    }
-
-    figcaption { @extend %gel-long-primer; }
-    time { @extend %gel-brevier; }
 }
