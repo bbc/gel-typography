@@ -1,10 +1,8 @@
-/*------------------------------------*\
-    #TOOLS
-\*------------------------------------*/
+///*------------------------------------*\
+//    # TYPOGRAPHY - TOOL
+//\*------------------------------------*/
 
-/**
- * Output the specified type group and non touch variant if required
- */
+// Output the specified type group and non touch variant if required
 @mixin gel-output-type-group($group-name) {
 
     // check that we've got the right type of data
@@ -15,12 +13,10 @@
     } @else {
 
         // is the requested group the no-touch group?
-        @if $group-name == $gel-type-no-touch-group {
+        @if ($group-name == $gel-type-no-touch-group) {
 
             .#{$gel-type-touch-class} {
-
                 @include gel-output-type-class($gel-type-settings, $group-name);
-
             }
 
         } @else {
@@ -34,25 +30,22 @@
 }
 
 
-/**
- * We need to loop through each class, create a selector and placeholder
- * and output the values
- */
+
+// We need to loop through each class, create a selector and placeholder
+// and output the values
 @mixin gel-output-type-class($type-settings, $group-name) {
 
     // loop through each font class
     @each $type-class, $type-values in $type-settings {
 
         // check if styles are defined for the current group
-        @if map-has-key($type-values, $group-name) {
+        @if (map-has-key($type-values, $group-name)) {
 
             // output the styles for the current type class
             .#{$gel-type-namespace}#{$type-class},
             %#{$gel-type-namespace}#{$type-class},
             %#{$gel-type-namespace}#{$group-name}-#{$type-class} {
-
                 @include gel-output-type-values(map-get($type-values, $group-name), $type-class, $group-name);
-
             }
 
         }
@@ -61,10 +54,10 @@
 
 }
 
-/**
- * Loop through a supplied Sass map and return each key & value
- * as CSS properities and values
- */
+
+
+// Loop through a supplied Sass map and return each key & value
+// as CSS properities and values
 @mixin gel-output-type-values($type-values, $type-class: null, $group-name: null) {
 
     @each $property, $value in $type-values {
@@ -76,10 +69,8 @@
             &#{$property} {
 
                 // if the current group is not the base group then we should extend the parent
-                @if $group-name == $gel-type-base-group {
-
+                @if ($group-name == $gel-type-base-group) {
                     @extend %#{$gel-type-namespace}#{$type-class};
-
                 }
 
                 @include gel-output-type-values($value);
@@ -87,24 +78,11 @@
 
         } @else {
 
-            // if we've got a pixel value then convert it to a `rem`
-            @if ($gel-type-enable-rem-output and type-of($value) == number) {
-
-                // check we've got a px value that we'll need for the `rem` convertion
-                @if (unitless($value)) {
-
-                    @warn 'Assuming #{$value} to be in pixels, attempting to convert it into pixels for you';
-                    $value: $value + 0px;
-
-                }
-
-                // pass the property and value into the `rem` function
+            // if we've got a pixel value then pass it to a `rem`
+            @if (type-of($value) == number and unit($value) == 'px') {
                 @include rem($property, $value);
-
             } @else {
-
                 #{$property}: $value;
-
             }
 
         }

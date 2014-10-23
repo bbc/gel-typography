@@ -1,18 +1,21 @@
-/*------------------------------------*\
-    #SETTINGS
-\*------------------------------------*/
+///*------------------------------------*\
+//    # TYPOGRAPHY - SETTINGS
+//\*------------------------------------*/
 
 // general configuration
-$gel-type-namespace: 'gel-' !default;
+$gel-type-namespace: $gel-namespace !default;
 $gel-type-touch-class: 'no-touch' !default;
 $gel-type-base-group: 'group-a';
 $gel-type-no-touch-group: 'group-d';
 
+
+
 // output configuration
-$gel-type-enable-rem-output: true !default;
-$gel-type-enable-markup-output: true !default;
-$gel-type-enable-font-family: false !default;
-$gel-type-enable-base-elements: false !default;
+$gel-type-enable--markup-output: true !default;
+$gel-type-enable--font-family: false !default;
+$gel-type-enable--base-elements: false !default;
+
+
 
 // default GEL typography configuration
 $gel-type-settings: (
@@ -153,9 +156,9 @@ $gel-type-settings: (
 
 // add the typography breakpoints to the list of exisiting
 // breakpoints if Sass Mq is available
-@if mixin-exists(mq) {
+@if (mixin-exists(mq)) {
 
-    $mq-breakpoints: mq-add-breakpoint(gel-type-group-b, 320px) !global;
-    $mq-breakpoints: mq-add-breakpoint(gel-type-group-c, 600px) !global;
+    $mq-breakpoints: mq-add-breakpoint(gel-bp-type-b, 320px) !global;
+    $mq-breakpoints: mq-add-breakpoint(gel-bp-type-c, 600px) !global;
 
 }
