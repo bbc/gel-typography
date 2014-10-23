@@ -4,7 +4,11 @@
     "shaun.bent@bbc.co.uk"
   ],
   "description": "BBC GEL Responsive Typography",
-  "main": "_typography.scss",
+  "main": [
+    "_typography.scss",
+    "_tools.scss",
+    "_settings.css"
+  ],
   "keywords": [
     "Sass",
     "Typography",
@@ -24,7 +28,7 @@
     "tests"
   ],
   "dependencies": {
-    "gel-settings": "git@github.com:bbc-gel/gel-settings.git#~0.1.1",
-    "gel-tools": "git@github.com:bbc-gel/gel-tools.git#~0.1.1"
+    "gel-settings": "git@github.com:bbc-gel/gel-settings.git#~0.1.0",
+    "gel-tools": "git@github.com:bbc-gel/gel-tools.git#~0.1.0"
   }
 }
