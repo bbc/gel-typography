@@ -126,13 +126,6 @@ If you need to vary the type across breakpoints you can use the following techni
 }
 ```
 
-### Credits
-
-- [Shaun Bent](http://www.twitter.com/shaunbent)
-- [Alexander Jones](https://twitter.com/itsaljones)
-- [Rory Pickering](https://twitter.com/rorypickering)
-- [Will Bamford](https://twitter.com/webseed)
-
 ## License
 
 > The MIT License (MIT)
