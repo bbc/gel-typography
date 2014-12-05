@@ -34,7 +34,7 @@ You can install this component manually by downloading the content of this Git r
 
 ## Dependencies
 
-In order to use the GEL Tools component you will need the following component available:
+In order to use the GEL Typography component you will need the following component available:
 
 - [GEL Settings](https://github.com/bbc-gel/gel-settings)
 - [GEL Tools](https://github.com/bbc-gel/gel-tools)
