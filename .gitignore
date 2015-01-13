@@ -1,6 +1,9 @@
 # Grunt
 node_modules/*
 
+# Sass
+.sass-cache
+
 # Bower
 bower_components/*
 
