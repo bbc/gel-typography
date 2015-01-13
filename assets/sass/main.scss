@@ -21,6 +21,7 @@
 	#SETTINGS
 \*------------------------------------*/
 
+@import '../../bower_components/gel-settings/globals';
 @import 'settings.defaults';
 
 /*------------------------------------*\
@@ -28,7 +29,8 @@
 \*------------------------------------*/
 
 @import '../../bower_components/sass-mq/mq';
-@import '../../bower_components/gel-typography/rem';
+@import '../../bower_components/gel-tools/rem';
+@import '../../bower_components/gel-tools/math';
 @import '../../bower_components/inuit-functions/tools.functions';
 
 /*------------------------------------*\

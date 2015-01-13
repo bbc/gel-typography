@@ -75,13 +75,13 @@
         content: 'Group A (0 - 319px)';
     }
 
-    @include mq($from: gel-type-group-b) {
+    @include mq($from: gel-bp-type-b) {
         &:after {
             content: 'Group B (320px - 599px)';
         }
     }
 
-    @include mq($from: gel-type-group-c) {
+    @include mq($from: gel-bp-type-c) {
         &:after {
             content: 'Group C (600+, Touch available)';
         }
@@ -100,13 +100,13 @@
         content: 'Feature Phones';
     }
 
-    @include mq($from: gel-type-group-b) {
+    @include mq($from: gel-bp-type-b) {
         &:after {
             content: 'Default & Smart Phones';
         }
     }
 
-    @include mq($from: gel-type-group-c) {
+    @include mq($from: gel-bp-type-c) {
         &:after {
             content: 'Typically Tablet Devices';
         }

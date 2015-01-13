@@ -63,14 +63,14 @@
         }
 
         @if map-has-key($type-values, 'group-b') {
-            @include mq($from: gel-type-group-b) {
+            @include mq($from: gel-bp-type-b) {
                 &:after {
                     content: get-type-settings('group-b', $type-values);
                 }
             }
         }
 
-       @include mq($from: gel-type-group-c) {
+       @include mq($from: gel-bp-type-c) {
             @if map-has-key($type-values, 'group-c') {
                 &:after {
                     content: get-type-settings('group-c', $type-values);
