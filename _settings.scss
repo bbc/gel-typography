@@ -180,7 +180,7 @@ $gel-type-settings: (
 // breakpoints if Sass Mq is available
 @if (mixin-exists(mq)) {
 
-    @include mq-add-breakpoint(gel-bp-type-b, 320px) !global;
-    @include mq-add-breakpoint(gel-bp-type-c, 600px) !global;
+    @include mq-add-breakpoint(gel-bp-type-b, 320px);
+    @include mq-add-breakpoint(gel-bp-type-c, 600px);
 
 }
