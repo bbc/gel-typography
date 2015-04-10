@@ -1,0 +1,28 @@
+{
+  "name": "gel-typography",
+  "version": "0.6.0-beta",
+  "description": "A flexible code implementation of the GEL responsive typography guidelines.",
+  "main": "_settings.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bbc/gel-typography.git"
+  },
+  "keywords": [
+    "bbc",
+    "gel",
+    "typography"
+  ],
+  "author": "BBC",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bbc/gel-typography/issues"
+  },
+  "homepage": "https://github.com/bbc/gel-typography",
+  "dependencies": {
+    "gel-settings": "git+ssh://github.com/bbc/gel-settings.git#0.3.0",
+    "gel-tools": "git+ssh://github.com/bbc/gel-tools.git#0.3.0"
+  }
+}
