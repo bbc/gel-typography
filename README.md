@@ -13,7 +13,7 @@ We recommend that you use a package manager ([Bower](http://bower.io/) or [NPM](
 ### Install using Bower
 
 ```Shell
-$ bower install --save https://github.com/bbc-gel/gel-typography.git
+$ bower install --save https://github.com/bbc/gel-typography.git
 ```
 
 Once installed, use a Sass `@import` to bring the component into your project:
@@ -24,7 +24,9 @@ Once installed, use a Sass `@import` to bring the component into your project:
 
 ### Install using NPM
 
-[Coming Soon]
+```Shell
+$ npm install --save node_modules/bbc/gel-typography
+```
 
 ### Install manually
 
