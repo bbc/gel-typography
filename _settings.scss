@@ -60,7 +60,7 @@ $gel-type-settings: (
         ),
         'group-d': (
           'font-size': 32px,
-          'line-height': 32px
+          'line-height': 36px
         )
     ),
     'double-pica': (
@@ -73,36 +73,36 @@ $gel-type-settings: (
           )
         ),
         'group-c': (
-          'font-size': 28px,
-          'line-height': 32px
+          'font-size': 25px,
+          'line-height': 28px
         ),
         'group-d': (
           'font-size': 24px,
-          'line-height': 24px
+          'line-height': 28px
         )
     ),
     'great-primer': (
         'group-a': (
           'font-size': 18px,
-          'line-height': 20px,
+          'line-height': 22px,
           '-bold': (
               'font-weight': bold
           )
         ),
         'group-b': (
-          'font-size': 20px,
-          'line-height': 24px,
+          'font-size': 18px,
+          'line-height': 22px,
           '-bold': (
               'letter-spacing': -1px
           )
         ),
         'group-c': (
-          'font-size': 24px,
-          'line-height': 28px
+          'font-size': 21px,
+          'line-height': 24px
         ),
         'group-d': (
           'font-size': 20px,
-          'line-height': 20px
+          'line-height': 24px
         )
     ),
     'pica': (
@@ -135,11 +135,12 @@ $gel-type-settings: (
           )
         ),
         'group-b': (
-          'font-size': 16px,
-          'line-height': 20px
+          'font-size': 15px,
+          'line-height': 18px
         ),
         'group-c': (
-          'line-height': 22px
+          'font-size': 15px,
+          'line-height': 20px
         ),
         'group-d': (
           'font-size': 14px,
@@ -153,6 +154,9 @@ $gel-type-settings: (
           '-bold': (
               'font-weight': bold
           )
+        ),
+        'group-b': (
+          'line-height': 18px
         ),
         'group-d': (
           'font-size': 13px
