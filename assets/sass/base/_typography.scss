@@ -1,0 +1,90 @@
+/*------------------------------------*\
+    # TYPOGRAPHY
+\*------------------------------------*/
+
+/**
+ * Define the core typography experience - this basically maps
+ * various elements of the GEL typography guidelines to the
+ * relivant type selectors
+ */
+html {
+  font-family: Helvetica, Arial, Sans-serif;
+  color: $gel-color--tundora;
+}
+
+.gel-demo {
+    & {
+        @extend %gel-pica;
+    }
+
+    h1 {
+        @extend %gel-canon-bold;
+
+        margin-top: double($gel-alt-spacing-unit);
+        margin-bottom: $gel-alt-spacing-unit;
+    }
+
+    h2 {
+        @extend %gel-double-pica-bold;
+
+        margin-top: double($gel-alt-spacing-unit);
+        margin-bottom: double($gel-alt-spacing-unit);
+    }
+
+    h3 {
+        @extend %gel-great-primer-bold;
+
+        margin-top: double($gel-alt-spacing-unit);
+        margin-bottom: double($gel-alt-spacing-unit);
+    }
+
+    p {
+       margin-bottom: double($gel-spacing-unit);
+    }
+
+    ul, ol {
+        list-style-position: inside;
+        margin-bottom: double($gel-spacing-unit);
+    }
+
+    ul {
+        list-style-type: square;
+    }
+
+    ul li, ol li {
+        margin-bottom: $gel-spacing-unit / 2;
+    }
+
+    a:link,
+    a:visited {
+        font-weight: bold;
+        text-decoration: underline;
+        color: $gel-color--tundora;
+    }
+
+    a:hover {
+        -webkit-transition: color 0.2s ease-out;
+        -khtml-transition: color 0.2s ease-out;
+        -moz-transition: color 0.2s ease-out;
+        -ms-transition: color 0.2s ease-out;
+        -o-transition: color 0.2s ease-out;
+        transition: color 0.2s ease-out;
+    }
+
+    a:focus,
+    a:hover,
+    a:active {
+        text-decoration: underline;
+        color: $gel-color--orange; /* TODO: Define correct link colour */
+    }
+
+    /* TODO: Define outline styles
+    a:focus, .button:focus {
+       
+    } */
+
+    small, figcaption {
+        @extend %gel-brevier;
+        color: $gel-color--cod-gray;
+    }
+}
