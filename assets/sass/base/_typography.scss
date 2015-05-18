@@ -16,75 +16,54 @@ html {
     & {
         @extend %gel-pica;
     }
+}
 
-    h1 {
-        @extend %gel-canon-bold;
+p {
+   margin-bottom: double($gel-spacing-unit);
+}
 
-        margin-top: double($gel-alt-spacing-unit);
-        margin-bottom: $gel-alt-spacing-unit;
-    }
+ul, ol {
+    list-style-position: inside;
+    margin-bottom: double($gel-spacing-unit);
+}
 
-    h2 {
-        @extend %gel-double-pica-bold;
+ul {
+    list-style-type: square;
+}
 
-        margin-top: double($gel-alt-spacing-unit);
-        margin-bottom: double($gel-alt-spacing-unit);
-    }
+ul li, ol li {
+    margin-bottom: $gel-spacing-unit / 2;
+}
 
-    h3 {
-        @extend %gel-great-primer-bold;
+a:link,
+a:visited {
+    font-weight: bold;
+    text-decoration: underline;
+    color: $gel-color--tundora;
+}
 
-        margin-top: double($gel-alt-spacing-unit);
-        margin-bottom: double($gel-alt-spacing-unit);
-    }
+a:hover {
+    -webkit-transition: color 0.2s ease-out;
+    -khtml-transition: color 0.2s ease-out;
+    -moz-transition: color 0.2s ease-out;
+    -ms-transition: color 0.2s ease-out;
+    -o-transition: color 0.2s ease-out;
+    transition: color 0.2s ease-out;
+}
 
-    p {
-       margin-bottom: double($gel-spacing-unit);
-    }
+a:focus,
+a:hover,
+a:active {
+    text-decoration: underline;
+    color: $gel-color--orange; /* TODO: Define correct link colour */
+}
 
-    ul, ol {
-        list-style-position: inside;
-        margin-bottom: double($gel-spacing-unit);
-    }
+/* TODO: Define outline styles
+a:focus, .button:focus {
 
-    ul {
-        list-style-type: square;
-    }
+} */
 
-    ul li, ol li {
-        margin-bottom: $gel-spacing-unit / 2;
-    }
-
-    a:link,
-    a:visited {
-        font-weight: bold;
-        text-decoration: underline;
-        color: $gel-color--tundora;
-    }
-
-    a:hover {
-        -webkit-transition: color 0.2s ease-out;
-        -khtml-transition: color 0.2s ease-out;
-        -moz-transition: color 0.2s ease-out;
-        -ms-transition: color 0.2s ease-out;
-        -o-transition: color 0.2s ease-out;
-        transition: color 0.2s ease-out;
-    }
-
-    a:focus,
-    a:hover,
-    a:active {
-        text-decoration: underline;
-        color: $gel-color--orange; /* TODO: Define correct link colour */
-    }
-
-    /* TODO: Define outline styles
-    a:focus, .button:focus {
-       
-    } */
-
-    small, figcaption {
-        @extend %gel-brevier;
-        color: $gel-color--cod-gray;
-    }
+small, figcaption {
+    @extend %gel-brevier;
+    color: $gel-color--cod-gray;
 }
