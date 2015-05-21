@@ -23,6 +23,20 @@
     text-transform: none; /* [2] */
 }
 
+.gel-type-demo__class-name,
+.gel-type-demo__class-html {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.gel-type-demo__class-name {
+    margin-right: $gel-spacing-unit;
+}
+
+.gel-type-demo__class-html {
+    margin-bottom: 0;
+}
+
 /**
  * 1. Remove an text-tranforms which might be missing with the look and feel
  */
