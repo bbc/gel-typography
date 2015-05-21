@@ -22,13 +22,6 @@
 	border-bottom: 1px solid $gel-color--alto;
     padding-top: $gel-alt-spacing-unit;
 	padding-bottom: $gel-alt-spacing-unit;
-
-    @if $enhanced {
-        @include mq($from: gel-bp-l) {
-            padding-top: double($gel-spacing-unit);
-            padding-bottom: double($gel-spacing-unit);
-        }
-	}
 }
 
 .gel-demo-header__brand {
