@@ -1,7 +1,7 @@
 {
   "name": "gel-typography",
-  "version": "0.5.1",
-  "description": "A flexible code implementation of the GEL responsive typography guidelines.",
+  "version": "0.5.2",
+  "description": "A flexible code implementation of the GEL Typography",
   "main": "_settings.scss",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/bbc/gel-typography",
   "dependencies": {
-    "gel-settings": "git+ssh://git@github.com/bbc/gel-settings.git#0.4.0",
-    "gel-tools": "git+ssh://git@github.com/bbc/gel-tools.git#0.4.0"
+    "gel-settings": "git+ssh://git@github.com/bbc/gel-settings.git#0.4.1",
+    "gel-tools": "git+ssh://git@github.com/bbc/gel-tools.git#0.4.1"
   }
 }

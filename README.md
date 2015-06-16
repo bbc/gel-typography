@@ -1,5 +1,9 @@
 # GEL Responsive Typography
 
+A flexible code implementation of the GEL Typography.
+
+This repository forms part of the the [GEL Foundations](https://github.com/bbc/gel-foundations).
+
 The GEL Responsive Typography scale has been established to work on all devices and is independent of device size and resolution.
 
 The typographic scale has been optimised based on the size of the viewport and the input method being used. We take a 'touch first' approach to typography, adjustments are then made if a primary input other than touch has been detected.
