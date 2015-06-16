@@ -1,6 +1,9 @@
 # Bower
 bower_components/*
 
+# NPM
+node_modules/*
+
 # Misc
 .DS_Store
 .DS_Store?

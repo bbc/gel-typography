@@ -24,7 +24,16 @@ Once installed, use a Sass `@import` to bring the component into your project:
 
 ### Install using NPM
 
-[Coming Soon]
+
+```Shell
+$ npm install --save git+ssh://git@github.com/bbc/gel-typography.git
+```
+
+As above, use a Sass `@import` to bring in the component:
+
+```Sass
+@import 'node_modules/gel-typography/typography';
+```
 
 ### Install manually
 
