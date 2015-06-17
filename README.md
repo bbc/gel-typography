@@ -1,14 +1,16 @@
-# GEL Responsive Typography
+# GEL Typography
 
 A flexible code implementation of the GEL Typography.
 
-This repository forms part of the the [GEL Foundations](https://github.com/bbc/gel-foundations).
+**This repository forms part of the the [GEL Foundations](https://github.com/bbc/gel-foundations).**
 
-The GEL Responsive Typography scale has been established to work on all devices and is independent of device size and resolution.
+## What is this?
+
+This is an implementation of our [GEL Typography Guidelines](http://www.bbc.co.uk/gel/guidelines/typography). 
+Providing typefaces, type sizes, weights, line-heights and tracking.
+The GEL Typography scale has been established to work on all devices and is independent of device size and resolution.
 
 The typographic scale has been optimised based on the size of the viewport and the input method being used. We take a 'touch first' approach to typography, adjustments are then made if a primary input other than touch has been detected.
-
-Background information relating to the [GEL Responsive Typography Guidelines](https://github.com/bbc-sport/gel-typography/wiki/GEL-Typography-Guidelines) can be found within the wiki pages and more details on the [BBC GEL website](http://www.bbc.co.uk/gel).
 
 ## Installation
 
@@ -47,7 +49,7 @@ You can install this component manually by downloading the content of this Git r
 
 ## Dependencies
 
-In order to use the GEL Typography component you will need the following component available:
+In order to use the GEL Typography component you will need the following components available:
 
 - [GEL Settings](https://github.com/bbc-gel/gel-settings)
 - [GEL Tools](https://github.com/bbc-gel/gel-tools)
