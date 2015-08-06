@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8" />
+    <title>GEL Typography Demo | BBC GEL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script>
+        var GEL = {
+            browser : {
+                isIE8: false
+            },
+            mustard : false
+        };
+    </script>
+    <!--[if IE 8]><script>GEL.browser.isIE8 = true;</script><![endif]-->
+    <script>
+        GEL.mustard = (function () {
+            var enhanced = (
+                'addEventListener' in window &&
+                'querySelector' in window.document &&
+                'localStorage' in window
+            );
+            return (enhanced || GEL.browser.isIE8);
+        })();
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+    <script>
+        if (GEL.mustard && GEL.browser.isIE8) {
+            document.write('<link rel="stylesheet" href="assets/css/gel-demo-fixed.css" />');
+        } else if (GEL.mustard) {
+            document.write('<link rel="stylesheet" href="assets/css/gel-demo-enhanced.css" />');
+        } else {
+            document.write('<link rel="stylesheet" href="assets/css/gel-demo-base.css" />');
+        }
+    </script>
+    <noscript>
+        <link rel="stylesheet" href="assets/css/base.css" />
+    </noscript>
+    <script>
+    !function(){function e(e,o){this.loadResource(e,o)}e.prototype.loadResource=function(e,o){try{this.loadResourceFromLocalStorage(e,o)}catch(t){this.loadResourceFromRemote(e,o)}},e.prototype.loadResourceFromLocalStorage=function(e,o){var t,r=window.localStorage.getItem(e);if(r&&(t=JSON.parse(r)),t&&t.url!==o)throw"Resource is either not present or has been updated";this.insertSvgIntoBody(t.data,"local")},e.prototype.loadResourceFromRemote=function(e,o){return this.supportsXMLHttpRequest()?void this.loadResourceViaXmlHttp(e,o):void this.loadResourceViaXDomainRequest(e,o)},e.prototype.loadResourceViaXmlHttp=function(e,o){var t=new XMLHttpRequest,r=this;t.onreadystatechange=function(){4===this.readyState&&(r.insertSvgIntoBody(this.responseText,"remote"),r.removePreviousVersion(e),r.writeToLocalStorage(e,o,this.responseText))},t.open("GET",o),t.send()},e.prototype.loadResourceViaXDomainRequest=function(e,o){var t=new XDomainRequest,r=this;t.onload=function(){this.responseText&&(r.insertSvgIntoBody(this.responseText,"remote"),r.removePreviousVersion(e),r.writeToLocalStorage(e,o,this.responseText))},t.onprogress=function(){},t.onerror=function(){},t.ontimeout=function(){},t.open("GET",o,!0),t.send()},e.prototype.supportsXMLHttpRequest=function(){var e=new XMLHttpRequest;return"withCredentials"in e},e.prototype.writeToLocalStorage=function(e,o,t){var r=JSON.stringify({url:o,data:t});try{window.localStorage.setItem(e,r)}catch(n){}},e.prototype.insertSvgIntoBody=function(e,o){var t=document.createElement("div");t.innerHTML=e,t.setAttribute("data-loaded-from",o),t.style.display="none",document.body.insertBefore(t,document.body.childNodes[0])},e.prototype.removePreviousVersion=function(e){window.localStorage.hasOwnProperty(e)&&window.localStorage.removeItem(e)},window.Shovel={load:function(o,t){new e(o,t)}}}();
+	</script>
+	<script>
+	    if (GEL.mustard && !GEL.browser.isIE8) {
+	        window.addEventListener('load', function () {
+	            Shovel.load('gel-icons-core', 'assets/svg/gel-icons-core.svg');
+	        });
+	    }
+	</script>
+</head>
+	<body>
+
+		<!-- GEL Demos Header -->
+        <div class="gel-demo">
+			<header role="banner" class="gel-demo-header">
+			    <div class="gel-demo-header__banner">
+                    <div class="gel-wrap clearfix">
+    					<div class="gel-demo-header__brand">
+                            <a class="gel-demo-header__brand-logo" href="http://www.bbc.co.uk/gel">
+            			        <object data="assets/images/bbc-gel-logo.svg" type="image/svg+xml">
+            			            <img src="assets/images/bbc-gel-logo.png" alt="BBC GEL Logo" />
+            			        </object>
+        					</a>
+    			   			<i class="gel-demo-header__brand-beta gel-minion-bold">Beta</i>
+                        </div>
+
+    					<a class="gel-demo-header__banner-button button gel-long-primer-bold" href="http://www.bbc.co.uk/gel/guidelines/typography">
+    						Go to BBC GEL
+    					</a>
+                    </div>
+                </div>
+                <div class="gel-demo-header__intro">
+                    <div class="gel-wrap">
+                    	<div class="gel-layout">
+                            <div class="gel-layout__item gel-bp-l-3/4">
+                                <h1 class="gel-demo-header__intro-title gel-canon-bold">Typography</h1>
+                                <p class="gel-demo-header__intro-summary">This is a working demo of the <a href="http://www.bbc.co.uk/gel/guidelines/typography">GEL Typography Guidelines</a>. This demo shows how our typographic styles are set across the BBC, online.</p>
+                            </div>
+		                </div>
+                    </div>
+                </div>
+			</header>
+            <main role="main" class="gel-demo-content">
+                <div class="gel-wrap">
+
+
+                    <div class="gel-type-demo-list">
+                        <article class="gel-type-demo gel-canon" data-type-class="canon">
+                            <div class="gel-type-demo__class gel-long-primer">
+                                <h2 class="gel-type-demo__class-name gel-long-primer">Canon Regular</h2><!--
+                             --><p class="gel-type-demo__class-html gel-brevier">(<code>gel-canon</code>)</p>
+                            </div>
+                            <div class="gel-layout">
+                                <div class="gel-layout__item gel-bp-l-1/3">
+                                    <p class="gel-type-demo__sample-scale"><span class="gel-type-demo__settings"></span> AaGg</p>
+                                </div>
+                                <div class="gel-layout__item gel-bp-l-2/3">
+                                    <p>Final preparations have begun for the London Paralympics opening ceremony, heralding 11 days of competition for athletes with disabilities</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="gel-type-demo gel-canon-bold" data-type-class="canon">
+                            <div class="gel-type-demo__class gel-long-primer">
+                                <h2 class="gel-type-demo__class-name gel-long-primer">Canon Bold</h2><!--
+                             --><p class="gel-type-demo__class-html gel-brevier">(<code>gel-canon-bold</code>)</p>
+                            </div>
+                            <div class="gel-layout">
+                                <div class="gel-layout__item gel-bp-l-1/3">
+                                    <p class="gel-type-demo__sample-scale"><span class="gel-type-demo__settings"></span> AaGg</p>
+                                </div>
+                                <div class="gel-layout__item gel-bp-l-2/3">
+                                    <p>Final preparations have begun for the London Paralympics opening ceremony, heralding 11 days of competition for athletes with disabilities</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="gel-type-demo gel-trafalgar" data-type-class="trafalgar">
+                            <div class="gel-type-demo__class gel-long-primer">
+                                <h2 class="gel-type-demo__class-name gel-long-primer">Trafalgar Regular</h2><!--
+                             --><p class="gel-type-demo__class-html gel-brevier">(<code>gel-trafalgar</code>)</p>
+                            </div>
+                            <div class="gel-layout">
+                                <div class="gel-layout__item gel-bp-l-1/3">
+                                    <p class="gel-type-demo__sample-scale"><span class="gel-type-demo__settings"></span> AaGg</p>
+                                </div>
+                                <div class="gel-layout__item gel-bp-l-2/3">
+                                    <p>Final preparations have begun for the London Paralympics opening ceremony, heralding 11 days of competition for athletes with disabilities</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="gel-type-demo gel-trafalgar-bold" data-type-class="trafalgar">
+                            <div class="gel-type-demo__class gel-long-primer">
+                                <h2 class="gel-type-demo__class-name gel-long-primer">Trafalgar Bold</h2><!--
+                             --><p class="gel-type-demo__class-html gel-brevier">(<code>gel-trafalgar-bold</code>)</p>
+                            </div>
+                            <div class="gel-layout">
+                                <div class="gel-layout__item gel-bp-l-1/3">
+                                    <p class="gel-type-demo__sample-scale"><span class="gel-type-demo__settings"></span> AaGg</p>
+                                </div>
+                                <div class="gel-layout__item gel-bp-l-2/3">
+                                    <p>Final preparations have begun for the London Paralympics opening ceremony, heralding 11 days of competition for athletes with disabilities</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="gel-type-demo gel-double-pica" data-type-class="double-pica">
+                            <div class="gel-type-demo__class gel-long-primer">
+                                <h2 class="gel-type-demo__class-name gel-long-primer">Double Pica Regular</h2><!--
+                             --><p class="gel-type-demo__class-html gel-brevier">(<code>gel-double-pica</code>)</p>
+                            </div>
+                            <div class="gel-layout">
+                                <div class="gel-layout__item gel-bp-l-1/3">
+                                    <p class="gel-type-demo__sample-scale"><span class="gel-type-demo__settings"></span> AaGg</p>
+                                </div>
+                                <div class="gel-layout__item gel-bp-l-2/3">
+                                    <p>Final preparations have begun for the London Paralympics opening ceremony, heralding 11 days of competition for athletes with disabilities</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="gel-type-demo gel-double-pica-bold" data-type-class="double-pica">
+                            <div class="gel-type-demo__class gel-long-primer">
+                                <h2 class="gel-type-demo__class-name gel-long-primer">Double Pica Bold</h2><!--
+                             --><p class="gel-type-demo__class-html gel-brevier">(<code>gel-double-pica-bold</code>)</p>
+                            </div>
+                            <div class="gel-layout">
+                                <div class="gel-layout__item gel-bp-l-1/3">
+                                    <p class="gel-type-demo__sample-scale"><span class="gel-type-demo__settings"></span> AaGg</p>
+                                </div>
+                                <div class="gel-layout__item gel-bp-l-2/3">
+                                    <p>Final preparations have begun for the London Paralympics opening ceremony, heralding 11 days of competition for athletes with disabilities</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="gel-type-demo gel-great-primer" data-type-class="great-primer">
+                            <div class="gel-type-demo__class gel-long-primer">
+                                <h2 class="gel-type-demo__class-name gel-long-primer">Great Primer Regular</h2><!--
+                             --><p class="gel-type-demo__class-html gel-brevier">(<code>gel-great-primer</code>)</p>
+                            </div>
+                            <div class="gel-layout">
+                                <div class="gel-layout__item gel-bp-l-1/3">
+                                    <p class="gel-type-demo__sample-scale"><span class="gel-type-demo__settings"></span> AaGg</p>
+                                </div>
+                                <div class="gel-layout__item gel-bp-l-2/3">
+                                    <p>Final preparations have begun for the London Paralympics opening ceremony, heralding 11 days of competition for athletes with disabilities</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="gel-type-demo gel-great-primer-bold" data-type-class="great-primer">
+                            <div class="gel-type-demo__class gel-long-primer">
+                                <h2 class="gel-type-demo__class-name gel-long-primer">Great Primer Bold</h2><!--
+                             --><p class="gel-type-demo__class-html gel-brevier">(<code>gel-great-primer-bold</code>)</p>
+                            </div>
+                            <div class="gel-layout">
+                                <div class="gel-layout__item gel-bp-l-1/3">
+                                    <p class="gel-type-demo__sample-scale"><span class="gel-type-demo__settings"></span> AaGg</p>
+                                </div>
+                                <div class="gel-layout__item gel-bp-l-2/3">
+                                    <p>Final preparations have begun for the London Paralympics opening ceremony, heralding 11 days of competition for athletes with disabilities</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="gel-type-demo gel-pica" data-type-class="pica">
+                            <div class="gel-type-demo__class gel-long-primer">
+                                <h2 class="gel-type-demo__class-name gel-long-primer">Pica Regular</h2><!--
+                             --><p class="gel-type-demo__class-html gel-brevier">(<code>gel-pica</code>)</p>
+                            </div>
+                            <div class="gel-layout">
+                                <div class="gel-layout__item gel-bp-l-1/3">
+                                    <p class="gel-type-demo__sample-scale"><span class="gel-type-demo__settings"></span> AaGg</p>
+                                </div>
+                                <div class="gel-layout__item gel-bp-l-2/3">
+                                    <p>Final preparations have begun for the London Paralympics opening ceremony, heralding 11 days of competition for athletes with disabilities</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="gel-type-demo gel-pica-bold" data-type-class="pica">
+                            <div class="gel-type-demo__class gel-long-primer">
+                                <h2 class="gel-type-demo__class-name gel-long-primer">Pica Bold</h2><!--
+                             --><p class="gel-type-demo__class-html gel-brevier">(<code>gel-pica</code>)</p>
+                            </div>
+                            <div class="gel-layout">
+                                <div class="gel-layout__item gel-bp-l-1/3">
+                                    <p class="gel-type-demo__sample-scale"><span class="gel-type-demo__settings"></span> AaGg</p>
+                                </div>
+                                <div class="gel-layout__item gel-bp-l-2/3">
+                                    <p>Final preparations have begun for the London Paralympics opening ceremony, heralding 11 days of competition for athletes with disabilities</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="gel-type-demo gel-long-primer" data-type-class="long-primer">
+                            <div class="gel-type-demo__class gel-long-primer">
+                                <h2 class="gel-type-demo__class-name gel-long-primer">Long Primer Regular</h2><!--
+                             --><p class="gel-type-demo__class-html gel-brevier">(<code>gel-long-primer</code>)</p>
+                            </div>
+                            <div class="gel-layout">
+                                <div class="gel-layout__item gel-bp-l-1/3">
+                                    <p class="gel-type-demo__sample-scale"><span class="gel-type-demo__settings"></span> AaGg</p>
+                                </div>
+                                <div class="gel-layout__item gel-bp-l-2/3">
+                                    <p>Final preparations have begun for the London Paralympics opening ceremony, heralding 11 days of competition for athletes with disabilities</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="gel-type-demo gel-long-primer-bold" data-type-class="long-primer">
+                            <div class="gel-type-demo__class gel-long-primer">
+                                <h2 class="gel-type-demo__class-name gel-long-primer">Long Primer Bold</h2><!--
+                             --><p class="gel-type-demo__class-html gel-brevier">(<code>gel-long-primer</code>)</p>
+                            </div>
+                            <div class="gel-layout">
+                                <div class="gel-layout__item gel-bp-l-1/3">
+                                    <p class="gel-type-demo__sample-scale"><span class="gel-type-demo__settings"></span> AaGg</p>
+                                </div>
+                                <div class="gel-layout__item gel-bp-l-2/3">
+                                    <p>Final preparations have begun for the London Paralympics opening ceremony, heralding 11 days of competition for athletes with disabilities</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="gel-type-demo gel-brevier" data-type-class="brevier">
+                            <div class="gel-type-demo__class gel-long-primer">
+                                <h2 class="gel-type-demo__class-name gel-long-primer">Brevier Regular</h2><!--
+                             --><p class="gel-type-demo__class-html gel-brevier">(<code>gel-brevier</code>)</p>
+                            </div>
+                            <div class="gel-layout">
+                                <div class="gel-layout__item gel-bp-l-1/3">
+                                    <p class="gel-type-demo__sample-scale"><span class="gel-type-demo__settings"></span> AaGg</p>
+                                </div>
+                                <div class="gel-layout__item gel-bp-l-2/3">
+                                    <p>Final preparations have begun for the London Paralympics opening ceremony, heralding 11 days of competition for athletes with disabilities</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="gel-type-demo gel-brevier-bold" data-type-class="brevier">
+                            <div class="gel-type-demo__class gel-long-primer">
+                                <h2 class="gel-type-demo__class-name gel-long-primer">Brevier Bold</h2><!--
+                             --><p class="gel-type-demo__class-html gel-brevier">(<code>gel-brevier</code>)</p>
+                            </div>
+                            <div class="gel-layout">
+                                <div class="gel-layout__item gel-bp-l-1/3">
+                                    <p class="gel-type-demo__sample-scale"><span class="gel-type-demo__settings"></span> AaGg</p>
+                                </div>
+                                <div class="gel-layout__item gel-bp-l-2/3">
+                                    <p>Final preparations have begun for the London Paralympics opening ceremony, heralding 11 days of competition for athletes with disabilities</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="gel-type-demo gel-minion" data-type-class="minion">
+                            <div class="gel-type-demo__class gel-long-primer">
+                                <h2 class="gel-type-demo__class-name gel-long-primer">Minion Regular</h2><!--
+                             --><p class="gel-type-demo__class-html gel-brevier">(<code>gel-minion</code>)</p>
+                            </div>
+                            <div class="gel-layout">
+                                <div class="gel-layout__item gel-bp-l-1/3">
+                                    <p class="gel-type-demo__sample-scale"><span class="gel-type-demo__settings"></span> AaGg</p>
+                                </div>
+                                <div class="gel-layout__item gel-bp-l-2/3">
+                                    <p>Final preparations have begun for the London Paralympics opening ceremony, heralding 11 days of competition for athletes with disabilities</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="gel-type-demo gel-minion-bold" data-type-class="minion">
+                            <div class="gel-type-demo__class gel-long-primer">
+                                <h2 class="gel-type-demo__class-name gel-long-primer">Minion Bold</h2><!--
+                             --><p class="gel-type-demo__class-html gel-brevier">(<code>gel-minion</code>)</p>
+                            </div>
+                            <div class="gel-layout">
+                                <div class="gel-layout__item gel-bp-l-1/3">
+                                    <p class="gel-type-demo__sample-scale"><span class="gel-type-demo__settings"></span> AaGg</p>
+                                </div>
+                                <div class="gel-layout__item gel-bp-l-2/3">
+                                    <p>Final preparations have begun for the London Paralympics opening ceremony, heralding 11 days of competition for athletes with disabilities</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </main>
+		</div>
+
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	    <script src="assets/js/main.js"></script>
+	</body>
+</html>
