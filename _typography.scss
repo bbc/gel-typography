@@ -1,5 +1,5 @@
 /*------------------------------------*\
-    #GEL TYPOGRAPHY
+    # GEL TYPOGRAPHY
 \*------------------------------------*/
 
 /**
@@ -30,18 +30,10 @@ $enhanced: true !default;
 // Output the typography styles for the 4 groups
 @if $gel-type-enable--markup-output {
 
-    @if $core {
-        @include gel-output-type-group('group-a');
-    }
-
-    @if $enhanced {
-        @include mq($from: gel-bp-type-b) {
-            @include gel-output-type-group('group-b');
-        }
-
-        @include mq($from: gel-bp-type-c) {
-            @include gel-output-type-group('group-c');
-            @include gel-output-type-group('group-d');
+    @each $type-class, $type-values in $gel-type-settings {
+        .#{$gel-type-namespace}#{$type-class},
+        %#{$gel-type-namespace}#{$type-class} {
+            @include gel-typography($type-class);
         }
     }
 
@@ -63,10 +55,9 @@ $enhanced: true !default;
 
 @if $gel-type-enable--base-elements {
 
-    /**
-     * Map the GEL Typography classes to the relevant
-     * HTML elements
-     */
+    // Map the GEL Typography classes to the relevant
+    // HTML elements
+    //
     h1 { @extend %#{$gel-type-namespace}trafalgar; }
     h2 { @extend %#{$gel-type-namespace}double-pica; }
     h3 { @extend %#{$gel-type-namespace}great-primer; }
