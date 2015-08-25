@@ -1,92 +1,124 @@
 ///*------------------------------------*\
-//    # TYPOGRAPHY - TOOL
+//    # GEL TYPOGRAPHY - TOOL
 //\*------------------------------------*/
 
-// Output the specified type group and non touch variant if required
-@mixin gel-output-type-group($group-name) {
+// Replace `$search` with `$replace` in `$string`
+//
+// @param {String}  $string - Initial string
+// @param {String}  $search - Substring to replace
+// @param {String}  $replace ('') - New value
+//
+// @return {String} Updated string
+//
+// @author          Hugo Giraudel - http://bit.ly/1Khge01
+//
+@function gel-str-replace($string, $search, $replace: '') {
+    $index: str-index($string, $search);
 
-    // check that we've got the right type of data
-    @if (type-of($gel-type-settings) != map) {
-
-        @warn '$gel-type-settings is expected to be a Sass map, looks like something\'s not right here';
-
-    } @else {
-
-        // is the requested group the no-touch group?
-        @if ($group-name == $gel-type-no-touch-group) {
-
-            .#{$gel-type-touch-class} {
-                @include gel-output-type-class($gel-type-settings, $group-name);
-            }
-
-        } @else {
-
-            @include gel-output-type-class($gel-type-settings, $group-name);
-
-        }
-
+    @if $index {
+        @return str-slice($string, 1, $index - 1) + $replace + gel-str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
     }
 
+    @return $string;
 }
 
 
+// Combine the the value of two Sass maps
+//
+// @param {Map}     $source - The orignal Sass map
+// @param {Map}     $map - Sass map containing the new values to be combined
+//
+// @return {Map}    New map consistenting of the values of both supplied maps
+//
+// @author          Hugo Giraudel - http://bit.ly/1PPIoj4
+//
+@function gel-map-combine($source, $map) {
+    @each $key, $value in $map {
+        $new: ($key: $value);
 
-// We need to loop through each class, create a selector and placeholder
-// and output the values
-@mixin gel-output-type-class($type-settings, $group-name) {
-
-    // loop through each font class
-    @each $type-class, $type-values in $type-settings {
-
-        // check if styles are defined for the current group
-        @if (map-has-key($type-values, $group-name)) {
-
-            // output the styles for the current type class
-            .#{$gel-type-namespace}#{$type-class},
-            %#{$gel-type-namespace}#{$type-class},
-            %#{$gel-type-namespace}#{$group-name}-#{$type-class} {
-                @include gel-output-type-values(map-get($type-values, $group-name), $type-class, $group-name);
-            }
-
+        @if map-has-key($source, $key) {
+            $current: map-get($source, $key);
+            $new: ($key: map-merge($current, $value));
         }
 
+        $source: map-merge($source, $new);
     }
 
+    @return $source;
 }
 
 
+// Return the type settings for the requested type class/type group. If a bold variant is
+// requested the bold type values will be combined with the type values of the non-bold
+// variant.
+//
+// @param {String}  $type-class - name of the type class you want the settings for (e.g. pica)
+// @param {String}  $type-group (all) - which type group you want the values for (e.g. group-a)
+//
+// @author          Shaun Bent
+//
+@function gel-typography($type-class, $type-group: 'all') {
+    $type-settings: map-get($gel-type-settings, $type-class);
 
-// Loop through a supplied Sass map and return each key & value
-// as CSS properities and values
-@mixin gel-output-type-values($type-values, $type-class: null, $group-name: null) {
+    @if (str-index($type-class, '-bold')) {
+        $root-type-group: map-get($gel-type-settings, gel-str-replace($type-class, '-bold'));
+        $type-settings: gel-map-combine($root-type-group, $type-settings);
+    }
 
+    @if ($type-group != 'all') {
+        @return map-get($type-settings, $type-group);
+    }
+
+    @return $type-settings;
+}
+
+
+// Output the type values for the requested type class (e.g pica). This will return all required media
+// queries and no-touch fallbacks
+//
+// @param {String}  $type-class - name of the type class to output the values for
+//
+// @author          Shaun Bent
+//
+@mixin gel-typography($type-class) {
+    @if $core {
+      $type-values: gel-typography($type-class, 'group-a');
+      @include gel-output-type-values($type-values, $type-class, 'group-a');
+    }
+
+    @if $enhanced {
+        @include mq($from: gel-bp-type-b) {
+            $type-values: gel-typography($type-class, 'group-b');
+            @include gel-output-type-values($type-values, $type-class, 'group-b');
+        }
+
+        @include mq($from: gel-bp-type-c) {
+            $type-values-c: gel-typography($type-class, 'group-c');
+            $type-values-d: gel-typography($type-class, $gel-type-no-touch-group);
+
+            @include gel-output-type-values($type-values-c, $type-class, 'group-c');
+
+            .#{$gel-type-touch-class} & {
+                @include gel-output-type-values($type-values-d, $type-class, $gel-type-no-touch-group);
+            }
+        }
+    }
+}
+
+
+// Loop through a supplied Sass map and return each key/value as CSS properties
+// and values. Any `px` value will be automatically passed to the `rem` tool
+//
+// @param {Map}  $type-values - a map of CSS values in property: value format
+//
+// @author          Shaun Bent
+//
+@mixin gel-output-type-values($type-values) {
     @each $property, $value in $type-values {
-
-        // do we need output values or a modifier
-        @if (type-of($value) == map) {
-
-            // create the new modifier class
-            &#{$property} {
-
-                // if the current group is not the base group then we should extend the parent
-                @if ($group-name == $gel-type-base-group) {
-                    @extend %#{$gel-type-namespace}#{$type-class};
-                }
-
-                @include gel-output-type-values($value);
-            }
-
+        @if (type-of($value) == number and unit($value) == 'px') {
+            @include rem($property, $value);
         } @else {
-
-            // if we've got a pixel value then pass it to a `rem`
-            @if (type-of($value) == number and unit($value) == 'px') {
-                @include rem($property, $value);
-            } @else {
-                #{$property}: $value;
-            }
-
+            #{$property}: $value;
         }
-
     }
-
 }
