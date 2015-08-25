@@ -1,5 +1,5 @@
 ///*------------------------------------*\
-//    # TYPOGRAPHY - SETTINGS
+//    # GEL TYPOGRAPHY - SETTINGS
 //\*------------------------------------*/
 
 // general configuration
@@ -23,10 +23,6 @@ $gel-type-settings: (
         'group-a': (
           'font-size': 28px,
           'line-height': 32px,
-          '-bold': (
-              'font-weight': bold,
-              'letter-spacing': -1px
-          )
         ),
         'group-b': (
           'font-size': 32px,
@@ -41,14 +37,16 @@ $gel-type-settings: (
           'line-height': 48px
         )
     ),
+    'canon-bold': (
+        'group-a': (
+            'font-weight': bold,
+            'letter-spacing': -1px
+        )
+    ),
     'trafalgar': (
         'group-a': (
           'font-size': 20px,
-          'line-height': 24px,
-          '-bold': (
-              'font-weight': bold,
-              'letter-spacing': -1px
-          )
+          'line-height': 24px
         ),
         'group-b': (
           'font-size': 24px,
@@ -63,14 +61,16 @@ $gel-type-settings: (
           'line-height': 32px
         )
     ),
+    'trafalgar-bold': (
+        'group-a': (
+            'font-weight': bold,
+            'letter-spacing': -1px
+        )
+    ),
     'double-pica': (
         'group-a': (
           'font-size': 20px,
-          'line-height': 24px,
-          '-bold': (
-              'font-weight': bold,
-              'letter-spacing': -1px
-          )
+          'line-height': 24px
         ),
         'group-c': (
           'font-size': 28px,
@@ -81,20 +81,20 @@ $gel-type-settings: (
           'line-height': 24px
         )
     ),
+    'double-pica-bold': (
+        'group-a': (
+            'font-weight': bold,
+            'letter-spacing': -1px
+        )
+    ),
     'great-primer': (
         'group-a': (
           'font-size': 18px,
-          'line-height': 20px,
-          '-bold': (
-              'font-weight': bold
-          )
+          'line-height': 20px
         ),
         'group-b': (
           'font-size': 20px,
-          'line-height': 24px,
-          '-bold': (
-              'letter-spacing': -1px
-          )
+          'line-height': 24px
         ),
         'group-c': (
           'font-size': 24px,
@@ -105,13 +105,18 @@ $gel-type-settings: (
           'line-height': 20px
         )
     ),
+    'great-primer-bold': (
+        'group-a': (
+            'font-weight': bold
+        ),
+        'group-b': (
+            'letter-spacing': -1px
+        )
+    ),
     'pica': (
         'group-a': (
           'font-size': 15px,
-          'line-height': 20px,
-          '-bold': (
-              'font-weight': bold
-          )
+          'line-height': 20px
         ),
         'group-b': (
           'font-size': 16px,
@@ -126,13 +131,15 @@ $gel-type-settings: (
           'line-height': 22px
         )
     ),
+    'pica-bold': (
+        'group-a': (
+            'font-weight': bold
+        )
+    ),
     'long-primer': (
         'group-a': (
           'font-size': 15px,
-          'line-height': 18px,
-          '-bold': (
-              'font-weight': bold
-          )
+          'line-height': 18px
         ),
         'group-b': (
           'font-size': 16px,
@@ -146,32 +153,41 @@ $gel-type-settings: (
           'line-height': 18px
         )
     ),
+    'long-primer-bold': (
+        'group-a': (
+            'font-weight': bold
+        )
+    ),
     'brevier': (
         'group-a': (
           'font-size': 14px,
-          'line-height': 16px,
-          '-bold': (
-              'font-weight': bold
-          )
+          'line-height': 16px
         ),
         'group-d': (
           'font-size': 13px
+        )
+    ),
+    'brevier-bold': (
+        'group-a': (
+            'font-weight': bold
         )
     ),
     'minion': (
         'group-a': (
           'font-size': 12px,
           'line-height': 16px,
-          'text-transform': uppercase,
-          '-bold': (
-              'font-weight': bold
-          )
+          'text-transform': uppercase
         ),
         'group-c': (
           'font-size': 13px
         ),
         'group-d': (
           'font-size': 12px
+        )
+    ),
+    'minion-bold': (
+        'group-a': (
+            'font-weight': bold
         )
     )
 ) !default;
