@@ -146,7 +146,7 @@ $gel-type-settings: (
 
 ### Touch Detection
 
-add the info here
+{{add the info here}}
 
 ## Who is using this?
 
