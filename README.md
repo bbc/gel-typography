@@ -114,7 +114,7 @@ The following configurable options are available:
 
 If you're using another font-face other than Arial and need to make adjustments to any of the type settings you can do this by defining in a custom `$gel-type-settings` map.
 
-*For example:* BBC News support many languages, some of which do not use latin based character sets which require custom font scripts. It is often the case that these custom fonts will require bespoke font-sizes or line-heights.
+*For example:* [BBC News](http://www.bbc.com/burmese) support many languages, some of which do not use latin based character sets which require custom font scripts. It is often the case that these custom fonts will require bespoke font-sizes or line-heights.
 
 For example, the configuration for Burmese may look like:
 
@@ -147,6 +147,12 @@ $gel-type-settings: (
 ### Touch Detection
 
 add the info here
+
+## Who is using this?
+
+The following teams are currently using this component: GEL, Sport, Live, Homepage, Search, BBC Food, CBBC, CBeebies, BBC Three, MyBBC, K&L, Taster & Weather
+
+If your team is using this component, let us know and we'll add you to the list.
 
 ## License
 
