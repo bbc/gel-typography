@@ -4,7 +4,7 @@
   "description": "A flexible code implementation of the GEL Typography",
   "main": "_settings.scss",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node-sass test/test.scss test/test.css --output-style=expanded --sourcemap=none && diff -u test/test-expected.css test/test.css"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,10 @@
     "url": "https://github.com/bbc/gel-typography/issues"
   },
   "homepage": "https://github.com/bbc/gel-typography",
+  "devDependencies": {
+    "node-sass": "^3.2.0"
+  },
   "dependencies": {
-    "gel-sass-tools": "git+ssh://git@github.com:bbc/gel-sass-tools.git#master",
+    "gel-sass-tools": "git+ssh://git@github.com:bbc/gel-sass-tools.git#master"
   }
 }
