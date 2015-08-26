@@ -4,11 +4,11 @@ bower_components/*
 # NPM
 node_modules/*
 
+# Testing - Ignore css files except those ending in -expected
+test/*.css
+!test/*-expected.css
+
 # Misc
 .DS_Store
 .DS_Store?
-
-# Testing Files
-type-test.css
-type-test.scss
-*.scssc
+.sass-cache/
