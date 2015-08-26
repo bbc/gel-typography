@@ -73,12 +73,25 @@ In order to use the component you will need the following components available:
 
 ## Usage
 
-By default the GEL Typography component does not output any markup but exposes a Sass Mixin. A collection of typography classes can be output by defining `$gel-type-enable--markup-output: true;` before you `@import` the typography partial.
+By default the GEL Typography component does not output any markup but exposes a Sass Mixin which can be called within your Sass.
+
+**Example**
+
+```scss
+.my-component {
+    @include gel-typography('pica');
+}
+
+.my-component__title {
+    @include gel-typography('canon');
+}
+```
+
+A collection of typography classes can be output by defining `$gel-type-enable--markup-output: true;` before you `@import` the typography partial.
 
 **Example:**
 
 ```scss
-$gel-type-touch-class: 'feature-no-touch';
 $gel-type-enable--markup-output: true;
 
 @import "gel-typography/typography";
@@ -94,7 +107,7 @@ The following configurable options are available:
 ### Output Configuration
 
 - `$gel-type-enable--markup-output: false;` - output a collection of classes for each type group
-- `$gel-type-enable--font-family: false;` - output the correct font-family required by GEL Typography. *Note* Barlesque will set this correctly if its been loaded on the page
+- `$gel-type-enable--font-family: false;` - output the correct font-family required by GEL Typography if ORB not available.
 - `$gel-type-enable--base-elements: false;` - map the GEL Typography classes to the relevant HTML elements
 
 ### Custom Font Configuration
