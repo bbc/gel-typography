@@ -144,6 +144,10 @@ $gel-type-settings: (
 );
 ```
 
+### Touch Detection
+
+add the info here
+
 ## License
 
 > The MIT License (MIT)
