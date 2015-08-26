@@ -83,23 +83,23 @@
 @mixin gel-typography($type-class) {
     @if $core {
       $type-values: gel-typography($type-class, 'group-a');
-      @include gel-output-type-values($type-values, $type-class, 'group-a');
+      @include gel-output-type-values($type-values);
     }
 
     @if $enhanced {
         @include mq($from: gel-bp-type-b) {
             $type-values: gel-typography($type-class, 'group-b');
-            @include gel-output-type-values($type-values, $type-class, 'group-b');
+            @include gel-output-type-values($type-values);
         }
 
         @include mq($from: gel-bp-type-c) {
             $type-values-c: gel-typography($type-class, 'group-c');
             $type-values-d: gel-typography($type-class, $gel-type-no-touch-group);
 
-            @include gel-output-type-values($type-values-c, $type-class, 'group-c');
+            @include gel-output-type-values($type-values-c);
 
             .#{$gel-type-touch-class} & {
-                @include gel-output-type-values($type-values-d, $type-class, $gel-type-no-touch-group);
+                @include gel-output-type-values($type-values-d);
             }
         }
     }
