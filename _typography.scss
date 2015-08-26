@@ -18,8 +18,8 @@ $gel-settings-available: false !default;
 
 
 // import the local dependancies
-@import 'settings';
-@import 'tools';
+@import 'lib/settings';
+@import 'lib/tools';
 
 
 // define some output control variables
