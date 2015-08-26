@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/bbc/gel-typography",
   "dependencies": {
-    "gel-settings": "git+ssh://git@github.com/bbc/gel-settings.git#0.4.0",
-    "gel-tools": "git+ssh://git@github.com/bbc/gel-tools.git#0.4.0"
+    "gel-sass-tools": "git+ssh://git@github.com:bbc/gel-sass-tools.git#^0.0.1",
   }
 }
