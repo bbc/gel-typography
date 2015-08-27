@@ -4,7 +4,8 @@
   "description": "A flexible code implementation of the GEL Typography",
   "main": "_settings.scss",
   "scripts": {
-    "test": "node-sass test/test.scss test/test.css --output-style=expanded --sourcemap=none && diff -u test/test-expected.css test/test.css"
+    "test": "node-sass test/test.scss test/test.css --output-style=expanded --sourcemap=none && diff -u test/test-expected.css test/test.css",
+    "dist": "node-sass dist/gel-typography.scss dist/gel-typography.min.css --output-style=compressed --sourcemap=none"
   },
   "repository": {
     "type": "git",
