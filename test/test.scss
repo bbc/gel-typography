@@ -11,11 +11,11 @@
 $gel-type-enable--markup-output: true !default;
 
 
-// Import the widths component
+// Import the typography component
 @import '../typography';
 
 
-// Lets test our mixins and functions
+// Lets test our mixin
 .my-component {
 	@include gel-typography('pica');
 }
