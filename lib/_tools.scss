@@ -55,6 +55,8 @@
 // @param {String}  $type-class - name of the type class you want the settings for (e.g. pica)
 // @param {String}  $type-group (all) - which type group you want the values for (e.g. group-a)
 //
+// @returns {Map}   a map of the type settings for the requested type class/type group
+//
 // @author          Shaun Bent
 //
 @function gel-typography($type-class, $type-group: 'all') {
@@ -82,24 +84,19 @@
 //
 @mixin gel-typography($type-class) {
     @if $core {
-      $type-values: gel-typography($type-class, 'group-a');
-      @include gel-output-type-values($type-values);
+      @include gel-output-type-values(gel-typography($type-class, 'group-a'));
     }
 
     @if $enhanced {
         @include mq($from: gel-bp-type-b) {
-            $type-values: gel-typography($type-class, 'group-b');
-            @include gel-output-type-values($type-values);
+            @include gel-output-type-values(gel-typography($type-class, 'group-b'));
         }
 
         @include mq($from: gel-bp-type-c) {
-            $type-values-c: gel-typography($type-class, 'group-c');
-            $type-values-d: gel-typography($type-class, $gel-type-no-touch-group);
-
-            @include gel-output-type-values($type-values-c);
+            @include gel-output-type-values(gel-typography($type-class, 'group-c'));
 
             .#{$gel-type-touch-class} & {
-                @include gel-output-type-values($type-values-d);
+                @include gel-output-type-values(gel-typography($type-class, $gel-type-no-touch-group));
             }
         }
     }
