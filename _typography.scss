@@ -1,14 +1,6 @@
-/*------------------------------------*\
-    # GEL TYPOGRAPHY
-\*------------------------------------*/
-
-/**
- * GEL Typography proposes using four groups to apply a scale appropriately across
- * a range of devices. We take a `Touch First` approach to typography, adjustments
- * are then made based on if a primary input other than touch has been detected
- *
- */
-
+///*------------------------------------*\
+//    # GEL TYPOGRAPHY
+//\*------------------------------------*/
 
 // We need to check that the GEL settings are available globally
 $gel-settings-available: false !default;
@@ -18,8 +10,8 @@ $gel-settings-available: false !default;
 
 
 // import the local dependancies
-@import 'settings';
-@import 'tools';
+@import 'lib/settings';
+@import 'lib/tools';
 
 
 // define some output control variables
