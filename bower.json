@@ -29,5 +29,6 @@
   ],
   "dependencies": {
     "gel-sass-tools": "git@github.com:bbc/gel-sass-tools.git"
-  }
+  },
+  "version": "1.0.0-beta"
 }
