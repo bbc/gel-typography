@@ -27,6 +27,6 @@
     "sass-mq": "^3.2.2"
   },
   "dependencies": {
-    "gel-sass-tools": "git+ssh://git@github.com:bbc/gel-sass-tools.git#master"
+    "gel-sass-tools": "git+ssh://git@github.com:bbc/gel-sass-tools.git#^1.0.0"
   }
 }
