@@ -146,7 +146,14 @@ $gel-type-settings: (
 
 ### Touch Detection
 
-{{add the info here}}
+We operate a [touch-first](http://www.bbc.co.uk/gel/guidelines/how-to-design-for-touch) approach to our Typography. Group C (touch) sizes are used from 600px by default and then detection should be used to get the Group D (non-touch) sizes. 
+
+We also understand that touch detection is not an absolute measure and does not guaruntee a 'true or false' outcome - this is okay.  
+
+#### Why not just have Group C and remove Group D?
+
+Products such as News & Sport require more densely packed, legacy-like font sizes for their 'desktop' experience. Eventually we aim to remove this group altogether.
+
 
 ## Who is using this?
 
