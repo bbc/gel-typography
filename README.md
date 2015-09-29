@@ -144,17 +144,17 @@ $gel-type-settings: (
 );
 ```
 
-### Touch Detection
+## Touch Detection
 
 We operate a [touch-first](http://www.bbc.co.uk/gel/guidelines/how-to-design-for-touch) approach to our Typography. Group C (touch) sizes are used from 600px by default and then detection should be used to get the Group D (non-touch) sizes.
 
 We also understand that touch detection is not an absolute measure and does not guarantee a 'true or false' outcome - this is okay.  
 
-#### Why not just have Group C and remove Group D?
+### Why not just have Group C and remove Group D?
 
 Products such as News & Sport require more densely packed, legacy-like font sizes for their 'desktop' experience. Eventually we aim to remove this group altogether.
 
-#### How can you detect touch
+### How can you detect touch
 
 There are a number of ways you can apply the touch detection. [Modernizr](https://modernizr.com), the common feature detection library offers some basic touch events detection. Alternatively, you could use your own bespoke detection script like this one used by [BBC Sport](https://github.com/bbc/onesport/blob/master/webapp/static-versioned/js/features.js#L5-L24).
 
