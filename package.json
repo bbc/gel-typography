@@ -16,6 +16,14 @@
     "gel",
     "typography"
   ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "dist"
+  ],
   "author": "BBC",
   "license": "MIT",
   "bugs": {

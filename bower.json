@@ -25,7 +25,8 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    "dist"
   ],
   "dependencies": {
     "gel-sass-tools": "git@github.com:bbc/gel-sass-tools.git#^1.0.0"
