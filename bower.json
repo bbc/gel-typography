@@ -4,11 +4,7 @@
     "shaun.bent@bbc.co.uk"
   ],
   "description": "A flexible code implementation of the GEL Typography",
-  "main": [
-    "_typography.scss",
-    "_tools.scss",
-    "_settings.css"
-  ],
+  "main": "_typography.scss",
   "keywords": [
     "Sass",
     "Typography",
