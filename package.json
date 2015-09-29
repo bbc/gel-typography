@@ -1,6 +1,6 @@
 {
   "name": "gel-typography",
-  "version": "1.0.0-beta",
+  "version": "1.0.0-rc",
   "description": "A flexible code implementation of the GEL Typography",
   "main": "_typography.scss",
   "scripts": {
