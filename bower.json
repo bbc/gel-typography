@@ -1,7 +1,8 @@
 {
   "name": "gel-typography",
   "authors": [
-    "shaun.bent@bbc.co.uk"
+    "shaun.bent@bbc.co.uk",
+    "alexander.jones@bbc.co.uk"
   ],
   "description": "A flexible code implementation of the GEL Typography",
   "main": "_typography.scss",
