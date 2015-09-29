@@ -110,7 +110,7 @@ The following configurable options are available:
 - `$gel-type-enable--font-family: false;` - output the correct font-family required by GEL Typography if ORB not available.
 - `$gel-type-enable--base-elements: false;` - map the GEL Typography classes to the relevant HTML elements
 
-### Custom Font Configuration
+### Custom Font Configuration
 
 If you're using another font-face other than Arial and need to make adjustments to any of the type settings you can do this by defining in a custom `$gel-type-settings` map.
 
