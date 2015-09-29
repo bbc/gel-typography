@@ -34,12 +34,11 @@ $enhanced: true !default;
 
 @if $gel-type-enable--font-family {
 
-    /**
-     * Barlesque will set the correct font-family on the <body> tag but if you're working on a project
-     * without Barlesque you might want to enable this flag
-     */
+    // Barlesque will set the correct font-family on the <body> tag but if you're working on a project
+    // without Barlesque you might want to enable this flag
+    //
     body {
-        font-family: Arial, Helvetica, freesans, sans-serif;
+        font-family: Helvetica, Arial, freesans, sans-serif;
     }
 
 }
@@ -47,8 +46,7 @@ $enhanced: true !default;
 
 @if $gel-type-enable--base-elements {
 
-    // Map the GEL Typography classes to the relevant
-    // HTML elements
+    // Map the GEL Typography classes to the relevant HTML elements
     //
     h1 { @extend %#{$gel-type-namespace}trafalgar; }
     h2 { @extend %#{$gel-type-namespace}double-pica; }
