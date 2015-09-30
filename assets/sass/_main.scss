@@ -1,13 +1,11 @@
 // settings
 @import 'settings/globals';
-@import 'vendor/gel-settings/globals';
+@import 'vendor/gel-sass-tools/sass-tools';
 @import 'settings/colours';
 
 
 // tools
 @import 'vendor/sass-mq/mq';
-@import 'vendor/gel-tools/rem';
-@import 'vendor/gel-tools/math';
 
 
 // generic
@@ -16,13 +14,16 @@
 @import 'generic/box-sizing';
 
 
+// GEL
+@import 'vendor/gel-layout/layout';
+@import 'vendor/gel-typography/typography';
+
+
 // base
 @import 'base/typography';
 
 
 // object
-@import 'vendor/gel-layout/layout';
-@import 'vendor/gel-typography/typography';
 @import 'objects/button';
 
 
