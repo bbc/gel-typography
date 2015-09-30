@@ -1,14 +1,11 @@
 {
   "name": "gel-typography",
   "authors": [
-    "shaun.bent@bbc.co.uk"
+    "shaun.bent@bbc.co.uk",
+    "alexander.jones@bbc.co.uk"
   ],
-  "description": "BBC GEL Responsive Typography",
-  "main": [
-    "_typography.scss",
-    "_tools.scss",
-    "_settings.css"
-  ],
+  "description": "A flexible code implementation of the GEL Typography",
+  "main": "_typography.scss",
   "keywords": [
     "Sass",
     "Typography",
@@ -25,20 +22,20 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    "dist"
   ],
   "dependencies": {
-    "gel-settings": "git@github.com:bbc-gel/gel-settings.git#~0.3.0",
-    "gel-tools": "git@github.com:bbc-gel/gel-tools.git#~0.3.0"
+    "gel-sass-tools": "git@github.com:bbc/gel-sass-tools.git#^1.0.0"
   },
-  "version": "0.5.0",
-  "_release": "0.5.0",
+  "version": "1.0.0-rc",
+  "_release": "1.0.0-rc",
   "_resolution": {
     "type": "version",
-    "tag": "0.5.0",
-    "commit": "d837f4a7e8d431867fc3e0a105d95e36f8e7ce37"
+    "tag": "1.0.0-rc",
+    "commit": "2bf6b08e505a1467b0ae3b30b0c8e85bc22f4bcb"
   },
   "_source": "https://github.com/bbc-gel/gel-typography.git",
-  "_target": "~0.5.0",
+  "_target": "1.0.0-rc",
   "_originalSource": "https://github.com/bbc-gel/gel-typography.git"
 }
