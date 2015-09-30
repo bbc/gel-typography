@@ -28,12 +28,12 @@
     "gel-settings": "git@github.com:bbc/gel-settings.git#~0.3.0",
     "gel-tools": "git@github.com:bbc/gel-tools.git#~0.3.0"
   },
-  "version": "0.1.1-beta",
-  "_release": "0.1.1-beta",
+  "version": "0.1.2",
+  "_release": "0.1.2",
   "_resolution": {
     "type": "version",
-    "tag": "0.1.1-beta",
-    "commit": "10c397d0cefd0b53088b15999db5120844112f57"
+    "tag": "0.1.2",
+    "commit": "1f9bb052e46aa5591dee4b7aea6f1791f2d2c7f0"
   },
   "_source": "https://github.com/bbc/gel-widths.git",
   "_target": "~0.1.1-beta",
