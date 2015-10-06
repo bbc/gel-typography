@@ -2,22 +2,72 @@
 //    # GEL TYPOGRAPHY - SETTINGS
 //\*------------------------------------*/
 
-// general configuration
+// The following variables are used to configure the GEL Typography component.
+// These variables should not be modified or adjusted directly; you should
+// predefine the variables in your own project, to overide these default settings.
+
+
+/// General configuration
+//
+// The default namespace applied to all typography classes output is inherits
+// from the default gel-namespace: `gel-`.
+//
+// @link http://bit.ly/1Z6hPfd
+//
+// @type String
+//
 $gel-type-namespace: $gel-namespace !default;
+
+// The classname used to signify if the device needs to display the no-touch group. This
+// class needs to be applied to high level elemet such as `body` or `html`
+//
+// @type String
+//
 $gel-type-touch-class: 'no-touch' !default;
+
+// Which typography group contains the base or core typography styles
+//
+// @type String
+//
 $gel-type-base-group: 'group-a';
+
+// Which typography group contains our non-touch typography styles
+//
+// @type String
+//
 $gel-type-no-touch-group: 'group-d';
 
 
-
-// output configuration
+/// Output configuration
+//
+// The default namespace applied to all typography classes output is inherits
+// from the default gel-namespace: `gel-`.
+//
+// @link http://bit.ly/1Z6hPfd
+//
+// @type String
+//
 $gel-type-enable--markup-output: false !default;
+
+// Which typography group contains our non-touch typography styles
+//
+// @type String
+//
 $gel-type-enable--font-family: false !default;
+
+// Which typography group contains our non-touch typography styles
+//
+// @type String
+//
 $gel-type-enable--base-elements: false !default;
 
 
-
-// default GEL typography configuration
+// The GEL typography specification for each type class at each type group.
+// Having these values stored in a map allows them to be easily updated and
+// customised for specific non-latin character sets.
+//
+// @type Map
+//
 $gel-type-settings: (
     'canon': (
         'group-a': (
@@ -183,11 +233,13 @@ $gel-type-settings: (
     )
 ) !default;
 
-// add the typography breakpoints to the list of exisiting
-// breakpoints if Sass Mq is available
-@if (mixin-exists(mq)) {
 
+// Adds the typography specific breakpoints to the Sass MQ list
+// of breakpoints
+//
+@if (mixin-exists(mq)) {
     @include mq-add-breakpoint(gel-bp-type-b, 320px);
     @include mq-add-breakpoint(gel-bp-type-c, 600px);
-
+} @else {
+    @warn 'Missing dependency: `Sass MQ`. Ensure this is included before this library'.
 }
