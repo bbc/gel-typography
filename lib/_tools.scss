@@ -8,15 +8,17 @@
 // @param {String}  $search - Substring to replace
 // @param {String}  $replace ('') - New value
 //
+// @access          private
+//
 // @return {String} Updated string
 //
 // @author          Hugo Giraudel - http://bit.ly/1Khge01
 //
-@function gel-str-replace($string, $search, $replace: '') {
+@function _gel-str-replace($string, $search, $replace: '') {
     $index: str-index($string, $search);
 
     @if $index {
-        @return str-slice($string, 1, $index - 1) + $replace + gel-str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+        @return str-slice($string, 1, $index - 1) + $replace + _gel-str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
     }
 
     @return $string;
@@ -28,11 +30,13 @@
 // @param {Map}     $source - The orignal Sass map
 // @param {Map}     $map - Sass map containing the new values to be combined
 //
+// @access          private
+//
 // @return {Map}    New map consistenting of the values of both supplied maps
 //
 // @author          Hugo Giraudel - http://bit.ly/1PPIoj4
 //
-@function gel-map-combine($source, $map) {
+@function _gel-map-combine($source, $map) {
     @each $key, $value in $map {
         $new: ($key: $value);
 
@@ -63,8 +67,8 @@
     $type-settings: map-get($gel-type-settings, $type-class);
 
     @if (str-index($type-class, '-bold')) {
-        $root-type-group: map-get($gel-type-settings, gel-str-replace($type-class, '-bold'));
-        $type-settings: gel-map-combine($root-type-group, $type-settings);
+        $root-type-group: map-get($gel-type-settings, _gel-str-replace($type-class, '-bold'));
+        $type-settings: _gel-map-combine($root-type-group, $type-settings);
     }
 
     @if ($type-group != 'all') {
@@ -84,19 +88,19 @@
 //
 @mixin gel-typography($type-class) {
     @if $core {
-      @include gel-output-type-values(gel-typography($type-class, 'group-a'));
+      @include _gel-output-type-values(gel-typography($type-class, 'group-a'));
     }
 
     @if $enhanced {
         @include mq($from: gel-bp-type-b) {
-            @include gel-output-type-values(gel-typography($type-class, 'group-b'));
+            @include _gel-output-type-values(gel-typography($type-class, 'group-b'));
         }
 
         @include mq($from: gel-bp-type-c) {
-            @include gel-output-type-values(gel-typography($type-class, 'group-c'));
+            @include _gel-output-type-values(gel-typography($type-class, 'group-c'));
 
             .#{$gel-type-touch-class} & {
-                @include gel-output-type-values(gel-typography($type-class, $gel-type-no-touch-group));
+                @include _gel-output-type-values(gel-typography($type-class, $gel-type-no-touch-group));
             }
         }
     }
@@ -108,9 +112,11 @@
 //
 // @param {Map}  $type-values - a map of CSS values in property: value format
 //
+// @access          private
+//
 // @author          Shaun Bent
 //
-@mixin gel-output-type-values($type-values) {
+@mixin _gel-output-type-values($type-values) {
     @each $property, $value in $type-values {
         @if (type-of($value) == number and unit($value) == 'px') {
             @include rem($property, $value);
