@@ -1,0 +1,117 @@
+///*------------------------------------*\
+//    # GEL GLOBALS
+//\*------------------------------------*/
+
+// The following variables provide a common configuration to use across
+// various GEL components. These variables should not be modified or
+// adjusted directly; you should predefine the variables in your own project,
+// to overide these default settings.
+
+
+/// Namespace
+//
+// By default all GEL components are namespaced with `gel-`, this allows us to
+// share components without the chance of there being any conflicts within existing
+// products. It also helps with sharing components across products.
+//
+// @type String
+//
+$gel-namespace: 'gel-' !default;
+
+
+
+/// Spacing
+//
+// GEL spacing is based on an 8px baseline and multiples of this number, where possible
+// this baseline and multiples of should act as your default spacing unit. This helps to
+// ensure we have consistant spacing across products.
+//
+// @type Number (with units)
+//
+$gel-spacing-unit: 8px !default;
+
+// We also make available an alternative spacing unit based on a 12px baseline to allow more
+// flexibility with spacing elements
+//
+// @type Number (with units)
+//
+$gel-alt-spacing-unit: 12px !default;
+
+
+
+/// Base settings
+//
+// Base settings are used primarly by our tools at the moment but there use could change in
+// the future.
+
+// Base font size identifies the font-size of the HTML element thus allowing consistant
+// calculation of rem units
+//
+// @type Number (with units)
+//
+$gel-base-font-size: 16px !default;
+
+
+
+/// Breakpoints
+//
+// Our global breakpoints allow us to make major changes in the grid and use typography
+// consistently across our products.
+//
+// Between these global breakpoints you can also add component breakpoints where the content needs it.
+//
+
+// The prefix applied to all GEL breakpoints
+//
+// @type String
+//
+$gel-breakpoint-prefix: 'gel-bp-' !default;
+
+// The names applied to each of our breakpoints. We're taking a t-shirt sizing naming convention
+//
+// @type Map
+//
+$gel-breakpoint-names: (xs, s, m, l, xl, xxl) !default;
+
+// The widths of our major breakpoints
+//
+// @type Map
+//
+$gel-breakpoint-sizes: (240px, 400px, 600px, 900px, 1008px, 1280px) !default;
+
+// If we're generating a fixed width output which breakpoint to use as the maximum
+//
+// @type String
+//
+$gel-breakpoint-static: gel-bp-l !default;
+
+
+// Loop through each of our breakpoint-sizes, map this with the appropriate name
+// and append it to the $mq-breakpoints map.
+$gel-breakpoints: ();
+@each $breakpoint in $gel-breakpoint-sizes {
+    $i: index($gel-breakpoint-sizes, $breakpoint);
+    $breakpoint-name: #{$gel-breakpoint-prefix}#{nth($gel-breakpoint-names, $i)};
+
+    $gel-breakpoints: map-merge($gel-breakpoints, ($breakpoint-name: $breakpoint)) !global;
+}
+
+
+
+/// MQ Config
+//
+// We're making use of the Guardians Sass MQ script to handle our media queries,
+// it also handles outputing a static version without Media Queries for older
+// versions of IE
+
+// MQ expects a Sass Map containing the available breakpoints
+$mq-breakpoints: $gel-breakpoints;
+
+// In order to output the appropriate styles for older versions of IE which don't
+// support Media Queries we need to define which breakpoint we want styles output for
+$mq-static-breakpoint: #{$gel-breakpoint-static};
+
+
+
+// Define a variable so we can tell the other components the settings are available
+$gel-settings-available: true;
