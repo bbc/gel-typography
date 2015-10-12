@@ -33,7 +33,7 @@
     "tag": "0.3.0",
     "commit": "654b912367700433622de088e5292e9c401905d1"
   },
-  "_source": "git@github.com:bbc/gel-settings.git",
+  "_source": "git@github.com:bbc-gel/gel-settings.git",
   "_target": "~0.3.0",
-  "_originalSource": "git@github.com:bbc/gel-settings.git"
+  "_originalSource": "git@github.com:bbc-gel/gel-settings.git"
 }

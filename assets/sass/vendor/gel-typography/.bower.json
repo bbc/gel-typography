@@ -33,7 +33,7 @@
   "_resolution": {
     "type": "version",
     "tag": "1.0.0",
-    "commit": "8bbab9d2f96bf406bb0bbc2e0f17413189e57f04"
+    "commit": "e9cff3bb5202d1ca1b72a3a6898b98fe999b04db"
   },
   "_source": "https://github.com/bbc/gel-typography.git",
   "_target": "1.0.0",
