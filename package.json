@@ -1,10 +1,11 @@
 {
   "name": "gel-typography",
-  "version": "0.5.2",
+  "version": "1.0.0-rc2",
   "description": "A flexible code implementation of the GEL Typography",
-  "main": "_settings.scss",
+  "main": "_typography.scss",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node-sass test/test.scss test/test.css --output-style=expanded --sourcemap=none && diff -u test/test-expected.css test/test.css",
+    "dist": "node-sass dist/gel-typography.scss dist/gel-typography.min.css --output-style=compressed --sourcemap=none"
   },
   "repository": {
     "type": "git",
@@ -15,14 +16,25 @@
     "gel",
     "typography"
   ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "dist"
+  ],
   "author": "BBC",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/bbc/gel-typography/issues"
   },
   "homepage": "https://github.com/bbc/gel-typography",
+  "devDependencies": {
+    "node-sass": "^3.2.0",
+    "sass-mq": "^3.2.2"
+  },
   "dependencies": {
-    "gel-settings": "git+ssh://git@github.com/bbc/gel-settings.git#0.4.0",
-    "gel-tools": "git+ssh://git@github.com/bbc/gel-tools.git#0.4.0"
+    "gel-sass-tools": "git+ssh://git@github.com:bbc/gel-sass-tools.git#^1.0.0"
   }
 }

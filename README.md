@@ -6,67 +6,93 @@ A flexible code implementation of the GEL Typography.
 
 ## What is this?
 
-This is an implementation of our [GEL Typography Guidelines](http://www.bbc.co.uk/gel/guidelines/typography). 
+This is an implementation of our [GEL Typography Guidelines](http://www.bbc.co.uk/gel/guidelines/typography).
 Providing typefaces, type sizes, weights, line-heights and tracking.
 The GEL Typography scale has been established to work on all devices and is independent of device size and resolution.
 
 The typographic scale has been optimised based on the size of the viewport and the input method being used. We take a 'touch first' approach to typography, adjustments are then made if a primary input other than touch has been detected.
 
+It can used in two forms, using a Sass mixin:
+
+```sass
+.my-component {
+    @include gel-typography('canon-bold');
+}
+```
+
+Or by simply adding the relivant classes to your markup:
+
+```html
+<h1 class="gel-canon-bold">Global Experience Language</h1>
+```
+
 ## Installation
 
-We recommend that you use a package manager ([Bower](http://bower.io/) or [NPM](https://www.npmjs.org/)) to install this component. Using a package manager will make it easier for you to handle any updates made to this component, it will also automatically manage the dependancies of this component for you.
+The easiest way to get started with the GEL Typography component is to use the combined version of the typography included within this repository.
+
+If you're a more advanced user and want to integrate the GEL Typography component within your codebase, use one of the following options:
 
 ### Install using Bower
 
-```Shell
-$ bower install --save https://github.com/bbc-gel/gel-typography.git
+```bash
+$ bower install --save git+ssh://git@github.com/bbc/gel-typography.git
 ```
 
-Once installed, use a Sass `@import` to bring the component into your project:
-
-```Sass
-@import 'bower_components/gel-typography/typography';
+```sass
+// your-app/main.scss
+@import 'bower_components/gel-sass-tools/gel-sass-tools';
+@import 'bower_components/sass-mq/mq';
+@import 'bower_components/gel-typography/gel-typography';
 ```
 
 ### Install using NPM
 
-
-```Shell
+```bash
 $ npm install --save git+ssh://git@github.com/bbc/gel-typography.git
 ```
 
-As above, use a Sass `@import` to bring in the component:
-
-```Sass
-@import 'node_modules/gel-typography/typography';
+```sass
+// your-app/main.scss
+@import 'node_modules/gel-sass-tools/gel-sass-tools';
+@import 'node_modules/sass-mq/mq';
+@import 'node_modules/gel-typography/gel-typography';
 ```
 
 ### Install manually
 
-You can install this component manually by downloading the content of this Git repo into your project and use a Sass `@import` to include it in your project.
+You can install this component manually by downloading the content of this Git repo into your project and use a Sass @import to include it in your project.
 
-> **Note:** you will manually need to manage the depedencies below, without these this component will fail to compile.
+> **Note:** you will manually need to manage the dependencies below, without these this component will fail to compile.
 
 ## Dependencies
 
-In order to use the GEL Typography component you will need the following components available:
+In order to use the component you will need the following components available:
 
-- [GEL Settings](https://github.com/bbc-gel/gel-settings)
-- [GEL Tools](https://github.com/bbc-gel/gel-tools)
-
-> **Note:** This component requires [Sass 3.3.x](http://blog.sass-lang.com/posts/184094-sass-33-is-released) to make use of [Sass Maps](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#maps) and various other features.
+- [GEL Sass Tools](https://github.com/bbc/gel-sass-tools)
+- [Sass MQ](https://github.com/sass-mq/sass-mq)
 
 ## Usage
 
-The GEL Typography component is designed to be flexible so that it is able to meet the needs of your product whilst adhering GEL Responsive Typography Guidelines.
+By default the GEL Typography component does not output any markup but exposes a Sass Mixin which can be called within your Sass.
 
-Configuration and customisation is controlled by declaring specific variables with your custom values before including the GEL Typography Sass files. When compiling the Sass your custom variables will be used and override any of the default values.
+**Example**
+
+```scss
+.my-component {
+    @include gel-typography('pica');
+}
+
+.my-component__title {
+    @include gel-typography('canon');
+}
+```
+
+A collection of typography classes can be output by defining `$gel-type-enable--markup-output: true;` before you `@import` the typography partial.
 
 **Example:**
 
 ```scss
-$gel-type-touch-class: 'feature-no-touch';
-$gel-type-enable--font-family: false;
+$gel-type-enable--markup-output: true;
 
 @import "gel-typography/typography";
 ```
@@ -75,25 +101,22 @@ The following configurable options are available:
 
 ### General Configuration
 
-- `$gel-type-namespace: 'gel-';` - you can change the default namespace applied to all typography classes by defining it here. Alternatively, you can remove the prefix by passing through a blank string.
+- `$gel-type-namespace: 'gel-';` - the default namespace applied to all typography classes
+- `$gel-type-touch-class: 'no-touch';` - the class exposed used by your touch detection script applied when a non-touch interface is detected
 
-> **Note:** In an attempt to establish a standard across the BBC we recommend that you use the default prefix of `gel-`. This will allow components to be shared across products and consistently rely on the same set of typography rules. Without the standard prefix you may need to include the same set of style rules twice.
+### Output Configuration
 
-- `$gel-type-touch-class: 'no-touch';` - as detailed previously the GEL Responsive Typography Guidelines adopts a 'touch-first' approach. You can specific the exact class name you're using for your touch detection. **Note:** as we're taking a 'touch-first' approach this class is applied when a non-touch interface is detected.
+- `$gel-type-enable--markup-output: false;` - output a collection of classes for each type group
+- `$gel-type-enable--font-family: false;` - output the correct font-family required by GEL Typography if ORB not available.
+- `$gel-type-enable--base-elements: false;` - map the GEL Typography classes to the relevant HTML elements
 
-#### Output Configuration
+### Custom Font Configuration
 
-- `$gel-type-enable--markup-output: true;` - Disabling this option will allow you to control the output of the typography style rules. You will need to directly access the `@include gel-output-type-group({{group-name}});` mixin yourself within your codebase
-- `$gel-type-enable--font-family: false;` - Barlesque will set the correct font-family on the <body> tag but if you're working on a project without Barlesque you might want to enable this flag to have the correct font-family defined for you.
-- `$gel-type-enable--base-elements: false;` - Enabling this flag will map the GEL Typography classes to the relevant HTML elements.
+If you're using another font-face other than Arial and need to make adjustments to any of the type settings you can do this by defining in a custom `$gel-type-settings` map.
 
-#### Custom Font Configuration
+*For example:* [BBC News](http://www.bbc.com/burmese) support many languages, some of which do not use latin based character sets which require custom font scripts. It is often the case that these custom fonts will require bespoke font-sizes or line-heights.
 
-If you're using another font-face other than Arial and need to make adjustments to any of the type settings you can do this by passing in a custom `$gel-type-settings` [map](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#maps).
-
-*For example:* BBC News support many languages, some of which do not use latin based character sets which require custom scripts loading in. It is often the case that these custom fonts will require bespoke font-sizes or line-heights.
-
-If you need to supply custom type settings, copy the entire `$gel-type-settings` map from the `_settings.scss` partial and include it before the `_typography.scss` partial is imported. You can then update this map with your custom configuration. For example, the configuration for Burmese may look like:
+For example, the configuration for Burmese may look like:
 
 ```scss
 $gel-type-settings: (
@@ -101,10 +124,6 @@ $gel-type-settings: (
         'group-a': (
           'font-size': 22px,
           'line-height': 30px,
-          '--bold': (
-              'font-weight': bold,
-              'letter-spacing': -1px
-          )
         ),
         'group-b': (
           'font-size': 26px,
@@ -119,33 +138,41 @@ $gel-type-settings: (
           'line-height': 32px
         )
     ),
-    'double-pica': (
+    'trafalgar-bold': (
        ...
     )
 );
 ```
 
-> **Note:** You're not limited to just `font-size` and `line-height` you can pass any standard CSS property and value. If enabled `px` values will automatically be converted into `rem` units.
+## Touch Detection
 
-#### Custom Typography
+We operate a [touch-first](http://www.bbc.co.uk/gel/guidelines/how-to-design-for-touch) approach to our Typography. Group C (touch) sizes are used from 600px by default and then detection should be used to get the Group D (non-touch) sizes.
 
-If you need to vary the type across breakpoints you can use the following technique (class equivalents not available yet):
+We also understand that touch detection is not an absolute measure and does not guarantee a 'true or false' outcome - this is okay.  
 
-```
-.custom-type {
-    @extend %gel-trafalgar;
-    @extend %gel-group-c-pica;
-    .no-touch & {
-        @extend %gel-group-d-pica;
-    }
-}
-```
+### Why not just have Group C and remove Group D?
+
+Products such as News & Sport require more densely packed, legacy-like font sizes for their 'desktop' experience. Eventually we aim to remove this group altogether.
+
+### How can you detect touch
+
+There are a number of ways you can apply the touch detection. [Modernizr](https://modernizr.com), the common feature detection library offers some basic touch events detection. Alternatively, you could use your own bespoke detection script like this one used by [BBC Sport](https://github.com/bbc/onesport/blob/master/webapp/static-versioned/js/features.js#L5-L24).
+
+## Who is using this?
+
+The following teams are currently using this component: GEL, Sport, Live, Homepage, Search, BBC Food, CBBC, CBeebies, BBC Three, MyBBC, K&L, Taster & Weather
+
+If your team is using this component, let us know and we'll add you to the list.
+
+## Who to get in touch with?
+
+Get in touch with Shaun Bent or Al Jones for more information about this project.
 
 ## License
 
 > The MIT License (MIT)
 >
-> Copyright 2014 British Broadcasting Corporation
+> Copyright 2015 British Broadcasting Corporation
 >
 > Permission is hereby granted, free of charge, to any person obtaining a copy of
 > this software and associated documentation files (the "Software"), to deal in
