@@ -26,7 +26,7 @@
     "dist"
   ],
   "dependencies": {
-    "gel-sass-tools": "git@github.com:bbc/gel-sass-tools.git#^1.0.0"
+    "sass-mq": "^3.2.3"
   },
   "version": "1.0.0"
 }

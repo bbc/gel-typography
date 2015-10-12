@@ -68,7 +68,6 @@ You can install this component manually by downloading the content of this Git r
 
 In order to use the component you will need the following components available:
 
-- [GEL Sass Tools](https://github.com/bbc/gel-sass-tools)
 - [Sass MQ](https://github.com/sass-mq/sass-mq)
 
 ## Usage
@@ -148,7 +147,7 @@ $gel-type-settings: (
 
 We operate a [touch-first](http://www.bbc.co.uk/gel/guidelines/how-to-design-for-touch) approach to our Typography. Group C (touch) sizes are used from 600px by default and then detection should be used to get the Group D (non-touch) sizes.
 
-We also understand that touch detection is not an absolute measure and does not guarantee a 'true or false' outcome - this is okay.  
+We also understand that touch detection is not an absolute measure and does not guarantee a 'true or false' outcome - this is okay.
 
 ### Why not just have Group C and remove Group D?
 

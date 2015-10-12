@@ -16,7 +16,7 @@
 //
 // @type String
 //
-$gel-type-namespace: $gel-namespace !default;
+$gel-type-namespace: 'gel-' !default;
 
 // The classname used to signify if the device needs to display the no-touch group. This
 // class needs to be applied to high level elemet such as `body` or `html`
@@ -36,6 +36,11 @@ $gel-type-base-group: 'group-a';
 // @type String
 //
 $gel-type-no-touch-group: 'group-d';
+
+// The base font-size to be used for convertiing px to rem values
+//
+// @type Length
+$gel-type-html-font-size: 16px !default;
 
 
 /// Output configuration
@@ -60,6 +65,16 @@ $gel-type-enable--font-family: false !default;
 // @type String
 //
 $gel-type-enable--base-elements: false !default;
+
+// Should we output REM values (if true)
+//
+// @type Boolean
+$gel-type-enable--rem-output: true !default;
+
+// Should we output PX values as a fallback (if true)
+//
+// @type Boolean
+$gel-type-enable--rem-fallback: true !default;
 
 
 // The GEL typography specification for each type class at each type group.
