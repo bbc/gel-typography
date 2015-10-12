@@ -164,6 +164,10 @@ The following teams are currently using this component: GEL, Sport, Live, Homepa
 
 If your team is using this component, let us know and we'll add you to the list.
 
+## Who to get in touch with?
+
+Get in touch with Shaun Bent or Al Jones for more information about this project.
+
 ## License
 
 > The MIT License (MIT)
