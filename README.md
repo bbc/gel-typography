@@ -40,9 +40,9 @@ $ bower install --save git+ssh://git@github.com/bbc/gel-typography.git
 
 ```sass
 // your-app/main.scss
-@import 'bower_components/gel-sass-tools/gel-sass-tools';
+@import 'bower_components/gel-sass-tools/sass-tools';
 @import 'bower_components/sass-mq/mq';
-@import 'bower_components/gel-typography/gel-typography';
+@import 'bower_components/gel-typography/typography';
 ```
 
 ### Install using NPM
@@ -53,9 +53,9 @@ $ npm install --save git+ssh://git@github.com/bbc/gel-typography.git
 
 ```sass
 // your-app/main.scss
-@import 'node_modules/gel-sass-tools/gel-sass-tools';
+@import 'node_modules/gel-sass-tools/sass-tools';
 @import 'node_modules/sass-mq/mq';
-@import 'node_modules/gel-typography/gel-typography';
+@import 'node_modules/gel-typography/typography';
 ```
 
 ### Install manually
@@ -148,7 +148,7 @@ $gel-type-settings: (
 
 We operate a [touch-first](http://www.bbc.co.uk/gel/guidelines/how-to-design-for-touch) approach to our Typography. Group C (touch) sizes are used from 600px by default and then detection should be used to get the Group D (non-touch) sizes.
 
-We also understand that touch detection is not an absolute measure and does not guarantee a 'true or false' outcome - this is okay.  
+We also understand that touch detection is not an absolute measure and does not guarantee a 'true or false' outcome - this is okay.
 
 ### Why not just have Group C and remove Group D?
 
