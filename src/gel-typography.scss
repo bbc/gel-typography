@@ -2,12 +2,12 @@
 //    # GEL TYPOGRAPHY
 //\*------------------------------------*/
 
-// Include general GEL dependancies
+// Include general dependancies
 @import '../node_modules/gel-sass-tools/sass-tools';
 @import '../node_modules/sass-mq/mq';
 
 
-// Lets declare a few varaibles to test the output
+// Enable the output for our distributed code
 $gel-type-enable--markup-output: true !default;
 
 
