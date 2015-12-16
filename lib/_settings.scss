@@ -165,15 +165,15 @@ $gel-type-settings: (
         ),
         'group-b': (
           'font-size': 16px,
-          'line-height': 22px
+          'line-height': 20px
         ),
         'group-c': (
           'font-size': 18px,
-          'line-height': 24px
+          'line-height': 22px
         ),
         'group-d': (
           'font-size': 16px,
-          'line-height': 22px
+          'line-height': 20px
         )
     ),
     'pica-bold': (
@@ -229,6 +229,24 @@ $gel-type-settings: (
     'minion-bold': (
         'group-a': (
             'font-weight': bold
+        )
+    ),
+    'body-copy': (
+        'group-a': (
+          'font-size': 15px,
+          'line-height': 20px
+        ),
+        'group-b': (
+          'font-size': 16px,
+          'line-height': 22px
+        ),
+        'group-c': (
+          'font-size': 18px,
+          'line-height': 24px
+        ),
+        'group-d': (
+          'font-size': 16px,
+          'line-height': 22px
         )
     )
 ) !default;
