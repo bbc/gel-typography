@@ -202,10 +202,14 @@ $gel-type-settings: (
     'brevier': (
         'group-a': (
           'font-size': 14px,
+          'line-height': 16px
+        ),
+        'group-b': (
           'line-height': 18px
         ),
         'group-d': (
-          'font-size': 13px
+          'font-size': 13px,
+          'line-height': 16px
         )
     ),
     'brevier-bold': (
