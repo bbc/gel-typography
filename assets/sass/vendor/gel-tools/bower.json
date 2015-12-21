@@ -4,7 +4,7 @@
   "authors": [
     "shaun.bent@bbc.co.uk"
   ],
-  "description": "A collection of common Sass Mixins & Functions needed to build GEL components",
+  "description": "A set of useful Sass functions & mixins that are required by the GEL Foundations",
   "main": [
     "_math.scss",
     "_rem.scss"

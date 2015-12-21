@@ -1,7 +1,7 @@
 {
   "name": "gel-widths",
-  "version": "0.1.2",
-  "description": "A collection of grid-agnostic width classes and helpers to use for sizing elements",
+  "version": "0.1.3",
+  "description": "A set of widths used to the create the GEL Grid.",
   "main": "_widths.scss",
   "repository": {
     "type": "git",
@@ -23,6 +23,6 @@
   "homepage": "https://github.com/bbc/gel-widths",
   "dependencies": {
     "gel-settings": "git+ssh://git@github.com/bbc/gel-settings.git#0.4.0",
-    "gel-tools": "git+ssh://git@github.com/bbc/gel-tools.git#0.4.0"
+    "gel-tools": "git+ssh://git@github.com/bbc/gel-tools.git#0.4.2"
   }
 }

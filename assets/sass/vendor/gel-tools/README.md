@@ -1,6 +1,8 @@
 # GEL Tools
 
-A collection of useful Sass functions and mixins are **required** by various components within the GEL codebase.
+A set of useful Sass functions & mixins that are required by the GEL Foundations.
+
+This repository forms part of the the [GEL Foundations](https://github.com/bbc/gel-foundations).
 
 The following tools are currently included:
 

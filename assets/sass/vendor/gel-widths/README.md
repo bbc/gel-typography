@@ -1,5 +1,9 @@
 # GEL Widths
 
+A set of widths used to the create the GEL Grid.
+
+This repository forms part of the the [GEL Foundations](https://github.com/bbc/gel-foundations).
+
 A collection of grid-agnostic width trumps which can be applied be combined with a layout system or applied to any element to give it a percentage based with.
 
 ## Installation

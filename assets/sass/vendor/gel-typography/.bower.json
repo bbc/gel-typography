@@ -28,14 +28,14 @@
   "dependencies": {
     "gel-sass-tools": "git@github.com:bbc/gel-sass-tools.git#^1.0.0"
   },
-  "version": "1.0.0",
-  "_release": "1.0.0",
+  "version": "2.0.0",
+  "_release": "2.0.0",
   "_resolution": {
     "type": "version",
-    "tag": "1.0.0",
-    "commit": "e9cff3bb5202d1ca1b72a3a6898b98fe999b04db"
+    "tag": "2.0.0",
+    "commit": "63049d26e33c950d672f9f0b8679629fb79abb6a"
   },
-  "_source": "https://github.com/bbc/gel-typography.git",
-  "_target": "1.0.0",
-  "_originalSource": "https://github.com/bbc/gel-typography.git"
+  "_source": "git@github.com:bbc/gel-typography.git",
+  "_target": "2.0.0",
+  "_originalSource": "git@github.com:bbc/gel-typography.git"
 }

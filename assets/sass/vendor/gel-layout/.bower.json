@@ -35,7 +35,7 @@
     "tag": "0.2.0",
     "commit": "2050a4c875b9a21a7369d449c59cb006ebf2daef"
   },
-  "_source": "https://github.com/bbc/gel-layout.git",
+  "_source": "git@github.com:bbc/gel-layout.git",
   "_target": "~0.2.0",
-  "_originalSource": "https://github.com/bbc/gel-layout.git"
+  "_originalSource": "git@github.com:bbc/gel-layout.git"
 }

@@ -4,7 +4,7 @@
   "authors": [
     "shaun.bent@bbc.co.uk"
   ],
-  "description": "A basic set of widths to use with the GEL layout system",
+  "description": "A set of widths used to the create the GEL Grid.",
   "main": "_widths.scss",
   "keywords": [
     "widths",
@@ -25,17 +25,17 @@
     "example"
   ],
   "dependencies": {
-    "gel-settings": "git@github.com:bbc/gel-settings.git#~0.3.0",
-    "gel-tools": "git@github.com:bbc/gel-tools.git#~0.3.0"
+    "gel-settings": "git@github.com:bbc/gel-settings.git#~0.4.1",
+    "gel-tools": "git@github.com:bbc/gel-tools.git#~0.4.1"
   },
-  "version": "0.1.2",
-  "_release": "0.1.2",
+  "version": "0.1.3",
+  "_release": "0.1.3",
   "_resolution": {
     "type": "version",
-    "tag": "0.1.2",
-    "commit": "1f9bb052e46aa5591dee4b7aea6f1791f2d2c7f0"
+    "tag": "0.1.3",
+    "commit": "4e051c001bf7d8df08e7cdcd38268671062b7e74"
   },
-  "_source": "https://github.com/bbc/gel-widths.git",
+  "_source": "git@github.com:bbc/gel-widths.git",
   "_target": "~0.1.1-beta",
-  "_originalSource": "https://github.com/bbc/gel-widths.git"
+  "_originalSource": "git@github.com:bbc/gel-widths.git"
 }

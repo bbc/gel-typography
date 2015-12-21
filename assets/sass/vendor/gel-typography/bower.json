@@ -28,5 +28,5 @@
   "dependencies": {
     "gel-sass-tools": "git@github.com:bbc/gel-sass-tools.git#^1.0.0"
   },
-  "version": "1.0.0"
+  "version": "2.0.0"
 }

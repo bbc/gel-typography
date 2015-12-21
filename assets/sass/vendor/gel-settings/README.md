@@ -1,11 +1,8 @@
 # GEL Settings
 
-The GEL Settings component contains a selection of common global variables that are **required** by most (if not all) GEL components.
+A set of common Sass variables that are required by the GEL Foundations.
 
-GEL Settings are broken down into two parts:
-
-- **Globals** - a collection of variables that provide common configuration
-- **MQ Config** - basic configuration of the Sass MQ component, the values are taken from the `Globals` partial
+This repository forms part of the the [GEL Foundations](https://github.com/bbc/gel-foundations).
 
 ## Installation
 
