@@ -3,7 +3,7 @@ module.exports = function(grunt) {
         dist: {
             expand: true,
             cwd: '<%= dir.static_sass %>',
-            src: ['**/*.scss', '!**/_*.scss'],
+            src: ['**/*.scss', '!**/_*.scss', '!vendor/**/*.scss'],
             dest: '<%= dir.static_css %>',
             ext: '.css',
             options: {
@@ -13,7 +13,7 @@ module.exports = function(grunt) {
         development: {
             expand: true,
             cwd: '<%= dir.static_sass %>',
-            src: ['**/*.scss', '!**/_*.scss'],
+            src: ['**/*.scss', '!**/_*.scss', '!vendor/**/*.scss'],
             dest: '<%= dir.static_css %>',
             ext: '.css',
             options: {
