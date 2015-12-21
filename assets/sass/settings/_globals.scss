@@ -6,9 +6,14 @@
 // of the GEL Settings component
 
 
-// Layout
-$gel-layout-enable--center: true;
-$gel-layout-enable--right: true;
+// Grid
+$gel-grid-enable--markup-output: true;
+$gel-grid-enable--whitespace-fix: true;
+$gel-grid-enable--center: true;
+$gel-grid-enable--right: true;
+
+
+// Spacing
 $gel-spacing-enable--margins: true;
 $gel-spacing-enable--margins-alt: true;
 $gel-spacing-enable--margins-tiny: true;
@@ -25,12 +30,6 @@ $gel-spacing-enable--paddings-large: true;
 $gel-spacing-enable--paddings-huge: true;
 $gel-spacing-enable--paddings-none: true;
 
-// Widths
-$gel-width-enable--markup-output: true;
-
 // Typography
 $gel-type-enable--markup-output: true;
 $gel-type-enable--font-family: true;
-
-/* Remove Whitespace - Temporary */
-$gel-layout-enable--whitespace-fix: true;
