@@ -47,14 +47,8 @@
         top: 1px;
     }
 
-    object {
+    svg {
         vertical-align: middle;
-
-        @if $enhanced {
-            @include mq($from: gel-bp-l) {
-                width: 164px;
-            }
-        }
     }
 }
 
