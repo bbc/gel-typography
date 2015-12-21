@@ -36,6 +36,6 @@
     "commit": "63049d26e33c950d672f9f0b8679629fb79abb6a"
   },
   "_source": "git@github.com:bbc/gel-typography.git",
-  "_target": "2.0.0",
+  "_target": "^2.0.0",
   "_originalSource": "git@github.com:bbc/gel-typography.git"
 }
