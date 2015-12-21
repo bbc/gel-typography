@@ -119,9 +119,45 @@
 @mixin _gel-output-type-values($type-values) {
     @each $property, $value in $type-values {
         @if (type-of($value) == number and unit($value) == 'px') {
-            @include rem($property, $value);
+            @include gel-type-rem($property, $value);
         } @else {
             #{$property}: $value;
         }
+    }
+}
+
+
+@mixin gel-type-rem($property, $value) {
+    // Return the pixel value first
+    @if ($gel-type-enable--rem-fallback == true) {
+        #{$property}: $value;
+    }
+
+    // Pass the px value into the rem function
+    @if ($gel-type-enable--rem-output == true) {
+        #{$property}: gel-type-rem($value);
+    }
+}
+
+
+// 'gel-type-rem' is a Sass function that converts pixel values to rem values
+// for whatever property is passed to it.
+//
+// Source: https://github.com/guardian/guss-rem
+@function gel-type-rem($value, $baseline: $gel-type-html-font-size) {
+    @if $value == 0 {
+        @return 0; // 0rem -> 0
+    }
+
+    @if type-of($value) == list {
+        $result: ();
+
+        @each $e in $value {
+            $result: append($result, gel-type-rem($e, $baseline));
+        }
+
+        @return $result;
+    } @else {
+        @return if(type-of($value) == number and unit($value) == px, $value / $baseline * 1rem, $value);
     }
 }

@@ -68,7 +68,6 @@ You can install this component manually by downloading the content of this Git r
 
 In order to use the component you will need the following components available:
 
-- [GEL Sass Tools](https://github.com/bbc/gel-sass-tools)
 - [Sass MQ](https://github.com/sass-mq/sass-mq)
 
 ## Usage
