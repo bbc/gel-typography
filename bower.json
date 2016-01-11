@@ -28,7 +28,7 @@
     "tests"
   ],
   "dependencies": {
-    "gel-settings": "git@github.com:bbc-gel/gel-settings.git#~0.3.0",
-    "gel-tools": "git@github.com:bbc-gel/gel-tools.git#~0.3.0"
+    "gel-settings": "git@github.com:bbc-gel/gel-settings.git#~0.4.0",
+    "gel-tools": "git@github.com:bbc-gel/gel-tools.git#~0.4.2"
   }
 }

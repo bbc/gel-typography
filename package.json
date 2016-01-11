@@ -1,6 +1,6 @@
 {
   "name": "gel-typography",
-  "version": "0.5.1",
+  "version": "0.5.3",
   "description": "A flexible code implementation of the GEL responsive typography guidelines.",
   "main": "_settings.scss",
   "scripts": {
