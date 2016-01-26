@@ -38,7 +38,7 @@ If you're a more advanced user and want to integrate the GEL Typography componen
 ### Install using Bower
 
 ```bash
-$ bower install --save git+ssh://git@github.com/bbc/gel-typography.git
+$ bower install --save gel-typography
 ```
 
 ```sass
@@ -51,7 +51,7 @@ $ bower install --save git+ssh://git@github.com/bbc/gel-typography.git
 ### Install using NPM
 
 ```bash
-$ npm install --save git+ssh://git@github.com/bbc/gel-typography.git
+$ npm install --save gel-typography
 ```
 
 ```sass
