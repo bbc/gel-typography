@@ -1,5 +1,8 @@
 <h1 align="center">GEL Typography</h1>
 <p align="center">
+  <a href="https://travis-ci.org/bbc/gel-typography" target="_blank"><img src="https://travis-ci.org/bbc/gel-typography.svg?branch=master"></a>
+</p>
+<p align="center">
     A flexible code implementation of the GEL Typography.<br />
     Forms part of the <a href="https://github.com/bbc/gel-foundations" target="_blank"><b>GEL Foundations</b></a>
 </p>
