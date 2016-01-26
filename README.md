@@ -1,12 +1,10 @@
-# GEL Typography
-
-A flexible code implementation of the GEL Typography.
-
-**This repository forms part of the the [GEL Foundations](https://github.com/bbc/gel-foundations).**
+<h1 align="center">GEL Typography</h1>
+<p align="center">A flexible code implementation of the GEL Typography.</p>
+<p align="center">Part of the **[GEL Foundations](https://github.com/bbc/gel-foundations)** project</p>
 
 ## What is this?
 
-This is an implementation of our [GEL Typography Guidelines](http://www.bbc.co.uk/gel/guidelines/typography).
+An implementation of the [GEL Typography Guidelines](http://www.bbc.co.uk/gel/guidelines/typography).
 Providing typefaces, type sizes, weights, line-heights and tracking.
 The GEL Typography scale has been established to work on all devices and is independent of device size and resolution.
 
