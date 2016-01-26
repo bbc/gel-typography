@@ -16,7 +16,7 @@
   ],
   "license": "MIT",
   "homepage": "http://www.bbc.co.uk/gel",
-  "private": true,
+  "private": false,
   "ignore": [
     "**/.*",
     "node_modules",
