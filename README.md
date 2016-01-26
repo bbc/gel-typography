@@ -1,6 +1,8 @@
 <h1 align="center">GEL Typography</h1>
-<p align="center">A flexible code implementation of the GEL Typography.</p>
-<p align="center">Forms part of the [GEL Foundations](https://github.com/bbc/gel-foundations)</p>
+<p align="center">
+    A flexible code implementation of the GEL Typography.<br />
+    Forms part of the <a href="https://github.com/bbc/gel-foundations" target="_blank">GEL Foundations</a>
+</p>
 
 ## What is this?
 
