@@ -22,7 +22,8 @@
     "bower_components",
     "test",
     "tests",
-    "dist"
+    "dist",
+    "src"
   ],
   "author": "BBC",
   "license": "MIT",

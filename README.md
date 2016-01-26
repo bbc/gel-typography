@@ -1,12 +1,12 @@
-# GEL Typography
-
-A flexible code implementation of the GEL Typography.
-
-**This repository forms part of the the [GEL Foundations](https://github.com/bbc/gel-foundations).**
+<h1 align="center">GEL Typography</h1>
+<p align="center">
+    A flexible code implementation of the GEL Typography.<br />
+    Forms part of the <a href="https://github.com/bbc/gel-foundations" target="_blank"><b>GEL Foundations</b></a>
+</p>
 
 ## What is this?
 
-This is an implementation of our [GEL Typography Guidelines](http://www.bbc.co.uk/gel/guidelines/typography).
+An implementation of the [GEL Typography Guidelines](http://www.bbc.co.uk/gel/guidelines/typography).
 Providing typefaces, type sizes, weights, line-heights and tracking.
 The GEL Typography scale has been established to work on all devices and is independent of device size and resolution.
 
@@ -20,7 +20,7 @@ It can used in two forms, using a Sass mixin:
 }
 ```
 
-Or by simply adding the relivant classes to your markup:
+Or by simply adding the relevant classes to your markup:
 
 ```html
 <h1 class="gel-canon-bold">Global Experience Language</h1>
@@ -160,19 +160,20 @@ There are a number of ways you can apply the touch detection. [Modernizr](https:
 
 ## Who is using this?
 
-The following teams are currently using this component: GEL, Sport, Live, Homepage, Search, BBC Food, CBBC, CBeebies, BBC Three, MyBBC, K&L, Taster & Weather
+The following teams are currently using this component: GEL, Sport, Live, Homepage, Search, BBC Food, CBBC, CBeebies, BBC Three, MyBBC, K&L, Taster, Academy & Weather
 
 If your team is using this component, let us know and we'll add you to the list.
 
-## Who to get in touch with?
+## Credits
 
-Get in touch with Shaun Bent or Al Jones for more information about this project.
+- [Shaun Bent](https://twitter.com/shaunbent)
+- [Al Jones](https://twitter.com/Itsaljones)
 
 ## License
 
 > The MIT License (MIT)
 >
-> Copyright 2015 British Broadcasting Corporation
+> Copyright 2016 British Broadcasting Corporation
 >
 > Permission is hereby granted, free of charge, to any person obtaining a copy of
 > this software and associated documentation files (the "Software"), to deal in

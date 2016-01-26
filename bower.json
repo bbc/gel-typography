@@ -23,7 +23,8 @@
     "bower_components",
     "test",
     "tests",
-    "dist"
+    "dist",
+    "src"
   ],
   "dependencies": {
     "gel-sass-tools": "git@github.com:bbc/gel-sass-tools.git#^1.0.0"
