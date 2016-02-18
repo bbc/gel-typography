@@ -110,7 +110,7 @@ The following configurable options are available:
 ### Output Configuration
 
 - `$gel-type-enable--markup-output: false;` - output a collection of classes for each type group
-- `$gel-type-enable--font-family: false;` - output the correct font-family required by GEL Typography if ORB not available.
+- `$gel-type-enable--font-family: false;` - output the correct font-family required by GEL Typography, required if the BBC's global header and footer, Barlesque, is not available.
 - `$gel-type-enable--base-elements: false;` - map the GEL Typography classes to the relevant HTML elements
 
 ### Custom Font Configuration
@@ -163,7 +163,7 @@ There are a number of ways you can apply the touch detection. [Modernizr](https:
 
 ## Who is using this?
 
-The following teams are currently using this component: GEL, Sport, Live, Homepage, Search, BBC Food, CBBC, CBeebies, BBC Three, MyBBC, K&L, Taster, Academy & Weather
+The following teams are currently using this component: GEL, News, Sport, Live, Homepage, Search, BBC Food, CBBC, CBeebies, BBC Three, MyBBC, K&L, Taster, Academy, Travel & Weather
 
 If your team is using this component, let us know and we'll add you to the list.
 
