@@ -12,9 +12,8 @@
 // The default namespace applied to all typography classes output is inherits
 // from the default gel-namespace: `gel-`.
 //
-// @link http://bit.ly/1Z6hPfd
-//
 // @type String
+// @link http://bit.ly/1Z6hPfd
 //
 $gel-type-namespace: $gel-namespace !default;
 
@@ -40,24 +39,25 @@ $gel-type-no-touch-group: 'group-d';
 
 /// Output configuration
 //
-// The default namespace applied to all typography classes output is inherits
-// from the default gel-namespace: `gel-`.
+// By default the typography component has no output and just exposes a
+// series of Sass mixins and tools. Enabling this option will output
+// a series of typography classes to be used within your markup.
 //
-// @link http://bit.ly/1Z6hPfd
-//
-// @type String
+// @type Bool
 //
 $gel-type-enable--markup-output: false !default;
 
-// Which typography group contains our non-touch typography styles
+// The BBCs global header and footer, Barlesque, will set the correct font-family
+// on the <body> tag but if you're working on a project without Barlesque will need
+// to enable this flag to have the correct font-family declared
 //
-// @type String
+// @type Bool
 //
 $gel-type-enable--font-family: false !default;
 
-// Which typography group contains our non-touch typography styles
+// Map the GEL Typography classes to the relevant HTML elements
 //
-// @type String
+// @type Bool
 //
 $gel-type-enable--base-elements: false !default;
 
