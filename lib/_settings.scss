@@ -48,9 +48,9 @@ $gel-type-no-touch-group: 'group-d';
 //
 $gel-type-enable--markup-output: false !default;
 
-// Barlesque will set the correct font-family on the <body> tag but
-// if you're working on a project without Barlesque you might want
-// to enable this flag
+// The BBCs global header and footer, Barlesque, will set the correct font-family
+// on the <body> tag but if you're working on a project without Barlesque will need
+// to enable this flag to have the correct font-family declared
 //
 // @type Bool
 //
