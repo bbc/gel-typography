@@ -4,15 +4,16 @@
 
 // Replace `$search` with `$replace` in `$string`
 //
-// @param {String}  $string - Initial string
-// @param {String}  $search - Substring to replace
-// @param {String}  $replace ('') - New value
+// @param {String} $string - Initial string
+// @param {String} $search - Substring to replace
+// @param {String} $replace ('') - New value
 //
-// @access          private
+// @access private
 //
-// @return {String} Updated string
+// @return {String} - Updated string
 //
-// @author          Hugo Giraudel - http://bit.ly/1Khge01
+// @author Hugo Giraudel
+// @link http://bit.ly/1Khge01
 //
 @function _gel-str-replace($string, $search, $replace: '') {
     $index: str-index($string, $search);
@@ -27,14 +28,15 @@
 
 // Combine the the value of two Sass maps
 //
-// @param {Map}     $source - The orignal Sass map
-// @param {Map}     $map - Sass map containing the new values to be combined
+// @param {Map} $source - The orignal Sass map
+// @param {Map} $map - Sass map containing the new values to be combined
 //
-// @access          private
+// @access private
 //
-// @return {Map}    New map consistenting of the values of both supplied maps
+// @return {Map} - New map consistenting of the values of both supplied maps
 //
-// @author          Hugo Giraudel - http://bit.ly/1PPIoj4
+// @author Hugo Giraudel
+// @link http://bit.ly/1PPIoj4
 //
 @function _gel-map-combine($source, $map) {
     @each $key, $value in $map {
@@ -56,12 +58,13 @@
 // requested the bold type values will be combined with the type values of the non-bold
 // variant.
 //
-// @param {String}  $type-class - name of the type class you want the settings for (e.g. pica)
-// @param {String}  $type-group (all) - which type group you want the values for (e.g. group-a)
+// @param {String} $type-class - name of the type class you want the settings for (e.g. pica)
+// @param {String} $type-group (all) - which type group you want the values for (e.g. group-a)
 //
-// @returns {Map}   a map of the type settings for the requested type class/type group
+// @returns {Map} - a map of the type settings for the requested type class/type group
 //
-// @author          Shaun Bent
+// @author Shaun Bent
+// @author Adam Bulmer
 //
 @function gel-typography($type-class, $type-group: 'all') {
     $type-settings: map-get($gel-type-settings, $type-class);
@@ -82,9 +85,10 @@
 // Output the type values for the requested type class (e.g pica). This will return all required media
 // queries and no-touch fallbacks
 //
-// @param {String}  $type-class - name of the type class to output the values for
+// @param {String} $type-class - name of the type class to output the values for
 //
-// @author          Shaun Bent
+// @author Shaun Bent
+// @author Adam Bulmer
 //
 @mixin gel-typography($type-class) {
     @if $core {
@@ -110,11 +114,12 @@
 // Loop through a supplied Sass map and return each key/value as CSS properties
 // and values. Any `px` value will be automatically passed to the `rem` tool
 //
-// @param {Map}  $type-values - a map of CSS values in property: value format
+// @param {Map} $type-values - a map of CSS values in property: value format
 //
-// @access          private
+// @access private
 //
-// @author          Shaun Bent
+// @author Shaun Bent
+// @author Adam Bulmer
 //
 @mixin _gel-output-type-values($type-values) {
     @each $property, $value in $type-values {
