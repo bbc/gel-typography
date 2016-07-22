@@ -163,7 +163,7 @@ There are a number of ways you can apply the touch detection. [Modernizr](https:
 
 ## Who is using this?
 
-The following teams are currently using this component: GEL, News, Sport, Live, Homepage, Search, BBC Food, CBBC, CBeebies, BBC Three, MyBBC, K&L, Taster, Academy, Travel & Weather
+The following teams are currently using this component: GEL, News, Sport, Live, Homepage, Search, BBC Food, CBBC, CBeebies, BBC Three, MyBBC, K&L, Taster, Academy, Travel & Weather, BBC Music
 
 If your team is using this component, let us know and we'll add you to the list.
 
