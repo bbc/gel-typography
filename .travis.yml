@@ -10,7 +10,8 @@ after_success:
 deploy:
   provider: npm
   email: "${EMAIL}"
-  api_key: "${NPM_TOKEN}"
+  api_key:
+    secure: IMJl8QGxSgZ1Ums2DyYLlnQN8ZZHf90J+eWmKGSQhAO5XNzqlbxti1RoiWEnlYRfV2i87PElgQi6C0ZbkmGbNWoIATGDYKpaZimQEqb6sCVcTCJ3jk3LpE+sOXKZ7xgS+wQJCkPmeWLVfqmmuf2yXnI8a6A0O8BFAQxWWVaYiiPDnMBjobLQ0noy+2SorfzAuhb7fweMHpTl6tIqyzFWwLtjETz6tK30VYrY/FoWTgAVwylgtPva1tnui8bL9sNDS76vD3HK/eCDWO0fZ/HksrmXGfjA7Z2H99w/07ju6mGJEhyXL5ZacbHRchfWNKf7L/uHq8YznzrSHFQXudnd0ItsV14gJ8IVhd/kKAvdssxlTgOI0FkYNYoiUZuDWltUfJ6yez9c6PHtEmaa1cO0B8zxHQwc2O4CqLVhA0/9nSHmc6EXsEmADXgUwRfamp8pNCSUR8wzBK16pBGXnEs/enJJGZ3+PKTLshWqmM6fhDL04GmiDkaBJVrArusUhDw13yOGFr+ZP/AYnbO3J1IHZ7OUsuBQMtvlbotPzWsKsY3LSuOKnIQghl16uwnPpiigye29I6rINJKr70ZhWgnz5APSJt8emrbNV+gHQYa4Tx5nJL3xJp5yqf5yc6AVZ5F6y1cA5uQr8Sh1K1InLtlA3VA00SzlDL5j1MaLomhvHXw=
   on:
     branch: master
 env:
