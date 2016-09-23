@@ -1,7 +1,14 @@
 language: node_js
 node_js:
-  - "0.12"
+- '6'
 before_script:
-  - npm install
+- npm install
 script:
-  - npm test
+- npm test
+after_success:
+- test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && bash
+  scripts/deploy.sh
+env:
+  global:
+  - secure: SU0CBjYJASnQ3EEg6XaewClqhBvePRV7n6h8JfoAE0dtzflNnPfZ7BDW8eoNXk5n9oDDCJ33so/R/RSKA3MlKqDWaXdpm8ZQ0N9b6BGrvZj6pYiBJk3d9XjGw4+rmOc8fYj8GxnmMcCgJ8KEJZMEDNfO8LqM8PlwMggOYGJXgbKiW47gh4iLSeEB05uVJtyYOeEAPdPSzmCetiV9LHblOaarufjIAj10DzifdpaKzTAccY+K0g5QLlIrMQMqMFtQhnkM9sNH1U5QDqP559bsOBBtledtCkhmQwW/4kVW3oi1fkQXYuPfi1IYCSgUm63FvjjrZTjpoEZmgkqf8OiO7x3vUiHj7UH7Gd2I4hLr/2gqV67jii354yxHOD7mvVG6aG+a+pNoHuDbJOFh989yZNTyRxUwj2oWggEqnBHI3QuLcRRttHSv1GwSiwkGWOrgsPZH+J2pQ+bVUnbO0MFL5OJcsNQk9TE40wRkiz0V72lFoYpLhbi7fzn42yd+c8uCTG9r+YzlRiOcYzEAfynvT/KlzgJAX+/eJQi1Pk6+pNgvFiDHBh+wV+VQ6pybQoLXo7VAw543iQMRegUmhc0VJu015mLzgB5ZObKVxSi8MYgsi/nOwcss+lKphye3ppCCJdWbi+uqrDGYQHykjrMMzsU+itBqtCQds8zZpcPoWn8=
+  - secure: aDnDHY/f0mod2LFCicbtGXpLSxRyeF/kHYiFgGyDRzjDwC4vlWQzxdDJeDRSJjYi4UPfYWFKx5Y7N9fMjDnN44O42eQOpwclTirz3MVIa+AWUP2B1xH2Wvd544B9yBnVSNPdJe7tXQpQ6OdkhOj5P94NRTh5/NM6tKJuO9A8aXiMRGRchzBeGb276gE+SPGl12JX8mUHFdqH3+ACivhGwbm9BHkBL+mU3GqfjEEYQ/p3WbUeR9WW8MoBkNqXX1IJ4vImaqIo3KU1dWmycOZX5mOCm1a4nFjZ2KltvVH4Cl3n90k0QFJhk7zhiEAiH8+RZvw2DYUpbloZn+rTYTaYlqjK+0OljhU3Qn1KPuU29c+l+kumpMXrvThW6k9zwCECCbaCitaRVwlAK7J5CEYKZhQT5QhTwgAtafM9hGgofAFsAY+CyBM/+BOSTmglWE8I7/l4AmjNzxE8Vbwz7Q8lvkGRsDCLNjclcBgq4E11tTSYrk7BD/PFVFChK1Md5z0igws1FWx7xMqBL8QuIf3T8mGZZO18zvYU1Zj0krRPIynKUUhVTZhAnDZpUVHJ7AabPwYk4RZ2bNo5LGZ/JcmKGOxWMkqmqSoe/2FAU4QgTNjX1JQYhS33MzzVAfteT4NPtg0iZz/EOmc/xiabFy9FR5g8ZT2bNSsngwohMxKUcOo=
