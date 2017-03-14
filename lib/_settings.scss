@@ -117,6 +117,30 @@ $gel-type-settings: (
             'letter-spacing': -1px
         )
     ),
+    'paragon': (
+      'group-a': (
+        'font-size': 20px,
+        'line-height': 24px
+      ),
+      'group-b': (
+        'font-size': 22px,
+        'line-height': 30px
+      ),
+      'group-c': (
+        'font-size': 30px,
+        'line-height': 34px
+      ),
+      'group-d': (
+        'font-size': 28px,
+        'line-height': 32px
+      )
+    ),
+    'paragon-bold': (
+      'group-a': (
+          'font-weight': bold,
+          'letter-spacing': -1px
+      )
+    ),
     'double-pica': (
         'group-a': (
           'font-size': 20px,
