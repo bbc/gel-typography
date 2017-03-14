@@ -128,6 +128,71 @@
   }
 }
 
+.gel-paragon {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+}
+
+@media (min-width: 20em) {
+  .gel-paragon {
+    font-size: 22px;
+    font-size: 1.375rem;
+    line-height: 30px;
+    line-height: 1.875rem;
+  }
+}
+
+@media (min-width: 37.5em) {
+  .gel-paragon {
+    font-size: 30px;
+    font-size: 1.875rem;
+    line-height: 34px;
+    line-height: 2.125rem;
+  }
+  .no-touch .gel-paragon {
+    font-size: 28px;
+    font-size: 1.75rem;
+    line-height: 32px;
+    line-height: 2rem;
+  }
+}
+
+.gel-paragon-bold {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+  font-weight: bold;
+  letter-spacing: -1px;
+  letter-spacing: -0.0625rem;
+}
+
+@media (min-width: 20em) {
+  .gel-paragon-bold {
+    font-size: 22px;
+    font-size: 1.375rem;
+    line-height: 30px;
+    line-height: 1.875rem;
+  }
+}
+
+@media (min-width: 37.5em) {
+  .gel-paragon-bold {
+    font-size: 30px;
+    font-size: 1.875rem;
+    line-height: 34px;
+    line-height: 2.125rem;
+  }
+  .no-touch .gel-paragon-bold {
+    font-size: 28px;
+    font-size: 1.75rem;
+    line-height: 32px;
+    line-height: 2rem;
+  }
+}
+
 .gel-double-pica {
   font-size: 20px;
   font-size: 1.25rem;
