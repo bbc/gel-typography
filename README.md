@@ -4,7 +4,7 @@
 </p>
 <p align="center">
     A flexible code implementation of the GEL Typography.<br />
-    Forms part of the <a href="https://github.com/bbc/gel-foundations" target="_blank"><b>GEL Foundations</b></a>
+    Forms part of the <a href="http://www.bbc.co.uk/gel/guidelines/category/foundations" target="_blank"><b>GEL Foundations</b></a>
 </p>
 
 ## What is this?
