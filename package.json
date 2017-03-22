@@ -32,10 +32,10 @@
   },
   "homepage": "https://github.com/bbc/gel-typography",
   "devDependencies": {
-    "node-sass": "^3.2.0",
-    "sass-mq": "^3.2.2"
+    "node-sass": "^3.2.0"
   },
   "dependencies": {
-    "gel-sass-tools": "^1.1.0"
+    "gel-sass-tools": "^1.1.0",
+    "sass-mq": "^3.2.2"
   }
 }

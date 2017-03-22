@@ -61,6 +61,16 @@ $ npm install --save gel-typography
 @import 'node_modules/gel-typography/typography';
 ```
 
+**Note**: The above assumes usage of npm 3 and a flat directory structure. Use
+the below paths if using npm 2
+
+```sass
+// your-app/main.scss
+@import 'node_modules/gel-typography/node_modules/gel-sass-tools/sass-tools';
+@import 'node_modules/gel-typography/node_modules/sass-mq/mq';
+@import 'node_modules/gel-typography/typography';
+```
+
 ### Install manually
 
 You can install this component manually by downloading the content of this Git repo into your project and use a Sass @import to include it in your project.
