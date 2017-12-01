@@ -1,6 +1,6 @@
-///*------------------------------------*\
-//    # GEL TYPOGRAPHY - TEST
-//\*------------------------------------*/
+///*------------------------------------------------*\
+//    # GEL TYPOGRAPHY - TEST WITHOUT LARGE FONTS
+//\*------------------------------------------------*/
 
 // Include general GEL dependancies
 @import '../node_modules/gel-sass-tools/sass-tools';
@@ -10,16 +10,15 @@
 // Lets declare a few varaibles to test the output
 $gel-type-enable--markup-output: true !default;
 
-
 // Import the typography component
 @import '../typography';
 
 
 // Lets test our mixin
 .my-component {
-	@include gel-typography('pica');
+  @include gel-typography('pica');
 }
 
 .my-component__title {
-	@include gel-typography('canon-bold');
+  @include gel-typography('canon-bold');
 }

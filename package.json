@@ -4,7 +4,9 @@
   "description": "A flexible code implementation of the GEL Typography",
   "main": "_typography.scss",
   "scripts": {
-    "test": "node-sass test/test.scss test/test.css --output-style=expanded --sourcemap=none && diff -u test/test-expected.css test/test.css",
+    "test": "npm run test-without-large-fonts && npm run test-with-large-fonts",
+    "test-without-large-fonts": "node-sass test/test-without-large-fonts.scss test/test-without-large-fonts.css --output-style=expanded --sourcemap=none && diff -u test/test-without-large-fonts-expected.css test/test-without-large-fonts.css",
+    "test-with-large-fonts": "node-sass test/test-with-large-fonts.scss test/test-with-large-fonts.css --output-style=expanded --sourcemap=none && diff -u test/test-with-large-fonts-expected.css test/test-with-large-fonts.css",
     "dist": "node-sass src/gel-typography.scss dist/gel-typography.min.css --output-style=compressed --sourcemap=none && node-sass src/gel-typography.scss dist/gel-typography.css --output-style=expanded --sourcemap=none"
   },
   "repository": {

@@ -61,6 +61,11 @@ $gel-type-enable--font-family: false !default;
 //
 $gel-type-enable--base-elements: false !default;
 
+// Map the larger GEL typography with the default gel-type-settings
+//
+// @type Bool
+//
+$gel-type-enable--larger-font-sizes: false !default;
 
 // The GEL typography specification for each type class at each type group.
 // Having these values stored in a map allows them to be easily updated and
@@ -276,96 +281,131 @@ $gel-type-settings: (
           'font-size': 16px,
           'line-height': 22px
         )
-    ),
+    )
+) !default;
+
+$gel-larger-font-sizes: (
+    // Additional type sizes for larger contexts
+    //
         'atlas': (
             'group-a': (
-                'font-size': 78px,
-                'line-height': 84px
+              'font-size': 78px,
+              'line-height': 84px
             ),
             'group-b': (
-                'font-size': 96px,
-                'line-height': 104px
+              'font-size': 96px,
+              'line-height': 104px
             ),
             'group-c': (
-                'font-size': 192px,
-                'line-height': 208px
+              'font-size': 192px,
+              'line-height': 208px
             ),
             'group-d': (
-                'font-size': 140px,
-                'line-height': 148px
+              'font-size': 140px,
+              'line-height': 148px
+            )
+        ),
+        'atlas-bold': (
+            'group-a': (
+              'font-weight': bold,
+              'letter-spacing': -1px
             )
         ),
         'elephant': (
             'group-a': (
-                'font-size': 60px,
-                'line-height': 64px
+              'font-size': 60px,
+              'line-height': 64px
             ),
             'group-b': (
-                'font-size': 78px,
-                'line-height': 84px
+              'font-size': 78px,
+              'line-height': 84px
             ),
             'group-c': (
-                'font-size': 156px,
-                'line-height': 170px
+              'font-size': 156px,
+              'line-height': 170px
             ),
             'group-d': (
-                'font-size': 116px,
-                'line-height': 124px
+              'font-size': 116px,
+              'line-height': 124px
+            )
+        ),
+        'elephant-bold': (
+            'group-a': (
+              'font-weight': bold,
+              'letter-spacing': -1px
             )
         ),
         'imperial': (
             'group-a': (
-                'font-size': 50px,
-                'line-height': 54px
+              'font-size': 50px,
+              'line-height': 54px
             ),
             'group-b': (
-                'font-size': 64px,
-                'line-height': 72px
+              'font-size': 64px,
+              'line-height': 72px
             ),
             'group-c': (
-                'font-size': 124px,
-                'line-height': 136px
+              'font-size': 124px,
+              'line-height': 136px
             ),
             'group-d': (
-                'font-size': 96px,
-                'line-height': 104px
+              'font-size': 96px,
+              'line-height': 104px
+            )
+        ),
+        'imperial-bold': (
+            'group-a': (
+              'font-weight': bold,
+              'letter-spacing': -1px
             )
         ),
         'royal': (
             'group-a': (
-                'font-size': 40px,
-                'line-height': 44px
+              'font-size': 40px,
+              'line-height': 44px
             ),
             'group-b': (
-                'font-size': 52px,
-                'line-height': 60px
+              'font-size': 52px,
+              'line-height': 60px
             ),
             'group-c': (
-                'font-size': 94px,
-                'line-height': 104px
+              'font-size': 94px,
+              'line-height': 104px
             ),
             'group-d': (
-                'font-size': 76px,
-                'line-height': 84px
+              'font-size': 76px,
+              'line-height': 84px
+            )
+        ),
+        'royal-bold': (
+            'group-a': (
+              'font-weight': bold,
+              'letter-spacing': -1px
             )
         ),
         'foolscap': (
             'group-a': (
-                'font-size': 32px,
-                'line-height': 36px
+              'font-size': 32px,
+              'line-height': 36px
             ),
             'group-b': (
-                'font-size': 40px,
-                'line-height': 44px
+              'font-size': 40px,
+              'line-height': 44px
             ),
             'group-c': (
-                'font-size': 72px,
-                'line-height': 80px
+              'font-size': 72px,
+              'line-height': 80px
             ),
             'group-d': (
-                'font-size': 56px,
-                'line-height': 60px
+              'font-size': 56px,
+              'line-height': 60px
             )
+        ),
+        'foolscap-bold': (
+                'group-a': (
+                        'font-weight': bold,
+                        'letter-spacing': -1px
+                )
         )
 ) !default;
 

@@ -1,0 +1,20 @@
+///*------------------------------------*\
+//    # GEL TYPOGRAPHY - TEST
+//\*------------------------------------*/
+
+// Include general GEL dependancies
+@import '../node_modules/gel-sass-tools/sass-tools';
+@import '../node_modules/sass-mq/mq';
+
+
+// Lets declare a few varaibles to test the output
+$gel-type-enable--markup-output: true !default;
+$gel-type-enable--larger-font-sizes: true !default;
+
+// Import the typography component
+@import '../typography';
+
+// Lets test our larger fonts
+.my-component__with-foolscap {
+	@include gel-typography('foolscap');
+}
