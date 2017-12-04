@@ -1,6 +1,6 @@
-///*------------------------------------*\
-//    # GEL TYPOGRAPHY - TEST
-//\*------------------------------------*/
+///*----------------------------------------------*\
+//    # GEL TYPOGRAPHY - TEST WITH LARGE FONTS
+//\*----------------------------------------------*/
 
 // Include general GEL dependancies
 @import '../node_modules/gel-sass-tools/sass-tools';
@@ -9,7 +9,7 @@
 
 // Lets declare a few varaibles to test the output
 $gel-type-enable--markup-output: true !default;
-$gel-type-enable--larger-font-sizes: true !default;
+$gel-type-enable--larger-type-sizes: true !default;
 
 // Import the typography component
 @import '../typography';
