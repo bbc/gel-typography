@@ -18,6 +18,10 @@ $gel-settings-available: false !default;
 $core: true !default;
 $enhanced: true !default;
 
+// If larger font sizes enable, merge them with gel-type-settings
+@if $gel-type-enable--larger-type-sizes {
+    $gel-type-settings: map-merge($gel-type-settings, $gel-larger-font-sizes);
+}
 
 // Output the typography styles for the 4 groups
 @if $gel-type-enable--markup-output {
