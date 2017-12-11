@@ -172,6 +172,11 @@ If your team is using this component, let us know and we'll add you to the list.
 - [Shaun Bent](https://twitter.com/shaunbent)
 - [Al Jones](https://twitter.com/Itsaljones)
 
+## Maintainers
+
+- [Nikos Tsouknidas](https://twitter.com/tsoukn)
+
+
 ## License
 
 > The MIT License (MIT)
