@@ -156,10 +156,10 @@
 
 @media (min-width: 37.5em) {
   .gel-paragon {
-    font-size: 30px;
-    font-size: 1.875rem;
-    line-height: 34px;
-    line-height: 2.125rem;
+    font-size: 28px;
+    font-size: 1.75rem;
+    line-height: 32px;
+    line-height: 2rem;
   }
   .no-touch .gel-paragon {
     font-size: 28px;
@@ -195,10 +195,10 @@
 
 @media (min-width: 37.5em) {
   .gel-paragon-bold {
-    font-size: 30px;
-    font-size: 1.875rem;
-    line-height: 34px;
-    line-height: 2.125rem;
+    font-size: 28px;
+    font-size: 1.75rem;
+    line-height: 32px;
+    line-height: 2rem;
   }
   .no-touch .gel-paragon-bold {
     font-size: 28px;
