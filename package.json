@@ -1,6 +1,6 @@
 {
   "name": "gel-typography",
-  "version": "2.0.5",
+  "version": "3.0.0",
   "description": "A flexible code implementation of the GEL Typography",
   "main": "_typography.scss",
   "scripts": {
@@ -34,8 +34,8 @@
   },
   "homepage": "https://github.com/bbc/gel-typography",
   "devDependencies": {
-    "node-sass": "^3.2.0",
-    "sass-mq": "^3.2.2"
+    "node-sass": "^4.13.1",
+    "sass-mq": "^5.0.1"
   },
   "dependencies": {
     "gel-sass-tools": "^1.1.0"

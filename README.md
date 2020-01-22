@@ -171,10 +171,11 @@ If your team is using this component, let us know and we'll add you to the list.
 
 - [Shaun Bent](https://twitter.com/shaunbent)
 - [Al Jones](https://twitter.com/Itsaljones)
+- [Nikos Tsouknidas](https://twitter.com/tsoukn)
 
 ## Maintainers
 
-- [Nikos Tsouknidas](https://twitter.com/tsoukn)
+- [Sean Carroll](https://github.com/randombitsUK/)
 
 
 ## License
