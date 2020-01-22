@@ -39,6 +39,11 @@
   letter-spacing: -0.0625rem;
 }
 
+.b-reith-sans-loaded .gel-canon-bold,
+.b-reith-serif-loaded .gel-canon-bold {
+  letter-spacing: normal;
+}
+
 @media (min-width: 20em) {
   .gel-canon-bold {
     font-size: 32px;
@@ -102,6 +107,11 @@
   font-weight: bold;
   letter-spacing: -1px;
   letter-spacing: -0.0625rem;
+}
+
+.b-reith-sans-loaded .gel-trafalgar-bold,
+.b-reith-serif-loaded .gel-trafalgar-bold {
+  letter-spacing: normal;
 }
 
 @media (min-width: 20em) {
@@ -169,6 +179,11 @@
   letter-spacing: -0.0625rem;
 }
 
+.b-reith-sans-loaded .gel-paragon-bold,
+.b-reith-serif-loaded .gel-paragon-bold {
+  letter-spacing: normal;
+}
+
 @media (min-width: 20em) {
   .gel-paragon-bold {
     font-size: 22px;
@@ -225,6 +240,11 @@
   letter-spacing: -0.0625rem;
 }
 
+.b-reith-sans-loaded .gel-double-pica-bold,
+.b-reith-serif-loaded .gel-double-pica-bold {
+  letter-spacing: normal;
+}
+
 @media (min-width: 37.5em) {
   .gel-double-pica-bold {
     font-size: 26px;
@@ -272,6 +292,10 @@
   .gel-great-primer-bold {
     letter-spacing: -1px;
     letter-spacing: -0.0625rem;
+  }
+  .b-reith-sans-loaded .gel-great-primer-bold,
+  .b-reith-serif-loaded .gel-great-primer-bold {
+    letter-spacing: normal;
   }
 }
 
@@ -550,6 +574,11 @@
   letter-spacing: -0.0625rem;
 }
 
+.b-reith-sans-loaded .gel-atlas-bold,
+.b-reith-serif-loaded .gel-atlas-bold {
+  letter-spacing: normal;
+}
+
 @media (min-width: 20em) {
   .gel-atlas-bold {
     font-size: 96px;
@@ -613,6 +642,11 @@
   font-weight: bold;
   letter-spacing: -1px;
   letter-spacing: -0.0625rem;
+}
+
+.b-reith-sans-loaded .gel-elephant-bold,
+.b-reith-serif-loaded .gel-elephant-bold {
+  letter-spacing: normal;
 }
 
 @media (min-width: 20em) {
@@ -680,6 +714,11 @@
   letter-spacing: -0.0625rem;
 }
 
+.b-reith-sans-loaded .gel-imperial-bold,
+.b-reith-serif-loaded .gel-imperial-bold {
+  letter-spacing: normal;
+}
+
 @media (min-width: 20em) {
   .gel-imperial-bold {
     font-size: 64px;
@@ -745,6 +784,11 @@
   letter-spacing: -0.0625rem;
 }
 
+.b-reith-sans-loaded .gel-royal-bold,
+.b-reith-serif-loaded .gel-royal-bold {
+  letter-spacing: normal;
+}
+
 @media (min-width: 20em) {
   .gel-royal-bold {
     font-size: 52px;
@@ -808,6 +852,11 @@
   font-weight: bold;
   letter-spacing: -1px;
   letter-spacing: -0.0625rem;
+}
+
+.b-reith-sans-loaded .gel-foolscap-bold,
+.b-reith-serif-loaded .gel-foolscap-bold {
+  letter-spacing: normal;
 }
 
 @media (min-width: 20em) {

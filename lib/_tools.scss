@@ -92,19 +92,27 @@
 //
 @mixin gel-typography($type-class) {
     @if $core {
-      @include _gel-output-type-values(gel-typography($type-class, 'group-a'));
+        $groupA: gel-typography($type-class, 'group-a');
+        @include _gel-output-type-values($groupA);
+        @include reith-letter-spacing($groupA);
     }
 
     @if $enhanced {
         @include mq($from: gel-bp-type-b) {
-            @include _gel-output-type-values(gel-typography($type-class, 'group-b'));
+            $groupB: gel-typography($type-class, 'group-b');
+            @include _gel-output-type-values($groupB);
+            @include reith-letter-spacing($groupB);
         }
 
         @include mq($from: gel-bp-type-c) {
-            @include _gel-output-type-values(gel-typography($type-class, 'group-c'));
+            $groupC: gel-typography($type-class, 'group-c');
+            @include _gel-output-type-values($groupC);
+            @include reith-letter-spacing($groupC);
 
             .#{$gel-type-touch-class} & {
-                @include _gel-output-type-values(gel-typography($type-class, $gel-type-no-touch-group));
+                $groupNoTouch: gel-typography($type-class, $gel-type-no-touch-group);
+                @include _gel-output-type-values($groupNoTouch);
+                @include reith-letter-spacing($groupNoTouch);
             }
         }
     }
@@ -127,6 +135,17 @@
             @include rem($property, $value);
         } @else {
             #{$property}: $value;
+        }
+    }
+}
+
+@mixin reith-letter-spacing($type-settings) {
+    @if (type-of($type-settings) == 'map') {
+        @if map-has-key($type-settings, 'letter-spacing') {
+            .b-reith-sans-loaded &,
+            .b-reith-serif-loaded & {
+                letter-spacing: normal;
+            }
         }
     }
 }
