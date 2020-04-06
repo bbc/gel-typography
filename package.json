@@ -38,6 +38,6 @@
     "sass-mq": "^5.0.1"
   },
   "dependencies": {
-    "gel-sass-tools": "^1.1.0"
+    "gel-sass-tools": "^1.2.1"
   }
 }
