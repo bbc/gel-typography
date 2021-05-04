@@ -1,6 +1,3 @@
-# Bower
-bower_components/*
-
 # NPM
 node_modules/*
 npm-debug.log
@@ -8,8 +5,3 @@ npm-debug.log
 # Testing - Ignore css files except those ending in -expected
 test/*.css
 !test/*-expected.css
-
-# Misc
-.DS_Store
-.DS_Store?
-.sass-cache/

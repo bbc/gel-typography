@@ -4,7 +4,6 @@
   line-height: 32px;
   line-height: 2rem;
 }
-
 @media (min-width: 20em) {
   .gel-canon {
     font-size: 32px;
@@ -13,7 +12,6 @@
     line-height: 2.25rem;
   }
 }
-
 @media (min-width: 37.5em) {
   .gel-canon {
     font-size: 52px;
@@ -38,12 +36,9 @@
   letter-spacing: -1px;
   letter-spacing: -0.0625rem;
 }
-
-.b-reith-sans-loaded .gel-canon-bold,
-.b-reith-serif-loaded .gel-canon-bold {
+.b-reith-sans-loaded .gel-canon-bold, .b-reith-serif-loaded .gel-canon-bold {
   letter-spacing: normal;
 }
-
 @media (min-width: 20em) {
   .gel-canon-bold {
     font-size: 32px;
@@ -52,7 +47,6 @@
     line-height: 2.25rem;
   }
 }
-
 @media (min-width: 37.5em) {
   .gel-canon-bold {
     font-size: 52px;
@@ -74,7 +68,6 @@
   line-height: 24px;
   line-height: 1.5rem;
 }
-
 @media (min-width: 20em) {
   .gel-trafalgar {
     font-size: 24px;
@@ -83,7 +76,6 @@
     line-height: 1.75rem;
   }
 }
-
 @media (min-width: 37.5em) {
   .gel-trafalgar {
     font-size: 36px;
@@ -108,12 +100,9 @@
   letter-spacing: -1px;
   letter-spacing: -0.0625rem;
 }
-
-.b-reith-sans-loaded .gel-trafalgar-bold,
-.b-reith-serif-loaded .gel-trafalgar-bold {
+.b-reith-sans-loaded .gel-trafalgar-bold, .b-reith-serif-loaded .gel-trafalgar-bold {
   letter-spacing: normal;
 }
-
 @media (min-width: 20em) {
   .gel-trafalgar-bold {
     font-size: 24px;
@@ -122,7 +111,6 @@
     line-height: 1.75rem;
   }
 }
-
 @media (min-width: 37.5em) {
   .gel-trafalgar-bold {
     font-size: 36px;
@@ -144,7 +132,6 @@
   line-height: 24px;
   line-height: 1.5rem;
 }
-
 @media (min-width: 20em) {
   .gel-paragon {
     font-size: 22px;
@@ -153,13 +140,12 @@
     line-height: 1.625rem;
   }
 }
-
 @media (min-width: 37.5em) {
   .gel-paragon {
-    font-size: 30px;
-    font-size: 1.875rem;
-    line-height: 34px;
-    line-height: 2.125rem;
+    font-size: 28px;
+    font-size: 1.75rem;
+    line-height: 32px;
+    line-height: 2rem;
   }
   .no-touch .gel-paragon {
     font-size: 28px;
@@ -178,12 +164,9 @@
   letter-spacing: -1px;
   letter-spacing: -0.0625rem;
 }
-
-.b-reith-sans-loaded .gel-paragon-bold,
-.b-reith-serif-loaded .gel-paragon-bold {
+.b-reith-sans-loaded .gel-paragon-bold, .b-reith-serif-loaded .gel-paragon-bold {
   letter-spacing: normal;
 }
-
 @media (min-width: 20em) {
   .gel-paragon-bold {
     font-size: 22px;
@@ -192,13 +175,12 @@
     line-height: 1.625rem;
   }
 }
-
 @media (min-width: 37.5em) {
   .gel-paragon-bold {
-    font-size: 30px;
-    font-size: 1.875rem;
-    line-height: 34px;
-    line-height: 2.125rem;
+    font-size: 28px;
+    font-size: 1.75rem;
+    line-height: 32px;
+    line-height: 2rem;
   }
   .no-touch .gel-paragon-bold {
     font-size: 28px;
@@ -214,7 +196,6 @@
   line-height: 24px;
   line-height: 1.5rem;
 }
-
 @media (min-width: 37.5em) {
   .gel-double-pica {
     font-size: 26px;
@@ -239,12 +220,9 @@
   letter-spacing: -1px;
   letter-spacing: -0.0625rem;
 }
-
-.b-reith-sans-loaded .gel-double-pica-bold,
-.b-reith-serif-loaded .gel-double-pica-bold {
+.b-reith-sans-loaded .gel-double-pica-bold, .b-reith-serif-loaded .gel-double-pica-bold {
   letter-spacing: normal;
 }
-
 @media (min-width: 37.5em) {
   .gel-double-pica-bold {
     font-size: 26px;
@@ -266,7 +244,6 @@
   line-height: 22px;
   line-height: 1.375rem;
 }
-
 @media (min-width: 37.5em) {
   .gel-great-primer {
     font-size: 21px;
@@ -287,18 +264,15 @@
   line-height: 1.375rem;
   font-weight: bold;
 }
-
 @media (min-width: 20em) {
   .gel-great-primer-bold {
     letter-spacing: -1px;
     letter-spacing: -0.0625rem;
   }
-  .b-reith-sans-loaded .gel-great-primer-bold,
-  .b-reith-serif-loaded .gel-great-primer-bold {
+  .b-reith-sans-loaded .gel-great-primer-bold, .b-reith-serif-loaded .gel-great-primer-bold {
     letter-spacing: normal;
   }
 }
-
 @media (min-width: 37.5em) {
   .gel-great-primer-bold {
     font-size: 21px;
@@ -318,7 +292,6 @@
   line-height: 20px;
   line-height: 1.25rem;
 }
-
 @media (min-width: 20em) {
   .gel-pica {
     font-size: 16px;
@@ -327,7 +300,6 @@
     line-height: 1.25rem;
   }
 }
-
 @media (min-width: 37.5em) {
   .gel-pica {
     font-size: 18px;
@@ -350,7 +322,6 @@
   line-height: 1.25rem;
   font-weight: bold;
 }
-
 @media (min-width: 20em) {
   .gel-pica-bold {
     font-size: 16px;
@@ -359,7 +330,6 @@
     line-height: 1.25rem;
   }
 }
-
 @media (min-width: 37.5em) {
   .gel-pica-bold {
     font-size: 18px;
@@ -381,7 +351,6 @@
   line-height: 18px;
   line-height: 1.125rem;
 }
-
 @media (min-width: 37.5em) {
   .gel-long-primer {
     line-height: 20px;
@@ -402,7 +371,6 @@
   line-height: 1.125rem;
   font-weight: bold;
 }
-
 @media (min-width: 37.5em) {
   .gel-long-primer-bold {
     line-height: 20px;
@@ -422,14 +390,12 @@
   line-height: 16px;
   line-height: 1rem;
 }
-
 @media (min-width: 20em) {
   .gel-brevier {
     line-height: 18px;
     line-height: 1.125rem;
   }
 }
-
 @media (min-width: 37.5em) {
   .no-touch .gel-brevier {
     font-size: 13px;
@@ -446,14 +412,12 @@
   line-height: 1rem;
   font-weight: bold;
 }
-
 @media (min-width: 20em) {
   .gel-brevier-bold {
     line-height: 18px;
     line-height: 1.125rem;
   }
 }
-
 @media (min-width: 37.5em) {
   .no-touch .gel-brevier-bold {
     font-size: 13px;
@@ -470,7 +434,6 @@
   line-height: 1rem;
   text-transform: uppercase;
 }
-
 @media (min-width: 37.5em) {
   .gel-minion {
     font-size: 13px;
@@ -490,7 +453,6 @@
   text-transform: uppercase;
   font-weight: bold;
 }
-
 @media (min-width: 37.5em) {
   .gel-minion-bold {
     font-size: 13px;
@@ -508,7 +470,6 @@
   line-height: 20px;
   line-height: 1.25rem;
 }
-
 @media (min-width: 20em) {
   .gel-body-copy {
     font-size: 16px;
@@ -517,7 +478,6 @@
     line-height: 1.375rem;
   }
 }
-
 @media (min-width: 37.5em) {
   .gel-body-copy {
     font-size: 18px;
