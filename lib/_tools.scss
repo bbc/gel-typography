@@ -120,7 +120,7 @@
 
 
 // Loop through a supplied Sass map and return each key/value as CSS properties
-// and values. Any `px` value will be automatically passed to the `rem` tool
+// and values. Any `px` value will be automatically passed to the `toRem` tool
 //
 // @param {Map} $type-values - a map of CSS values in property: value format
 //
@@ -132,7 +132,7 @@
 @mixin _gel-output-type-values($type-values) {
     @each $property, $value in $type-values {
         @if (type-of($value) == number and unit($value) == 'px') {
-            @include rem($property, $value);
+            @include toRem($property, $value);
         } @else {
             #{$property}: $value;
         }
