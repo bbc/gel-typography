@@ -1,3 +1,5 @@
+@use 'sass:map';
+
 ///*------------------------------------*\
 //    # GEL TYPOGRAPHY - TOOL
 //\*------------------------------------*/
@@ -44,10 +46,10 @@
 
         @if map-has-key($source, $key) {
             $current: map-get($source, $key);
-            $new: ($key: map-merge($current, $value));
+            $new: ($key: map.merge($current, $value));
         }
 
-        $source: map-merge($source, $new);
+        $source: map.merge($source, $new);
     }
 
     @return $source;

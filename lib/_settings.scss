@@ -1,3 +1,5 @@
+@use 'sass:meta';
+
 ///*------------------------------------*\
 //    # GEL TYPOGRAPHY - SETTINGS
 //\*------------------------------------*/
@@ -412,7 +414,7 @@ $gel-larger-font-sizes: (
 // Adds the typography specific breakpoints to the Sass MQ list
 // of breakpoints
 //
-@if (mixin-exists(mq)) {
+@if (meta.mixin-exists(mq)) {
     @include mq-add-breakpoint(gel-bp-type-b, 320px);
     @include mq-add-breakpoint(gel-bp-type-c, 600px);
 } @else {
