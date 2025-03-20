@@ -7,6 +7,7 @@
     "build": "npm run build:compressed && npm run build:expanded",
     "build:compressed": "sass --style=compressed --no-source-map src/gel-typography.scss dist/gel-typography.min.css",
     "build:expanded": "sass --style=expanded --no-source-map src/gel-typography.scss dist/gel-typography.css",
+    "prettier": "prettier --write '{src/**/*,test/**/*,*}.{js,mjs,json,scss}'",
     "pretest": "npm run pretest:without && npm run pretest:with",
     "pretest:with": "sass --style=expanded --no-source-map test/test-with-large-fonts.scss test/test-with-large-fonts.css",
     "pretest:without": "sass --style=expanded --no-source-map test/test-without-large-fonts.scss test/test-without-large-fonts.css",
@@ -38,6 +39,7 @@
   },
   "homepage": "https://github.com/bbc/gel-typography",
   "devDependencies": {
+    "prettier": "3.5.3",
     "sass": "1.85.0",
     "sass-mq": "6.0.0"
   },
