@@ -1,0 +1,9 @@
+$gel-type-enable--larger-type-sizes: true !default;
+
+@import '../../../node_modules/gel-sass-tools/sass-tools';
+@import '../../../node_modules/sass-mq/mq';
+@import '../../../typography';
+
+.foolscap {
+  @include gel-typography('foolscap');
+}

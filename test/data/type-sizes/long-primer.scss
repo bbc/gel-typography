@@ -1,0 +1,7 @@
+@import '../../../node_modules/gel-sass-tools/sass-tools';
+@import '../../../node_modules/sass-mq/mq';
+@import '../../../typography';
+
+.long-primer {
+  @include gel-typography('long-primer');
+}
