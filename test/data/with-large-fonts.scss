@@ -1,0 +1,6 @@
+$gel-type-enable--markup-output: true !default;
+$gel-type-enable--larger-type-sizes: true !default;
+
+@import '../../node_modules/gel-sass-tools/sass-tools';
+@import '../../node_modules/sass-mq/mq';
+@import '../../typography';
