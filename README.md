@@ -4,6 +4,19 @@
     Forms part of the <a href="https://github.com/bbc/gel-foundations" target="_blank"><b>GEL Foundations</b></a>
 </p>
 
+## Breaking Change: v6.0.0
+
+### @import, @use and @forward
+
+The `@import` directive is now deprecated in favour of `@use` and `@forward`, see [SASS documentation](https://sass-lang.com/documentation/at-rules/use/) for more information.
+
+GEL Typography has now been updated to `@use` and `@forward` to remove a large number of deprecation notices.
+
+With the new @use directive, no var, function, or mixin is placed in global scope, and they are all scoped within the file.
+
+This means that users will explicitly need to include the partial file in each file that may use its vars, functions or mixins.
+
+
 ## What is this?
 
 An implementation of the [GEL Typography Guidelines](http://www.bbc.co.uk/gel/guidelines/typography).
