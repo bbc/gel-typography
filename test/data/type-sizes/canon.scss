@@ -1,7 +1,5 @@
-@import '../../../node_modules/gel-sass-tools/sass-tools';
-@import '../../../node_modules/sass-mq/mq';
-@import '../../../typography';
+@use '../../../typography';
 
 .canon {
-  @include gel-typography('canon');
+  @include typography.gel-typography('canon');
 }

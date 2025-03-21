@@ -1,7 +1,5 @@
-@import '../../../node_modules/gel-sass-tools/sass-tools';
-@import '../../../node_modules/sass-mq/mq';
-@import '../../../typography';
+@use '../../../typography';
 
 .double-pica {
-  @include gel-typography('double-pica');
+  @include typography.gel-typography('double-pica');
 }
