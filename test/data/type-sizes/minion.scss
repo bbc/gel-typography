@@ -1,7 +1,5 @@
-@import '../../../node_modules/gel-sass-tools/sass-tools';
-@import '../../../node_modules/sass-mq/mq';
-@import '../../../typography';
+@use '../../../typography';
 
 .minion {
-  @include gel-typography('minion');
+  @include typography.gel-typography('minion');
 }

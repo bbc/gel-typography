@@ -1,7 +1,5 @@
-@import '../../../node_modules/gel-sass-tools/sass-tools';
-@import '../../../node_modules/sass-mq/mq';
-@import '../../../typography';
+@use '../../../typography';
 
 .body-copy {
-  @include gel-typography('body-copy');
+  @include typography.gel-typography('body-copy');
 }
