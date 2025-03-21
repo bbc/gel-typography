@@ -1,8 +1,5 @@
 <h1 align="center">GEL Typography</h1>
 <p align="center">
-  <a href="https://travis-ci.org/bbc/gel-typography" target="_blank"><img src="https://travis-ci.org/bbc/gel-typography.svg?branch=master"></a>
-</p>
-<p align="center">
     A flexible code implementation of the GEL Typography.<br />
     Forms part of the <a href="https://github.com/bbc/gel-foundations" target="_blank"><b>GEL Foundations</b></a>
 </p>
@@ -43,14 +40,12 @@ $ npm install --save gel-typography
 
 ```sass
 // your-app/main.scss
-@import 'node_modules/gel-sass-tools/sass-tools';
-@import 'node_modules/sass-mq/mq';
-@import 'node_modules/gel-typography/typography';
+@use 'node_modules/gel-typography/typography';
 ```
 
 ### Install manually
 
-You can install this component manually by downloading the content of this Git repo into your project and use a Sass @import to include it in your project.
+You can install this component manually by downloading the content of this Git repo into your project and use a Sass @use to include it in your project.
 
 > **Note:** you will manually need to manage the dependencies below, without these this component will fail to compile.
 
@@ -77,14 +72,12 @@ By default the GEL Typography component does not output any markup but exposes a
 }
 ```
 
-A collection of typography classes can be output by defining `$gel-type-enable--markup-output: true;` before you `@import` the typography partial.
+A collection of typography classes can be output by defining `$gel-type-enable--markup-output: true;` as you `@use` the typography partial.
 
 **Example:**
 
 ```scss
-$gel-type-enable--markup-output: true;
-
-@import "gel-typography/typography";
+@use "gel-typography/typography" with ($gel-type-enable--markup-output: true);
 ```
 
 The following configurable options are available:
