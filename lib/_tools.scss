@@ -1,3 +1,5 @@
+@use '../node_modules/sass-mq/mq';
+@use '../node_modules/gel-sass-tools/sass-tools';
 @use 'sass:map';
 
 ///*------------------------------------*\
@@ -100,13 +102,13 @@
     }
 
     @if $enhanced {
-        @include mq($from: gel-bp-type-b) {
+        @include mq.mq($from: gel-bp-type-b) {
             $groupB: gel-typography($type-class, 'group-b');
             @include _gel-output-type-values($groupB);
             @include reith-letter-spacing($groupB);
         }
 
-        @include mq($from: gel-bp-type-c) {
+        @include mq.mq($from: gel-bp-type-c) {
             $groupC: gel-typography($type-class, 'group-c');
             @include _gel-output-type-values($groupC);
             @include reith-letter-spacing($groupC);
@@ -134,7 +136,7 @@
 @mixin _gel-output-type-values($type-values) {
     @each $property, $value in $type-values {
         @if (type-of($value) == number and unit($value) == 'px') {
-            @include toRem($property, $value);
+            @include sass-tools.toRem($property, $value);
         } @else {
             #{$property}: $value;
         }

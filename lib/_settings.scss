@@ -1,3 +1,5 @@
+@use '../node_modules/sass-mq/mq';
+@use '../node_modules/gel-sass-tools/sass-tools';
 @use 'sass:meta';
 
 ///*------------------------------------*\
@@ -17,7 +19,7 @@
 // @type String
 // @link http://bit.ly/1Z6hPfd
 //
-$gel-type-namespace: $gel-namespace !default;
+$gel-type-namespace: sass-tools.$gel-namespace !default;
 
 // The classname used to signify if the device needs to display the no-touch group. This
 // class needs to be applied to high level elemet such as `body` or `html`
@@ -415,8 +417,8 @@ $gel-larger-font-sizes: (
 // of breakpoints
 //
 @if (meta.mixin-exists(mq)) {
-    @include mq-add-breakpoint(gel-bp-type-b, 320px);
-    @include mq-add-breakpoint(gel-bp-type-c, 600px);
+    @include mq.add-breakpoint(gel-bp-type-b, 320px);
+    @include mq.add-breakpoint(gel-bp-type-c, 600px);
 } @else {
     @warn 'Missing dependency: `Sass MQ`. Ensure this is included before this library';
 }
