@@ -5,8 +5,8 @@
   "main": "_typography.scss",
   "scripts": {
     "build": "npm run build:compressed && npm run build:expanded",
-    "build:compressed": "sass --style=compressed --no-source-map src/gel-typography.scss dist/gel-typography.min.css",
-    "build:expanded": "sass --style=expanded --no-source-map src/gel-typography.scss dist/gel-typography.css",
+    "build:compressed": "sass --load-path=node_modules/ --style=compressed --no-source-map src/gel-typography.scss dist/gel-typography.min.css",
+    "build:expanded": "sass --load-path=node_modules/ --style=expanded --no-source-map src/gel-typography.scss dist/gel-typography.css",
     "prettier": "prettier --write '{src/**/*,test/**/*,*}.{js,mjs,json,scss}'",
     "pretest": "npm run prettier",
     "test": "jest --verbose"
