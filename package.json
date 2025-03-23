@@ -1,12 +1,12 @@
 {
   "name": "gel-typography",
-  "version": "6.0.0-beta.1",
+  "version": "6.0.0-beta.2",
   "description": "A flexible code implementation of the GEL Typography",
   "main": "_typography.scss",
   "scripts": {
     "build": "npm run build:compressed && npm run build:expanded",
-    "build:compressed": "sass --style=compressed --no-source-map src/gel-typography.scss dist/gel-typography.min.css",
-    "build:expanded": "sass --style=expanded --no-source-map src/gel-typography.scss dist/gel-typography.css",
+    "build:compressed": "sass --load-path=node_modules/ --style=compressed --no-source-map src/gel-typography.scss dist/gel-typography.min.css",
+    "build:expanded": "sass --load-path=node_modules/ --style=expanded --no-source-map src/gel-typography.scss dist/gel-typography.css",
     "prettier": "prettier --write '{src/**/*,test/**/*,*}.{js,mjs,json,scss}'",
     "pretest": "npm run prettier",
     "test": "jest --verbose"
@@ -40,7 +40,7 @@
     "sass": "1.86.0"
   },
   "dependencies": {
-    "gel-sass-tools": "4.0.0-beta.1",
+    "gel-sass-tools": "4.0.0-beta.3",
     "sass-mq": "7.0.0-beta.1"
   }
 }
