@@ -1,4 +1,4 @@
-@use 'sass-mq/mq' as *;
+@use 'sass-mq/mq';
 @use 'gel-sass-tools/sass-tools' as *;
 
 
@@ -413,5 +413,5 @@ $gel-larger-font-sizes: (
 // Adds the typography specific breakpoints to the Sass MQ list
 // of breakpoints
 //
-@include add-breakpoint(gel-bp-type-b, 320px);
-@include add-breakpoint(gel-bp-type-c, 600px);
+@include mq.add-breakpoint(gel-bp-type-b, 320px);
+@include mq.add-breakpoint(gel-bp-type-c, 600px);
