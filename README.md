@@ -6,15 +6,11 @@
 
 ## Breaking Change: v6.0.0
 
-### @import, @use and @forward
+v6.0.0 of GEL Typography implements the [@use](https://sass-lang.com/documentation/at-rules/use/) and [@forward](https://sass-lang.com/documentation/at-rules/forward/) approach and removes [@import](https://sass-lang.com/documentation/at-rules/import/).
 
-The `@import` directive is now deprecated in favour of `@use` and `@forward`, see [SASS documentation](https://sass-lang.com/documentation/at-rules/use/) for more information.
+This has a number of consequences; how modules are loaded, and how to access variables. Namespaces now come into play, so please read the sass documentation links above to learn more.
 
-GEL Typography has now been updated to `@use` and `@forward` to remove a large number of deprecation notices.
-
-With the new @use directive, no var, function, or mixin is placed in global scope, and they are all scoped within the file.
-
-This means that users will explicitly need to include the partial file in each file that may use its vars, functions or mixins.
+For usage of GEL Typography prior to v6.0.0 please reference the [v5.2.0 readme](https://github.com/bbc/gel-typography/tree/5.2.0).
 
 
 ## What is this?
@@ -27,9 +23,11 @@ The typographic scale has been optimised based on the size of the viewport and t
 
 It can used in two forms, using a Sass mixin:
 
-```sass
+```scss
+@use 'gel-typography/typography' as type;
+
 .my-component {
-    @include gel-typography('canon-bold');
+    @include type.gel-typography('canon-bold');
 }
 ```
 
@@ -53,7 +51,7 @@ $ npm install --save gel-typography
 
 ```sass
 // your-app/main.scss
-@use 'node_modules/gel-typography/typography';
+@use 'gel-typography/typography';
 ```
 
 ### Install manually
@@ -62,12 +60,22 @@ You can install this component manually by downloading the content of this Git r
 
 > **Note:** you will manually need to manage the dependencies below, without these this component will fail to compile.
 
-## Dependencies
+### Loadpaths
 
-In order to use the component you will need the following components available:
+Because this module depends on other modules, [GEL Sass Tools](https://github.com/bbc/gel-sass-tools) and [Sass MQ](https://github.com/sass-mq/sass-mq), when compiling your Sass it needs to know where find the referenced modules. It does this via a [loadPath](https://sass-lang.com/documentation/at-rules/use/#load-paths).
 
-- [GEL Sass Tools](https://github.com/bbc/gel-sass-tools)
-- [Sass MQ](https://github.com/sass-mq/sass-mq)
+If compiling from the command line you can specify:
+```
+sass --load-path=node_modules/ <options>
+```
+
+With nodejs you can call `compile` or `compileAsync`:
+```js
+await sass.compileAsync(file, { loadPaths: ['./node_modules'] })
+```
+
+This ensures the dependencies can be loaded correctly.
+
 
 ## Usage
 
@@ -76,12 +84,14 @@ By default the GEL Typography component does not output any markup but exposes a
 **Example**
 
 ```scss
+@use 'gel-typography/typography' as type;
+
 .my-component {
-    @include gel-typography('pica');
+    @include type.gel-typography('pica');
 }
 
 .my-component__title {
-    @include gel-typography('canon');
+    @include type.gel-typography('canon');
 }
 ```
 
@@ -90,7 +100,7 @@ A collection of typography classes can be output by defining `$gel-type-enable--
 **Example:**
 
 ```scss
-@use "gel-typography/typography" with ($gel-type-enable--markup-output: true);
+@use "gel-typography/typography" as type with ($gel-type-enable--markup-output: true);
 ```
 
 The following configurable options are available:
