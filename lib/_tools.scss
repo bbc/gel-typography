@@ -1,5 +1,5 @@
 @use 'sass-mq/mq';
-@use 'gel-sass-tools/sass-tools' as *;
+@use 'gel-sass-tools/sass-tools' ;
 @use 'settings';
 @use 'sass:map';
 @use 'sass:math';
@@ -151,7 +151,7 @@ $fixed: false !default;
 @mixin _gel-output-type-values($type-values) {
   @each $property, $value in $type-values {
     @if (meta.type-of($value) == number and math.unit($value) == 'px') {
-      @include toRem($property, $value);
+      @include sass-tools.toRem($property, $value);
     } @else {
       #{$property}: $value;
     }
