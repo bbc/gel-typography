@@ -9,7 +9,7 @@
     "build:expanded": "sass --load-path=node_modules/ --style=expanded --no-source-map src/gel-typography.scss dist/gel-typography.css",
     "prettier": "prettier --write '{src/**/*,test/**/*,*}.{js,mjs,json,scss}'",
     "pretest": "npm run prettier",
-    "test": "jest --verbose"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
