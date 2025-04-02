@@ -11,7 +11,6 @@
 //\*------------------------------------*/
 
 // define some output control variables
-$core: true !default;
 $enhanced: true !default;
 
 // If larger font sizes enable, merge them with gel-type-settings
@@ -110,11 +109,9 @@ $enhanced: true !default;
 // @author Adam Bulmer
 //
 @mixin gel-typography($type-class) {
-  @if $core {
-    $groupA: gel-typography($type-class, 'group-a');
-    @include _gel-output-type-values($groupA);
-    @include reith-letter-spacing($groupA);
-  }
+  $groupA: gel-typography($type-class, 'group-a');
+  @include _gel-output-type-values($groupA);
+  @include reith-letter-spacing($groupA);
 
   @if $enhanced {
     @include mq.mq($from: gel-bp-type-b) {
