@@ -10,11 +10,6 @@
 //    # GEL TYPOGRAPHY - TOOL
 //\*------------------------------------*/
 
-// define some output control variables
-$core: true !default;
-$enhanced: true !default;
-$fixed: false !default;
-
 // If larger font sizes enable, merge them with gel-type-settings
 @if settings.$gel-type-enable--larger-type-sizes {
   settings.$gel-type-settings: map.merge(settings.$gel-type-settings, settings.$gel-larger-font-sizes);
@@ -111,29 +106,25 @@ $fixed: false !default;
 // @author Adam Bulmer
 //
 @mixin gel-typography($type-class) {
-  @if $core {
-    $groupA: gel-typography($type-class, 'group-a');
-    @include _gel-output-type-values($groupA);
-    @include reith-letter-spacing($groupA);
+  $groupA: gel-typography($type-class, 'group-a');
+  @include _gel-output-type-values($groupA);
+  @include reith-letter-spacing($groupA);
+
+  @include mq.mq($from: gel-bp-type-b) {
+    $groupB: gel-typography($type-class, 'group-b');
+    @include _gel-output-type-values($groupB);
+    @include reith-letter-spacing($groupB);
   }
 
-  @if $enhanced {
-    @include mq.mq($from: gel-bp-type-b) {
-      $groupB: gel-typography($type-class, 'group-b');
-      @include _gel-output-type-values($groupB);
-      @include reith-letter-spacing($groupB);
-    }
+  @include mq.mq($from: gel-bp-type-c) {
+    $groupC: gel-typography($type-class, 'group-c');
+    @include _gel-output-type-values($groupC);
+    @include reith-letter-spacing($groupC);
 
-    @include mq.mq($from: gel-bp-type-c) {
-      $groupC: gel-typography($type-class, 'group-c');
-      @include _gel-output-type-values($groupC);
-      @include reith-letter-spacing($groupC);
-
-      .#{settings.$gel-type-touch-class} & {
-        $groupNoTouch: gel-typography($type-class, settings.$gel-type-no-touch-group);
-        @include _gel-output-type-values($groupNoTouch);
-        @include reith-letter-spacing($groupNoTouch);
-      }
+    .#{settings.$gel-type-touch-class} & {
+      $groupNoTouch: gel-typography($type-class, settings.$gel-type-no-touch-group);
+      @include _gel-output-type-values($groupNoTouch);
+      @include reith-letter-spacing($groupNoTouch);
     }
   }
 }

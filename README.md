@@ -10,6 +10,10 @@ v6.0.0 of GEL Typography implements the [@use](https://sass-lang.com/documentati
 
 This has a number of consequences; how modules are loaded, and how to access variables. Namespaces now come into play, so please read the sass documentation links above to learn more.
 
+Previously, the properties output from this module could be controlled via three variables: $core, $enhanced and $fixed. These three variables allowed for control of the output, where core functionality could be separated out from enhanced functionality (for more advanced browsers) and for Internet Explorer (fixed).
+
+As browsers have moved on significantly since this approach was adopted it is considered a good time to remove this functionality.
+
 For usage of GEL Typography prior to v6.0.0 please reference the [v5.2.0 readme](https://github.com/bbc/gel-typography/tree/5.2.0).
 
 
