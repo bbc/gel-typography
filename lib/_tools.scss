@@ -13,7 +13,6 @@
 // define some output control variables
 $core: true !default;
 $enhanced: true !default;
-$fixed: false !default;
 
 // If larger font sizes enable, merge them with gel-type-settings
 @if settings.$gel-type-enable--larger-type-sizes {
