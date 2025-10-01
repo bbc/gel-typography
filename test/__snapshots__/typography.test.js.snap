@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`GEL Typography larger type sizes Atlas 1`] = `
+exports[`GEL Typography > larger type sizes > Atlas 1`] = `
 ".atlas {
   font-size: 78px;
   font-size: 4.875rem;
@@ -31,7 +31,7 @@ exports[`GEL Typography larger type sizes Atlas 1`] = `
 }"
 `;
 
-exports[`GEL Typography larger type sizes Elephant 1`] = `
+exports[`GEL Typography > larger type sizes > Elephant 1`] = `
 ".elephant {
   font-size: 60px;
   font-size: 3.75rem;
@@ -62,7 +62,7 @@ exports[`GEL Typography larger type sizes Elephant 1`] = `
 }"
 `;
 
-exports[`GEL Typography larger type sizes Foolscap 1`] = `
+exports[`GEL Typography > larger type sizes > Foolscap 1`] = `
 ".foolscap {
   font-size: 32px;
   font-size: 2rem;
@@ -93,7 +93,7 @@ exports[`GEL Typography larger type sizes Foolscap 1`] = `
 }"
 `;
 
-exports[`GEL Typography larger type sizes Imperial 1`] = `
+exports[`GEL Typography > larger type sizes > Imperial 1`] = `
 ".imperial {
   font-size: 50px;
   font-size: 3.125rem;
@@ -124,7 +124,7 @@ exports[`GEL Typography larger type sizes Imperial 1`] = `
 }"
 `;
 
-exports[`GEL Typography larger type sizes Royal 1`] = `
+exports[`GEL Typography > larger type sizes > Royal 1`] = `
 ".royal {
   font-size: 40px;
   font-size: 2.5rem;
@@ -155,7 +155,7 @@ exports[`GEL Typography larger type sizes Royal 1`] = `
 }"
 `;
 
-exports[`GEL Typography type sizes Body Copy 1`] = `
+exports[`GEL Typography > type sizes > Body Copy 1`] = `
 ".body-copy {
   font-size: 15px;
   font-size: 0.9375rem;
@@ -186,7 +186,7 @@ exports[`GEL Typography type sizes Body Copy 1`] = `
 }"
 `;
 
-exports[`GEL Typography type sizes Brevier 1`] = `
+exports[`GEL Typography > type sizes > Brevier 1`] = `
 ".brevier {
   font-size: 14px;
   font-size: 0.875rem;
@@ -209,7 +209,7 @@ exports[`GEL Typography type sizes Brevier 1`] = `
 }"
 `;
 
-exports[`GEL Typography type sizes Canon 1`] = `
+exports[`GEL Typography > type sizes > Canon 1`] = `
 ".canon {
   font-size: 28px;
   font-size: 1.75rem;
@@ -240,7 +240,7 @@ exports[`GEL Typography type sizes Canon 1`] = `
 }"
 `;
 
-exports[`GEL Typography type sizes Double Pica 1`] = `
+exports[`GEL Typography > type sizes > Double Pica 1`] = `
 ".double-pica {
   font-size: 20px;
   font-size: 1.25rem;
@@ -263,7 +263,7 @@ exports[`GEL Typography type sizes Double Pica 1`] = `
 }"
 `;
 
-exports[`GEL Typography type sizes Great Primer 1`] = `
+exports[`GEL Typography > type sizes > Great Primer 1`] = `
 ".great-primer {
   font-size: 18px;
   font-size: 1.125rem;
@@ -284,7 +284,7 @@ exports[`GEL Typography type sizes Great Primer 1`] = `
 }"
 `;
 
-exports[`GEL Typography type sizes Long Primer 1`] = `
+exports[`GEL Typography > type sizes > Long Primer 1`] = `
 ".long-primer {
   font-size: 15px;
   font-size: 0.9375rem;
@@ -305,7 +305,7 @@ exports[`GEL Typography type sizes Long Primer 1`] = `
 }"
 `;
 
-exports[`GEL Typography type sizes Minion 1`] = `
+exports[`GEL Typography > type sizes > Minion 1`] = `
 ".minion {
   font-size: 12px;
   font-size: 0.75rem;
@@ -325,7 +325,7 @@ exports[`GEL Typography type sizes Minion 1`] = `
 }"
 `;
 
-exports[`GEL Typography type sizes Paragon 1`] = `
+exports[`GEL Typography > type sizes > Paragon 1`] = `
 ".paragon {
   font-size: 20px;
   font-size: 1.25rem;
@@ -356,7 +356,7 @@ exports[`GEL Typography type sizes Paragon 1`] = `
 }"
 `;
 
-exports[`GEL Typography type sizes Pica 1`] = `
+exports[`GEL Typography > type sizes > Pica 1`] = `
 ".pica {
   font-size: 15px;
   font-size: 0.9375rem;
@@ -387,7 +387,7 @@ exports[`GEL Typography type sizes Pica 1`] = `
 }"
 `;
 
-exports[`GEL Typography type sizes Trafalgar 1`] = `
+exports[`GEL Typography > type sizes > Trafalgar 1`] = `
 ".trafalgar {
   font-size: 20px;
   font-size: 1.25rem;
@@ -418,7 +418,7 @@ exports[`GEL Typography type sizes Trafalgar 1`] = `
 }"
 `;
 
-exports[`GEL Typography with large fonts 1`] = `
+exports[`GEL Typography > with large fonts 1`] = `
 ".gel-canon {
   font-size: 28px;
   font-size: 1.75rem;
@@ -1235,7 +1235,7 @@ exports[`GEL Typography with large fonts 1`] = `
 }"
 `;
 
-exports[`GEL Typography without large fonts 1`] = `
+exports[`GEL Typography > without large fonts 1`] = `
 ".gel-canon {
   font-size: 28px;
   font-size: 1.75rem;
