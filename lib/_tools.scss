@@ -1,5 +1,5 @@
 @use 'sass-mq/mq';
-@use 'gel-sass-tools/sass-tools' ;
+@use 'gel-sass-tools/sass-tools';
 @use 'settings';
 @use 'sass:map';
 @use 'sass:math';
@@ -12,7 +12,10 @@
 
 // If larger font sizes enable, merge them with gel-type-settings
 @if settings.$gel-type-enable--larger-type-sizes {
-  settings.$gel-type-settings: map.merge(settings.$gel-type-settings, settings.$gel-larger-font-sizes);
+  settings.$gel-type-settings: map.merge(
+    settings.$gel-type-settings,
+    settings.$gel-larger-font-sizes
+  );
 }
 
 // Replace `$search` with `$replace` in `$string`

@@ -4,12 +4,12 @@
   "description": "A flexible code implementation of the GEL Typography",
   "main": "_typography.scss",
   "scripts": {
-    "build": "npm run build:compressed && npm run build:expanded",
-    "build:compressed": "sass --load-path=node_modules/ --style=compressed --no-source-map src/gel-typography.scss dist/gel-typography.min.css",
-    "build:expanded": "sass --load-path=node_modules/ --style=expanded --no-source-map src/gel-typography.scss dist/gel-typography.css",
-    "prettier": "prettier --write '{src/**/*,test/**/*,*}.{js,mjs,json,scss}'",
-    "pretest": "npm run prettier",
-    "test": "jest"
+    "build": "npm run sass:compressed && npm run sass:expanded",
+    "jest": "jest",
+    "sass:compressed": "sass --load-path=node_modules/ --style=compressed --no-source-map src/gel-typography.scss dist/gel-typography.min.css",
+    "sass:expanded": "sass --load-path=node_modules/ --style=expanded --no-source-map src/gel-typography.scss dist/gel-typography.css",
+    "prettier": "prettier . '!**/*.md' '!dist/**/*' --write",
+    "test": "npm run prettier && npm run jest"
   },
   "repository": {
     "type": "git",
