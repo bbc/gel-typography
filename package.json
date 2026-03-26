@@ -34,11 +34,8 @@
     "url": "https://github.com/bbc/gel-typography/issues"
   },
   "homepage": "https://github.com/bbc/gel-typography",
-  "overrides": {
-    "picomatch": "4.0.4"
-  },
   "dependencies": {
-    "gel-sass-tools": "4.1.3",
+    "gel-sass-tools": "4.1.4",
     "sass-mq": "7.0.0"
   },
   "devDependencies": {
