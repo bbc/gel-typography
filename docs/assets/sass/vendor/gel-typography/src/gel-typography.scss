@@ -1,0 +1,15 @@
+///*------------------------------------*\
+//    # GEL TYPOGRAPHY
+//\*------------------------------------*/
+
+// Include general dependancies
+@import '../node_modules/gel-sass-tools/sass-tools';
+@import '../node_modules/sass-mq/mq';
+
+
+// Enable the output for our distributed code
+$gel-type-enable--markup-output: true !default;
+
+
+// Import the typography component
+@import '../typography';

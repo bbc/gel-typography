@@ -1,0 +1,56 @@
+///*------------------------------------*\
+//    # GEL TYPOGRAPHY
+//\*------------------------------------*/
+
+// We need to check that the GEL settings are available globally
+$gel-settings-available: false !default;
+@if ($gel-settings-available == false) {
+    @warn "Missing Dependency: Have you included the GEL settings?";
+}
+
+
+// import the local dependancies
+@import 'lib/settings';
+@import 'lib/tools';
+
+
+// define some output control variables
+$core: true !default;
+$enhanced: true !default;
+
+
+// Output the typography styles for the 4 groups
+@if $gel-type-enable--markup-output {
+
+    @each $type-class, $type-values in $gel-type-settings {
+        .#{$gel-type-namespace}#{$type-class},
+        %#{$gel-type-namespace}#{$type-class} {
+            @include gel-typography($type-class);
+        }
+    }
+
+}
+
+
+@if $gel-type-enable--font-family {
+
+    // Barlesque will set the correct font-family on the <body> tag but if you're working on a project
+    // without Barlesque you might want to enable this flag
+    //
+    body {
+        font-family: Helvetica, Arial, freesans, sans-serif;
+    }
+
+}
+
+
+@if $gel-type-enable--base-elements {
+
+    // Map the GEL Typography classes to the relevant HTML elements
+    //
+    h1 { @extend %#{$gel-type-namespace}trafalgar; }
+    h2 { @extend %#{$gel-type-namespace}double-pica; }
+    h3 { @extend %#{$gel-type-namespace}great-primer; }
+    h4 { @extend %#{$gel-type-namespace}pica; }
+
+}

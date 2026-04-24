@@ -1,0 +1,41 @@
+{
+  "name": "gel-typography",
+  "authors": [
+    "shaun.bent@bbc.co.uk",
+    "alexander.jones@bbc.co.uk"
+  ],
+  "description": "A flexible code implementation of the GEL Typography",
+  "main": "_typography.scss",
+  "keywords": [
+    "Sass",
+    "Typography",
+    "Responsive",
+    "BBC",
+    "GEL",
+    "Global Experience Language"
+  ],
+  "license": "MIT",
+  "homepage": "http://www.bbc.co.uk/gel",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "dist"
+  ],
+  "dependencies": {
+    "gel-sass-tools": "git@github.com:bbc/gel-sass-tools.git#^1.0.0"
+  },
+  "version": "2.0.0",
+  "_release": "2.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "2.0.0",
+    "commit": "63049d26e33c950d672f9f0b8679629fb79abb6a"
+  },
+  "_source": "git@github.com:bbc/gel-typography.git",
+  "_target": "^2.0.0",
+  "_originalSource": "git@github.com:bbc/gel-typography.git"
+}
