@@ -504,13 +504,11 @@ html {
     padding-right: 16px;
   }
 }
-
 @media (min-width: 80em) {
   .gel-wrap {
     max-width: 1280px;
   }
 }
-
 /**
  * A grid row
  */
@@ -530,7 +528,6 @@ html {
     margin-left: -16px;
   }
 }
-
 /**
  * A single grid item
  */
@@ -550,7 +547,6 @@ html {
     padding-left: 16px;
   }
 }
-
 /**
  * Make the layout items fill up from the right hand side
  */
@@ -558,7 +554,7 @@ html {
   text-align: right;
 }
 
-.gel-layout--right>.gel-layout__item {
+.gel-layout--right > .gel-layout__item {
   text-align: left;
 }
 
@@ -569,7 +565,7 @@ html {
   text-align: center;
 }
 
-.gel-layout--center>.gel-layout__item {
+.gel-layout--center > .gel-layout__item {
   text-align: left;
 }
 
@@ -577,23 +573,18 @@ html {
   .gel-1\/3\@l {
     width: 33.3333333333% !important;
   }
-
   .gel-2\/3\@l {
     width: 66.6666666667% !important;
   }
-
   .gel-3\/4\@l {
     width: 75% !important;
   }
 }
-
 @media (min-width: 80em) {
   .gel-10\/12\@xxl {
     width: 83.3333333333% !important;
   }
 }
-
-
 .gel-canon {
   font-size: 28px;
   font-size: 1.75rem;
@@ -609,7 +600,6 @@ html {
     line-height: 2.25rem;
   }
 }
-
 @media (min-width: 37.5em) {
   .gel-canon {
     font-size: 52px;
@@ -617,7 +607,6 @@ html {
     line-height: 56px;
     line-height: 3.5rem;
   }
-
   .no-touch .gel-canon {
     font-size: 44px;
     font-size: 2.75rem;
@@ -625,7 +614,6 @@ html {
     line-height: 3rem;
   }
 }
-
 .gel-canon-bold {
   font-size: 28px;
   font-size: 1.75rem;
@@ -644,7 +632,6 @@ html {
     line-height: 2.25rem;
   }
 }
-
 @media (min-width: 37.5em) {
   .gel-canon-bold {
     font-size: 52px;
@@ -652,7 +639,6 @@ html {
     line-height: 56px;
     line-height: 3.5rem;
   }
-
   .no-touch .gel-canon-bold {
     font-size: 44px;
     font-size: 2.75rem;
@@ -660,7 +646,6 @@ html {
     line-height: 3rem;
   }
 }
-
 .gel-trafalgar {
   font-size: 20px;
   font-size: 1.25rem;
@@ -676,7 +661,6 @@ html {
     line-height: 1.75rem;
   }
 }
-
 @media (min-width: 37.5em) {
   .gel-trafalgar {
     font-size: 36px;
@@ -684,7 +668,6 @@ html {
     line-height: 40px;
     line-height: 2.5rem;
   }
-
   .no-touch .gel-trafalgar {
     font-size: 32px;
     font-size: 2rem;
@@ -692,7 +675,6 @@ html {
     line-height: 2.25rem;
   }
 }
-
 .gel-trafalgar-bold {
   font-size: 20px;
   font-size: 1.25rem;
@@ -711,7 +693,6 @@ html {
     line-height: 1.75rem;
   }
 }
-
 @media (min-width: 37.5em) {
   .gel-trafalgar-bold {
     font-size: 36px;
@@ -719,7 +700,6 @@ html {
     line-height: 40px;
     line-height: 2.5rem;
   }
-
   .no-touch .gel-trafalgar-bold {
     font-size: 32px;
     font-size: 2rem;
@@ -727,7 +707,6 @@ html {
     line-height: 2.25rem;
   }
 }
-
 .gel-double-pica {
   font-size: 20px;
   font-size: 1.25rem;
@@ -742,7 +721,6 @@ html {
     line-height: 30px;
     line-height: 1.875rem;
   }
-
   .no-touch .gel-double-pica {
     font-size: 24px;
     font-size: 1.5rem;
@@ -750,7 +728,6 @@ html {
     line-height: 1.75rem;
   }
 }
-
 .gel-double-pica-bold {
   font-size: 20px;
   font-size: 1.25rem;
@@ -768,7 +745,6 @@ html {
     line-height: 30px;
     line-height: 1.875rem;
   }
-
   .no-touch .gel-double-pica-bold {
     font-size: 24px;
     font-size: 1.5rem;
@@ -776,7 +752,6 @@ html {
     line-height: 1.75rem;
   }
 }
-
 .gel-great-primer {
   font-size: 18px;
   font-size: 1.125rem;
@@ -791,13 +766,11 @@ html {
     line-height: 24px;
     line-height: 1.5rem;
   }
-
   .no-touch .gel-great-primer {
     font-size: 20px;
     font-size: 1.25rem;
   }
 }
-
 .gel-great-primer-bold {
   font-size: 18px;
   font-size: 1.125rem;
@@ -812,7 +785,6 @@ html {
     letter-spacing: -0.0625rem;
   }
 }
-
 @media (min-width: 37.5em) {
   .gel-great-primer-bold {
     font-size: 21px;
@@ -820,13 +792,11 @@ html {
     line-height: 24px;
     line-height: 1.5rem;
   }
-
   .no-touch .gel-great-primer-bold {
     font-size: 20px;
     font-size: 1.25rem;
   }
 }
-
 .gel-pica,
 .gel-demo {
   font-size: 15px;
@@ -836,7 +806,6 @@ html {
 }
 
 @media (min-width: 20em) {
-
   .gel-pica,
   .gel-demo {
     font-size: 16px;
@@ -845,9 +814,7 @@ html {
     line-height: 1.25rem;
   }
 }
-
 @media (min-width: 37.5em) {
-
   .gel-pica,
   .gel-demo {
     font-size: 18px;
@@ -855,7 +822,6 @@ html {
     line-height: 22px;
     line-height: 1.375rem;
   }
-
   .no-touch .gel-pica,
   .no-touch .gel-demo {
     font-size: 16px;
@@ -864,7 +830,6 @@ html {
     line-height: 1.25rem;
   }
 }
-
 .gel-pica-bold {
   font-size: 15px;
   font-size: 0.9375rem;
@@ -881,7 +846,6 @@ html {
     line-height: 1.25rem;
   }
 }
-
 @media (min-width: 37.5em) {
   .gel-pica-bold {
     font-size: 18px;
@@ -889,7 +853,6 @@ html {
     line-height: 22px;
     line-height: 1.375rem;
   }
-
   .no-touch .gel-pica-bold {
     font-size: 16px;
     font-size: 1rem;
@@ -897,7 +860,6 @@ html {
     line-height: 1.25rem;
   }
 }
-
 .gel-long-primer {
   font-size: 15px;
   font-size: 0.9375rem;
@@ -910,7 +872,6 @@ html {
     line-height: 20px;
     line-height: 1.25rem;
   }
-
   .no-touch .gel-long-primer {
     font-size: 14px;
     font-size: 0.875rem;
@@ -918,7 +879,6 @@ html {
     line-height: 1.125rem;
   }
 }
-
 .gel-long-primer-bold {
   font-size: 15px;
   font-size: 0.9375rem;
@@ -932,7 +892,6 @@ html {
     line-height: 20px;
     line-height: 1.25rem;
   }
-
   .no-touch .gel-long-primer-bold {
     font-size: 14px;
     font-size: 0.875rem;
@@ -940,7 +899,6 @@ html {
     line-height: 1.125rem;
   }
 }
-
 .gel-brevier,
 small,
 figcaption {
@@ -951,7 +909,6 @@ figcaption {
 }
 
 @media (min-width: 20em) {
-
   .gel-brevier,
   small,
   figcaption {
@@ -959,9 +916,7 @@ figcaption {
     line-height: 1.125rem;
   }
 }
-
 @media (min-width: 37.5em) {
-
   .no-touch .gel-brevier,
   .no-touch small,
   .no-touch figcaption {
@@ -971,7 +926,6 @@ figcaption {
     line-height: 1rem;
   }
 }
-
 .gel-brevier-bold {
   font-size: 14px;
   font-size: 0.875rem;
@@ -986,7 +940,6 @@ figcaption {
     line-height: 1.125rem;
   }
 }
-
 @media (min-width: 37.5em) {
   .no-touch .gel-brevier-bold {
     font-size: 13px;
@@ -995,7 +948,6 @@ figcaption {
     line-height: 1rem;
   }
 }
-
 .gel-minion {
   font-size: 12px;
   font-size: 0.75rem;
@@ -1009,13 +961,11 @@ figcaption {
     font-size: 13px;
     font-size: 0.8125rem;
   }
-
   .no-touch .gel-minion {
     font-size: 12px;
     font-size: 0.75rem;
   }
 }
-
 .gel-minion-bold {
   font-size: 12px;
   font-size: 0.75rem;
@@ -1030,13 +980,11 @@ figcaption {
     font-size: 13px;
     font-size: 0.8125rem;
   }
-
   .no-touch .gel-minion-bold {
     font-size: 12px;
     font-size: 0.75rem;
   }
 }
-
 .gel-body-copy {
   font-size: 15px;
   font-size: 0.9375rem;
@@ -1052,7 +1000,6 @@ figcaption {
     line-height: 1.375rem;
   }
 }
-
 @media (min-width: 37.5em) {
   .gel-body-copy {
     font-size: 18px;
@@ -1060,7 +1007,6 @@ figcaption {
     line-height: 24px;
     line-height: 1.5rem;
   }
-
   .no-touch .gel-body-copy {
     font-size: 16px;
     font-size: 1rem;
@@ -1068,7 +1014,6 @@ figcaption {
     line-height: 1.375rem;
   }
 }
-
 body {
   font-family: Helvetica, Arial, freesans, sans-serif;
 }
@@ -1165,7 +1110,6 @@ figcaption {
     min-width: 192px;
   }
 }
-
 .button .gel-icon--inline {
   margin-right: 8px;
 }
@@ -1232,7 +1176,6 @@ figcaption {
     padding-bottom: 6px;
   }
 }
-
 .gel-demo-header__brand-logo {
   color: #404040;
   display: inline-block;
@@ -1274,7 +1217,6 @@ figcaption {
     width: auto;
   }
 }
-
 .gel-demo-header__intro-title {
   margin-top: 24px;
   margin-bottom: 12px;
@@ -1307,15 +1249,13 @@ figcaption {
     padding: 16px;
   }
 }
-
 @media (min-width: 56.25em) {
   .gel-type-controls {
     margin-right: 0;
     margin-left: 0;
   }
 }
-
-.gel-type-controls> :last-child {
+.gel-type-controls > :last-child {
   margin-bottom: 0;
   /* [1] */
 }
@@ -1336,7 +1276,6 @@ figcaption {
     right: 16px;
   }
 }
-
 .gel-type-controls__mode-toggle {
   padding: 0;
   border: 0;
@@ -1364,7 +1303,6 @@ figcaption {
     margin-left: 8px;
   }
 }
-
 /**
  * Change the group name based on the current media-query
  */
@@ -1377,17 +1315,14 @@ figcaption {
     content: "Group B (320px - 599px)";
   }
 }
-
 @media (min-width: 37.5em) {
   .gel-type-controls__group-name:after {
     content: "Group C (600+, Touch available)";
   }
-
   .no-touch .gel-type-controls__group-name:after {
     content: "Group D (600+, Touch not available)";
   }
 }
-
 /**
  * Change the example device based on the current media-query
  */
@@ -1400,17 +1335,14 @@ figcaption {
     content: "Default & Smart Phones";
   }
 }
-
 @media (min-width: 37.5em) {
   .gel-type-controls__example-device:after {
     content: "Typically Tablet Devices";
   }
-
   .no-touch .gel-type-controls__example-device:after {
     content: "Typically Desktop or Laptop Screens";
   }
 }
-
 /*------------------------------------*\
     # TYPE DEMO
 \*------------------------------------*/
@@ -1487,17 +1419,14 @@ figcaption {
     content: "32/36";
   }
 }
-
 @media (min-width: 37.5em) {
   [data-type-class=canon] .gel-type-demo__settings:after {
     content: "52/56";
   }
-
   .no-touch [data-type-class=canon] .gel-type-demo__settings:after {
     content: "44/48";
   }
 }
-
 [data-type-class=canon-bold] .gel-type-demo__settings:after {
   content: "44/48";
 }
@@ -1511,17 +1440,14 @@ figcaption {
     content: "24/28";
   }
 }
-
 @media (min-width: 37.5em) {
   [data-type-class=trafalgar] .gel-type-demo__settings:after {
     content: "36/40";
   }
-
   .no-touch [data-type-class=trafalgar] .gel-type-demo__settings:after {
     content: "32/36";
   }
 }
-
 [data-type-class=trafalgar-bold] .gel-type-demo__settings:after {
   content: "32/36";
 }
@@ -1534,12 +1460,10 @@ figcaption {
   [data-type-class=double-pica] .gel-type-demo__settings:after {
     content: "26/30";
   }
-
   .no-touch [data-type-class=double-pica] .gel-type-demo__settings:after {
     content: "24/28";
   }
 }
-
 [data-type-class=double-pica-bold] .gel-type-demo__settings:after {
   content: "24/28";
 }
@@ -1552,12 +1476,10 @@ figcaption {
   [data-type-class=great-primer] .gel-type-demo__settings:after {
     content: "21/24";
   }
-
   .no-touch [data-type-class=great-primer] .gel-type-demo__settings:after {
     content: "20/24";
   }
 }
-
 [data-type-class=great-primer-bold] .gel-type-demo__settings:after {
   content: "20/24";
 }
@@ -1567,7 +1489,6 @@ figcaption {
     content: "20/24";
   }
 }
-
 [data-type-class=pica] .gel-type-demo__settings:after {
   content: "15/20";
 }
@@ -1577,17 +1498,14 @@ figcaption {
     content: "16/20";
   }
 }
-
 @media (min-width: 37.5em) {
   [data-type-class=pica] .gel-type-demo__settings:after {
     content: "18/22";
   }
-
   .no-touch [data-type-class=pica] .gel-type-demo__settings:after {
     content: "16/20";
   }
 }
-
 [data-type-class=pica-bold] .gel-type-demo__settings:after {
   content: "16/20";
 }
@@ -1600,12 +1518,10 @@ figcaption {
   [data-type-class=long-primer] .gel-type-demo__settings:after {
     content: "15/20";
   }
-
   .no-touch [data-type-class=long-primer] .gel-type-demo__settings:after {
     content: "14/18";
   }
 }
-
 [data-type-class=long-primer-bold] .gel-type-demo__settings:after {
   content: "14/18";
 }
@@ -1619,13 +1535,11 @@ figcaption {
     content: "14/18";
   }
 }
-
 @media (min-width: 37.5em) {
   .no-touch [data-type-class=brevier] .gel-type-demo__settings:after {
     content: "13/16";
   }
 }
-
 [data-type-class=brevier-bold] .gel-type-demo__settings:after {
   content: "13/16";
 }
@@ -1638,12 +1552,10 @@ figcaption {
   [data-type-class=minion] .gel-type-demo__settings:after {
     content: "13/16";
   }
-
   .no-touch [data-type-class=minion] .gel-type-demo__settings:after {
     content: "12/16";
   }
 }
-
 [data-type-class=minion-bold] .gel-type-demo__settings:after {
   content: "12/16";
 }
@@ -1657,18 +1569,14 @@ figcaption {
     content: "16/22";
   }
 }
-
 @media (min-width: 37.5em) {
   [data-type-class=body-copy] .gel-type-demo__settings:after {
     content: "18/24";
   }
-
   .no-touch [data-type-class=body-copy] .gel-type-demo__settings:after {
     content: "16/22";
   }
 }
-
-
 /*------------------------------------*\
     # CLEARFIX
 \*------------------------------------*/
