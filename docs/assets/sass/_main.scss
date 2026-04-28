@@ -266,9 +266,9 @@ select {
  *    `input` and others.
  */
 button,
-html input[type=button],
-input[type=reset],
-input[type=submit] {
+html input[type='button'],
+input[type='reset'],
+input[type='submit'] {
   -webkit-appearance: button;
   /* 2 */
   cursor: pointer;
@@ -307,8 +307,8 @@ input {
  * 1. Address box sizing set to `content-box` in IE 8/9/10.
  * 2. Remove excess padding in IE 8/9/10.
  */
-input[type=checkbox],
-input[type=radio] {
+input[type='checkbox'],
+input[type='radio'] {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -320,8 +320,8 @@ input[type=radio] {
  * `font-size` values of the `input`, it causes the cursor style of the
  * decrement button to change from `default` to `text`.
  */
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -330,7 +330,7 @@ input[type=number]::-webkit-outer-spin-button {
  * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
  *    (include `-moz` to future-proof).
  */
-input[type=search] {
+input[type='search'] {
   -webkit-appearance: textfield;
   /* 1 */
   -moz-box-sizing: content-box;
@@ -344,8 +344,8 @@ input[type=search] {
  * Safari (but not Chrome) clips the cancel button when the search input has
  * padding (and `textfield` appearance).
  */
-input[type=search]::-webkit-search-cancel-button,
-input[type=search]::-webkit-search-decoration {
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -558,7 +558,7 @@ html {
   text-align: right;
 }
 
-.gel-layout--right>.gel-layout__item {
+.gel-layout--right > .gel-layout__item {
   text-align: left;
 }
 
@@ -569,7 +569,7 @@ html {
   text-align: center;
 }
 
-.gel-layout--center>.gel-layout__item {
+.gel-layout--center > .gel-layout__item {
   text-align: left;
 }
 
@@ -592,7 +592,6 @@ html {
     width: 83.3333333333% !important;
   }
 }
-
 
 .gel-canon {
   font-size: 28px;
@@ -836,7 +835,6 @@ html {
 }
 
 @media (min-width: 20em) {
-
   .gel-pica,
   .gel-demo {
     font-size: 16px;
@@ -847,7 +845,6 @@ html {
 }
 
 @media (min-width: 37.5em) {
-
   .gel-pica,
   .gel-demo {
     font-size: 18px;
@@ -951,7 +948,6 @@ figcaption {
 }
 
 @media (min-width: 20em) {
-
   .gel-brevier,
   small,
   figcaption {
@@ -961,7 +957,6 @@ figcaption {
 }
 
 @media (min-width: 37.5em) {
-
   .no-touch .gel-brevier,
   .no-touch small,
   .no-touch figcaption {
@@ -1315,7 +1310,7 @@ figcaption {
   }
 }
 
-.gel-type-controls> :last-child {
+.gel-type-controls > :last-child {
   margin-bottom: 0;
   /* [1] */
 }
@@ -1369,22 +1364,22 @@ figcaption {
  * Change the group name based on the current media-query
  */
 .gel-type-controls__group-name:after {
-  content: "Group A (0 - 319px)";
+  content: 'Group A (0 - 319px)';
 }
 
 @media (min-width: 20em) {
   .gel-type-controls__group-name:after {
-    content: "Group B (320px - 599px)";
+    content: 'Group B (320px - 599px)';
   }
 }
 
 @media (min-width: 37.5em) {
   .gel-type-controls__group-name:after {
-    content: "Group C (600+, Touch available)";
+    content: 'Group C (600+, Touch available)';
   }
 
   .no-touch .gel-type-controls__group-name:after {
-    content: "Group D (600+, Touch not available)";
+    content: 'Group D (600+, Touch not available)';
   }
 }
 
@@ -1392,22 +1387,22 @@ figcaption {
  * Change the example device based on the current media-query
  */
 .gel-type-controls__example-device:after {
-  content: "Feature Phones";
+  content: 'Feature Phones';
 }
 
 @media (min-width: 20em) {
   .gel-type-controls__example-device:after {
-    content: "Default & Smart Phones";
+    content: 'Default & Smart Phones';
   }
 }
 
 @media (min-width: 37.5em) {
   .gel-type-controls__example-device:after {
-    content: "Typically Tablet Devices";
+    content: 'Typically Tablet Devices';
   }
 
   .no-touch .gel-type-controls__example-device:after {
-    content: "Typically Desktop or Laptop Screens";
+    content: 'Typically Desktop or Laptop Screens';
   }
 }
 
@@ -1478,196 +1473,195 @@ figcaption {
 /**
  * Output the type settings for each font-class for each group
  */
-[data-type-class=canon] .gel-type-demo__settings:after {
-  content: "28/32";
+[data-type-class='canon'] .gel-type-demo__settings:after {
+  content: '28/32';
 }
 
 @media (min-width: 20em) {
-  [data-type-class=canon] .gel-type-demo__settings:after {
-    content: "32/36";
+  [data-type-class='canon'] .gel-type-demo__settings:after {
+    content: '32/36';
   }
 }
 
 @media (min-width: 37.5em) {
-  [data-type-class=canon] .gel-type-demo__settings:after {
-    content: "52/56";
+  [data-type-class='canon'] .gel-type-demo__settings:after {
+    content: '52/56';
   }
 
-  .no-touch [data-type-class=canon] .gel-type-demo__settings:after {
-    content: "44/48";
+  .no-touch [data-type-class='canon'] .gel-type-demo__settings:after {
+    content: '44/48';
   }
 }
 
-[data-type-class=canon-bold] .gel-type-demo__settings:after {
-  content: "44/48";
+[data-type-class='canon-bold'] .gel-type-demo__settings:after {
+  content: '44/48';
 }
 
-[data-type-class=trafalgar] .gel-type-demo__settings:after {
-  content: "20/24";
+[data-type-class='trafalgar'] .gel-type-demo__settings:after {
+  content: '20/24';
 }
 
 @media (min-width: 20em) {
-  [data-type-class=trafalgar] .gel-type-demo__settings:after {
-    content: "24/28";
+  [data-type-class='trafalgar'] .gel-type-demo__settings:after {
+    content: '24/28';
   }
 }
 
 @media (min-width: 37.5em) {
-  [data-type-class=trafalgar] .gel-type-demo__settings:after {
-    content: "36/40";
+  [data-type-class='trafalgar'] .gel-type-demo__settings:after {
+    content: '36/40';
   }
 
-  .no-touch [data-type-class=trafalgar] .gel-type-demo__settings:after {
-    content: "32/36";
+  .no-touch [data-type-class='trafalgar'] .gel-type-demo__settings:after {
+    content: '32/36';
   }
 }
 
-[data-type-class=trafalgar-bold] .gel-type-demo__settings:after {
-  content: "32/36";
+[data-type-class='trafalgar-bold'] .gel-type-demo__settings:after {
+  content: '32/36';
 }
 
-[data-type-class=double-pica] .gel-type-demo__settings:after {
-  content: "20/24";
+[data-type-class='double-pica'] .gel-type-demo__settings:after {
+  content: '20/24';
 }
 
 @media (min-width: 37.5em) {
-  [data-type-class=double-pica] .gel-type-demo__settings:after {
-    content: "26/30";
+  [data-type-class='double-pica'] .gel-type-demo__settings:after {
+    content: '26/30';
   }
 
-  .no-touch [data-type-class=double-pica] .gel-type-demo__settings:after {
-    content: "24/28";
+  .no-touch [data-type-class='double-pica'] .gel-type-demo__settings:after {
+    content: '24/28';
   }
 }
 
-[data-type-class=double-pica-bold] .gel-type-demo__settings:after {
-  content: "24/28";
+[data-type-class='double-pica-bold'] .gel-type-demo__settings:after {
+  content: '24/28';
 }
 
-[data-type-class=great-primer] .gel-type-demo__settings:after {
-  content: "18/22";
+[data-type-class='great-primer'] .gel-type-demo__settings:after {
+  content: '18/22';
 }
 
 @media (min-width: 37.5em) {
-  [data-type-class=great-primer] .gel-type-demo__settings:after {
-    content: "21/24";
+  [data-type-class='great-primer'] .gel-type-demo__settings:after {
+    content: '21/24';
   }
 
-  .no-touch [data-type-class=great-primer] .gel-type-demo__settings:after {
-    content: "20/24";
+  .no-touch [data-type-class='great-primer'] .gel-type-demo__settings:after {
+    content: '20/24';
   }
 }
 
-[data-type-class=great-primer-bold] .gel-type-demo__settings:after {
-  content: "20/24";
+[data-type-class='great-primer-bold'] .gel-type-demo__settings:after {
+  content: '20/24';
 }
 
 @media (min-width: 20em) {
-  [data-type-class=great-primer-bold] .gel-type-demo__settings:after {
-    content: "20/24";
+  [data-type-class='great-primer-bold'] .gel-type-demo__settings:after {
+    content: '20/24';
   }
 }
 
-[data-type-class=pica] .gel-type-demo__settings:after {
-  content: "15/20";
+[data-type-class='pica'] .gel-type-demo__settings:after {
+  content: '15/20';
 }
 
 @media (min-width: 20em) {
-  [data-type-class=pica] .gel-type-demo__settings:after {
-    content: "16/20";
+  [data-type-class='pica'] .gel-type-demo__settings:after {
+    content: '16/20';
   }
 }
 
 @media (min-width: 37.5em) {
-  [data-type-class=pica] .gel-type-demo__settings:after {
-    content: "18/22";
+  [data-type-class='pica'] .gel-type-demo__settings:after {
+    content: '18/22';
   }
 
-  .no-touch [data-type-class=pica] .gel-type-demo__settings:after {
-    content: "16/20";
+  .no-touch [data-type-class='pica'] .gel-type-demo__settings:after {
+    content: '16/20';
   }
 }
 
-[data-type-class=pica-bold] .gel-type-demo__settings:after {
-  content: "16/20";
+[data-type-class='pica-bold'] .gel-type-demo__settings:after {
+  content: '16/20';
 }
 
-[data-type-class=long-primer] .gel-type-demo__settings:after {
-  content: "15/18";
+[data-type-class='long-primer'] .gel-type-demo__settings:after {
+  content: '15/18';
 }
 
 @media (min-width: 37.5em) {
-  [data-type-class=long-primer] .gel-type-demo__settings:after {
-    content: "15/20";
+  [data-type-class='long-primer'] .gel-type-demo__settings:after {
+    content: '15/20';
   }
 
-  .no-touch [data-type-class=long-primer] .gel-type-demo__settings:after {
-    content: "14/18";
+  .no-touch [data-type-class='long-primer'] .gel-type-demo__settings:after {
+    content: '14/18';
   }
 }
 
-[data-type-class=long-primer-bold] .gel-type-demo__settings:after {
-  content: "14/18";
+[data-type-class='long-primer-bold'] .gel-type-demo__settings:after {
+  content: '14/18';
 }
 
-[data-type-class=brevier] .gel-type-demo__settings:after {
-  content: "14/16";
+[data-type-class='brevier'] .gel-type-demo__settings:after {
+  content: '14/16';
 }
 
 @media (min-width: 20em) {
-  [data-type-class=brevier] .gel-type-demo__settings:after {
-    content: "14/18";
+  [data-type-class='brevier'] .gel-type-demo__settings:after {
+    content: '14/18';
   }
 }
 
 @media (min-width: 37.5em) {
-  .no-touch [data-type-class=brevier] .gel-type-demo__settings:after {
-    content: "13/16";
+  .no-touch [data-type-class='brevier'] .gel-type-demo__settings:after {
+    content: '13/16';
   }
 }
 
-[data-type-class=brevier-bold] .gel-type-demo__settings:after {
-  content: "13/16";
+[data-type-class='brevier-bold'] .gel-type-demo__settings:after {
+  content: '13/16';
 }
 
-[data-type-class=minion] .gel-type-demo__settings:after {
-  content: "12/16";
+[data-type-class='minion'] .gel-type-demo__settings:after {
+  content: '12/16';
 }
 
 @media (min-width: 37.5em) {
-  [data-type-class=minion] .gel-type-demo__settings:after {
-    content: "13/16";
+  [data-type-class='minion'] .gel-type-demo__settings:after {
+    content: '13/16';
   }
 
-  .no-touch [data-type-class=minion] .gel-type-demo__settings:after {
-    content: "12/16";
+  .no-touch [data-type-class='minion'] .gel-type-demo__settings:after {
+    content: '12/16';
   }
 }
 
-[data-type-class=minion-bold] .gel-type-demo__settings:after {
-  content: "12/16";
+[data-type-class='minion-bold'] .gel-type-demo__settings:after {
+  content: '12/16';
 }
 
-[data-type-class=body-copy] .gel-type-demo__settings:after {
-  content: "15/20";
+[data-type-class='body-copy'] .gel-type-demo__settings:after {
+  content: '15/20';
 }
 
 @media (min-width: 20em) {
-  [data-type-class=body-copy] .gel-type-demo__settings:after {
-    content: "16/22";
+  [data-type-class='body-copy'] .gel-type-demo__settings:after {
+    content: '16/22';
   }
 }
 
 @media (min-width: 37.5em) {
-  [data-type-class=body-copy] .gel-type-demo__settings:after {
-    content: "18/24";
+  [data-type-class='body-copy'] .gel-type-demo__settings:after {
+    content: '18/24';
   }
 
-  .no-touch [data-type-class=body-copy] .gel-type-demo__settings:after {
-    content: "16/22";
+  .no-touch [data-type-class='body-copy'] .gel-type-demo__settings:after {
+    content: '16/22';
   }
 }
-
 
 /*------------------------------------*\
     # CLEARFIX
@@ -1676,7 +1670,7 @@ figcaption {
  * Micro clearfix, as per: css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
  */
 .clearfix:after {
-  content: "";
+  content: '';
   display: table;
   clear: both;
 }
