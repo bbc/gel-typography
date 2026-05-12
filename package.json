@@ -1,6 +1,6 @@
 {
   "name": "gel-typography",
-  "version": "6.1.6",
+  "version": "6.1.7",
   "description": "A flexible code implementation of the GEL Typography",
   "main": "_typography.scss",
   "scripts": {
@@ -40,7 +40,7 @@
     "sass-mq": "7.0.0"
   },
   "devDependencies": {
-    "jsdom": "29.1.0",
+    "jsdom": "29.1.1",
     "prettier": "3.8.3",
     "sass": "1.99.0",
     "vitest": "4.1.5"
