@@ -288,23 +288,23 @@ $gel-type-settings: (
 $gel-larger-font-sizes: (
   // Additional type sizes for larger contexts
   'atlas': (
-      'group-a': (
-        'font-size': 78px,
-        'line-height': 84px,
-      ),
-      'group-b': (
-        'font-size': 96px,
-        'line-height': 104px,
-      ),
-      'group-c': (
-        'font-size': 192px,
-        'line-height': 208px,
-      ),
-      'group-d': (
-        'font-size': 140px,
-        'line-height': 148px,
-      ),
+    'group-a': (
+      'font-size': 78px,
+      'line-height': 84px,
     ),
+    'group-b': (
+      'font-size': 96px,
+      'line-height': 104px,
+    ),
+    'group-c': (
+      'font-size': 192px,
+      'line-height': 208px,
+    ),
+    'group-d': (
+      'font-size': 140px,
+      'line-height': 148px,
+    ),
+  ),
   'atlas-bold': (
     'group-a': (
       'font-weight': bold,
@@ -406,7 +406,7 @@ $gel-larger-font-sizes: (
       'font-weight': bold,
       'letter-spacing': -1px,
     ),
-  )
+  ),
 ) !default;
 
 // Adds the typography specific breakpoints to the Sass MQ list
